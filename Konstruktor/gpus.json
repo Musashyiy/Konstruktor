@@ -1,0 +1,212 @@
+[
+  {
+    "Name": "NVIDIA GeForce RTX 4070 Super",
+    "WattInput": 220.0,
+    "VRAMcapacity": 12.0,
+    "VRAMtype": "GDDR6X",
+    "Price": 599.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA GeForce RTX 4080 Super",
+    "WattInput": 320.0,
+    "VRAMcapacity": 16.0,
+    "VRAMtype": "GDDR6X",
+    "Price": 999.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA GeForce RTX 4060",
+    "WattInput": 115.0,
+    "VRAMcapacity": 8.0,
+    "VRAMtype": "GDDR6",
+    "Price": 299.0,
+    "Categories": [ "Gaming" ]
+  },
+
+  {
+    "Name": "AMD Radeon RX 7800 XT",
+    "WattInput": 263.0,
+    "VRAMcapacity": 16.0,
+    "VRAMtype": "GDDR6",
+    "Price": 499.0,
+    "Categories": [ "Gaming" ]
+  },
+
+  {
+    "Name": "AMD Radeon RX 7900 XTX",
+    "WattInput": 355.0,
+    "VRAMcapacity": 24.0,
+    "VRAMtype": "GDDR6",
+    "Price": 999.0,
+    "Categories": [ "Gaming" ]
+  },
+
+  {
+    "Name": "NVIDIA RTX 4000 SFF Ada (Workstation)",
+    "WattInput": 70.0,
+    "VRAMcapacity": 20.0,
+    "VRAMtype": "GDDR6",
+    "Price": 1250.0,
+    "Categories": [ "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA T1000 8GB (Low-Profile)",
+    "WattInput": 50.0,
+    "VRAMcapacity": 8.0,
+    "VRAMtype": "GDDR6",
+    "Price": 420.0,
+    "Categories": [ "Office" ]
+  },
+
+  {
+    "Name": "Intel Arc A750",
+    "WattInput": 225.0,
+    "VRAMcapacity": 8.0,
+    "VRAMtype": "GDDR6",
+    "Price": 249.0,
+    "Categories": [ "Gaming" ]
+  },
+
+  {
+    "Name": "NVIDIA GeForce RTX 5090",
+    "WattageInput": 450.0,
+    "VRAMcapacity": 32.0,
+    "VRAMtype": "GDDR7",
+    "Price": 1999.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA GeForce RTX 5080",
+    "WattageInput": 350.0,
+    "VRAMcapacity": 20.0,
+    "VRAMtype": "GDDR7",
+    "Price": 1299.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA GeForce RTX 5070 Ti",
+    "WattageInput": 275.0,
+    "VRAMcapacity": 16.0,
+    "VRAMtype": "GDDR7",
+    "Price": 849.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA GeForce RTX 5060",
+    "WattageInput": 180.0,
+    "VRAMcapacity": 12.0,
+    "VRAMtype": "GDDR7",
+    "Price": 429.0,
+    "Categories": [ "Gaming" ]
+  },
+
+  {
+    "Name": "NVIDIA GeForce RTX 5050",
+    "WattageInput": 130.0,
+    "VRAMcapacity": 8.0,
+    "VRAMtype": "GDDR7",
+    "Price": 329.0,
+    "Categories": [ "Gaming" ]
+  },
+
+  {
+    "Name": "NVIDIA RTX A5500 (Workstation)",
+    "WattageInput": 230.0,
+    "VRAMcapacity": 24.0,
+    "VRAMtype": "GDDR6 ECC",
+    "Price": 2490.0,
+    "Categories": [ "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA RTX 6000 Ada Generation",
+    "WattageInput": 300.0,
+    "VRAMcapacity": 48.0,
+    "VRAMtype": "GDDR6 ECC",
+    "Price": 6990.0,
+    "Categories": [ "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA RTX A4000",
+    "WattageInput": 140.0,
+    "VRAMcapacity": 16.0,
+    "VRAMtype": "GDDR6 ECC",
+    "Price": 1199.0,
+    "Categories": [ "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA RTX A2000 12GB",
+    "WattageInput": 70.0,
+    "VRAMcapacity": 12.0,
+    "VRAMtype": "GDDR6",
+    "Price": 499.0,
+    "Categories": [ "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA RTX 5000 Ada Generation",
+    "WattageInput": 250.0,
+    "VRAMcapacity": 32.0,
+    "VRAMtype": "GDDR6 ECC",
+    "Price": 3490.0,
+    "Categories": [ "Rendering" ]
+  },
+
+  {
+    "Name": "NVIDIA T400 4GB (Low-Profile)",
+    "WattageInput": 30.0,
+    "VRAMcapacity": 4.0,
+    "VRAMtype": "GDDR6",
+    "Price": 150.0,
+    "Categories": [ "Office" ]
+  },
+  {
+    "Name": "NVIDIA T600 4GB (Low-Profile)",
+    "WattageInput": 40.0,
+    "VRAMcapacity": 4.0,
+    "VRAMtype": "GDDR6",
+    "Price": 180.0,
+    "Categories": [ "Office" ]
+  },
+  {
+    "Name": "Intel Arc A310",
+    "WattageInput": 75.0,
+    "VRAMcapacity": 4.0,
+    "VRAMtype": "GDDR6",
+    "Price": 120.0,
+    "Categories": [ "Office" ]
+  },
+  {
+    "Name": "AMD Radeon RX 6400 LP",
+    "WattageInput": 53.0,
+    "VRAMcapacity": 4.0,
+    "VRAMtype": "GDDR6",
+    "Price": 135.0,
+    "Categories": [ "Office" ]
+  },
+  {
+    "Name": "NVIDIA GT 1030 2GB",
+    "WattageInput": 30.0,
+    "VRAMcapacity": 2.0,
+    "VRAMtype": "GDDR5",
+    "Price": 90.0,
+    "Categories": [ "Office" ]
+  },
+  {
+    "Name": "NVIDIA Quadro P620 2GB",
+    "WattageInput": 40.0,
+    "VRAMcapacity": 2.0,
+    "VRAMtype": "GDDR5",
+    "Price": 160.0,
+    "Categories": [ "Office" ]
+  }
+]

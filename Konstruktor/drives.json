@@ -1,0 +1,109 @@
+[
+    {
+      "Name": "Samsung 980 Pro 1TB NVMe",
+      "Connection": "PCIe 4.0",
+      "Size": 1000.0,
+      "FormFactor": "M.2",
+      "Price": 119.0,
+      "Categories": [ "Gaming", "Rendering" ]
+    },
+
+    {
+      "Name": "WD Black SN850X 2TB NVMe",
+      "Connection": "PCIe 4.0",
+      "Size": 2000.0,
+      "FormFactor": "M.2",
+      "Price": 169.0,
+      "Categories": [ "Gaming", "Rendering" ]
+    },
+
+    {
+      "Name": "Crucial MX500 1TB SSD",
+      "Connection": "SATA",
+      "Size": 1000.0,
+      "FormFactor": "2.5\"",
+      "Price": 69.0,
+      "Categories": [ "Office", "Gaming" ]
+    },
+
+    {
+      "Name": "Samsung 870 QVO 2TB SSD",
+      "Connection": "SATA",
+      "Size": 2000.0,
+      "FormFactor": "2.5\"",
+      "Price": 99.0,
+      "Categories": [ "Office", "Server" ]
+    },
+
+    {
+      "Name": "Sabrent Rocket 4 Plus 4TB",
+      "Connection": "PCIe 4.0",
+      "Size": 4000.0,
+      "FormFactor": "M.2",
+      "Price": 379.0,
+      "Categories": [ "Rendering", "Server" ]
+    },
+
+    {
+      "Name": "Corsair MP600 Pro XT 2TB",
+      "Connection": "PCIe 4.0",
+      "Size": 2000.0,
+      "FormFactor": "M.2",
+      "Price": 189.0,
+      "Categories": [ "Gaming", "Rendering" ]
+    },
+
+    {
+      "Name": "Seagate Exos X20 16TB",
+      "Connection": "SATA",
+      "Size": 16000.0,
+      "FormFactor": "3.5\"",
+      "Price": 389.0,
+      "Categories": [ "Server" ]
+    },
+
+    {
+      "Name": "WD Gold 12TB HDD",
+      "Connection": "SATA",
+      "Size": 12000.0,
+      "FormFactor": "3.5\"",
+      "Price": 329.0,
+      "Categories": [ "Server" ]
+    },
+
+    {
+      "Name": "Kingston A400 480GB SSD",
+      "Connection": "SATA",
+      "Size": 480.0,
+      "FormFactor": "2.5\"",
+      "Price": 29.0,
+      "Categories": [ "Office" ]
+    },
+
+    {
+      "Name": "Samsung 990 Pro 2TB NVMe",
+      "Connection": "PCIe 4.0",
+      "Size": 2000.0,
+      "FormFactor": "M.2",
+      "Price": 189.0,
+      "Categories": [ "Gaming", "Rendering" ]
+    },
+
+    {
+      "Name": "Intel Optane P5800X 1.6TB",
+      "Connection": "PCIe 4.0",
+      "Size": 1600.0,
+      "FormFactor": "U.2",
+      "Price": 1199.0,
+      "Categories": [ "Server", "Rendering" ]
+    },
+
+    {
+      "Name": "WD Blue SN580 1TB NVMe",
+      "Connection": "PCIe 4.0",
+      "Size": 1000.0,
+      "FormFactor": "M.2",
+      "Price": 79.0,
+      "Categories": [ "Office", "Gaming" ]
+    }
+]
