@@ -1,0 +1,58 @@
+[
+	{
+		"Name": "Noctua NH-D15",
+		"Form": "Air",
+		"Price": 99.0,
+		"Categories": [ "Gaming", "Rendering", "Server" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ]
+	},
+	{
+		"Name": "be quiet! Dark Rock Pro 5",
+		"Form": "Air",
+		"Price": 94.0,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ]
+	},
+	{
+		"Name": "Corsair iCUE H150i Elite Capellix XT (360mm)",
+		"Form": "AiO",
+		"Price": 169.0,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ]
+	},
+	{
+		"Name": "Arctic Liquid Freezer II 360",
+		"Form": "AiO",
+		"Price": 119.0,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ]
+	},
+	{
+		"Name": "DeepCool AK620",
+		"Form": "Air",
+		"Price": 64.0,
+		"Categories": [ "Gaming", "Office" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ]
+	},
+	{
+		"Name": "NZXT Kraken 280",
+		"Form": "AiO",
+		"Price": 159.0,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ]
+	},
+	{
+		"Name": "Cooler Master 2U Passive Server Cooler",
+		"Form": "Passive",
+		"Price": 49.0,
+		"Categories": [ "Server" ],
+		"Sockets": [ "LGA3647" ]
+	},
+	{
+		"Name": "Noctua NH-D9 DX-3647",
+		"Form": "Air",
+		"Price": 119.0,
+		"Categories": [ "Server" ],
+		"Sockets": [ "LGA3647" ]
+	}
+]

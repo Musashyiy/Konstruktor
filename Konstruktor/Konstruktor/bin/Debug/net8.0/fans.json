@@ -1,0 +1,38 @@
+[
+	{
+		"Name": "Noctua NF-A12x25 PWM",
+		"Size": 120.0,
+		"Price": 29.0,
+		"Categories": [ "Gaming", "Rendering", "Office" ]
+	},
+	{
+		"Name": "be quiet! Silent Wings Pro 4 140mm",
+		"Size": 140.0,
+		"Price": 31.0,
+		"Categories": [ "Gaming", "Rendering" ]
+	},
+	{
+		"Name": "Corsair AF120 Elite",
+		"Size": 120.0,
+		"Price": 19.0,
+		"Categories": [ "Gaming", "Office" ]
+	},
+	{
+		"Name": "Arctic P12 PWM PST",
+		"Size": 120.0,
+		"Price": 7.0,
+		"Categories": [ "Office", "Server" ]
+	},
+	{
+		"Name": "Lian Li UNI Fan SL120 V2",
+		"Size": 120.0,
+		"Price": 25.0,
+		"Categories": [ "Gaming", "Rendering" ]
+	},
+	{
+		"Name": "Phanteks T30-120",
+		"Size": 120.0,
+		"Price": 29.0,
+		"Categories": [ "Gaming", "Rendering", "Server" ]
+	}
+]

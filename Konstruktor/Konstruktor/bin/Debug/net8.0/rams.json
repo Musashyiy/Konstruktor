@@ -1,0 +1,74 @@
+[
+  {
+    "Name": "Corsair Vengeance 32GB (2x16) DDR5-6000",
+    "Size": 32.0,
+    "Type": "DDR5",
+    "Design": "DIMM",
+    "ClockSpeed": 6000.0,
+    "Price": 115.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "G.Skill Trident Z5 RGB 64GB (2x32) DDR5-6400",
+    "Size": 64.0,
+    "Type": "DDR5",
+    "Design": "DIMM",
+    "ClockSpeed": 6400.0,
+    "Price": 245.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "Kingston Fury Beast 16GB (2x8) DDR4-3200",
+    "Size": 16.0,
+    "Type": "DDR4",
+    "Design": "DIMM",
+    "ClockSpeed": 3200.0,
+    "Price": 45.0,
+    "Categories": [ "Office", "Gaming" ]
+  },
+  {
+    "Name": "Crucial Pro 32GB (2x16) DDR4-3600",
+    "Size": 32.0,
+    "Type": "DDR4",
+    "Design": "DIMM",
+    "ClockSpeed": 3600.0,
+    "Price": 75.0,
+    "Categories": [ "Gaming", "Office" ]
+  },
+  {
+    "Name": "Kingston Fury Impact 32GB (2x16) DDR5-5600",
+    "Size": 32.0,
+    "Type": "DDR5",
+    "Design": "SO-DIMM",
+    "ClockSpeed": 5600.0,
+    "Price": 135.0,
+    "Categories": [ "Office" ]
+  },
+  {
+    "Name": "Samsung 64GB DDR5-4800 ECC RDIMM",
+    "Size": 64.0,
+    "Type": "DDR5",
+    "Design": "RDIMM",
+    "ClockSpeed": 4800.0,
+    "Price": 189.0,
+    "Categories": [ "Server" ]
+  },
+  {
+    "Name": "Crucial 128GB (2x64) DDR5-5600 ECC RDIMM",
+    "Size": 128.0,
+    "Type": "DDR5",
+    "Design": "RDIMM",
+    "ClockSpeed": 5600.0,
+    "Price": 439.0,
+    "Categories": [ "Server", "Rendering" ]
+  },
+  {
+    "Name": "G.Skill Ripjaws S5 48GB (2x24) DDR5-6000",
+    "Size": 48.0,
+    "Type": "DDR5",
+    "Design": "DIMM",
+    "ClockSpeed": 6000.0,
+    "Price": 139.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  }
+]
