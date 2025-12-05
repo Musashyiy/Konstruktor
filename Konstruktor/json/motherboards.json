@@ -1,0 +1,146 @@
+[
+  {
+    "Name": "ASUS TUF Gaming X670E-Plus",
+    "Fit": "ATX",
+    "Socket": "AM5",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 299.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "MSI MAG B650 Tomahawk WiFi",
+    "Fit": "ATX",
+    "Socket": "AM5",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 219.0,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "Gigabyte Z790 Aorus Elite AX",
+    "Fit": "ATX",
+    "Socket": "LGA1700",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 289.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "ASUS ROG Strix Z790-E Gaming WiFi",
+    "Fit": "ATX",
+    "Socket": "LGA1700",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 429.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "ASRock B550M Pro4",
+    "Fit": "Micro-ATX",
+    "Socket": "AM4",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 95.0,
+    "Categories": [ "Office" ]
+  },
+  {
+    "Name": "MSI PRO H610M-G",
+    "Fit": "Micro-ATX",
+    "Socket": "LGA1700",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "SATA" ],
+    "Price": 79.0,
+    "Categories": [ "Office" ]
+  },
+  {
+    "Name": "ASUS ROG Strix X670E-I Gaming",
+    "Fit": "Mini-ITX",
+    "Socket": "AM5",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 349.0,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "Gigabyte B760I Aorus Pro DDR5",
+    "Fit": "Mini-ITX",
+    "Socket": "LGA1700",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 219.0,
+    "Categories": [ "Gaming", "Office" ]
+  },
+  {
+    "Name": "Supermicro H12SSL-i",
+    "Fit": "ATX",
+    "Socket": "SP3",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "SATA" ],
+    "Price": 530.0,
+    "Categories": [ "Server" ]
+  },
+  {
+    "Name": "ASRock Rack ROMED8-2T",
+    "Fit": "E-ATX",
+    "Socket": "SP3",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 600.0,
+    "Categories": [ "Server" ]
+  },
+  {
+    "Name": "Supermicro H13SSL-N",
+    "Fit": "ATX",
+    "Socket": "SP5",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 850.0,
+    "Categories": [ "Server", "Rendering" ]
+  },
+  {
+    "Name": "ASRock Rack W680D4U-2L2T",
+    "Fit": "ATX",
+    "Socket": "LGA1700",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 470.0,
+    "Categories": [ "Server", "Office" ]
+  },
+  {
+    "Name": "Supermicro X12SPA-T",
+    "Fit": "E-ATX",
+    "Socket": "LGA4189",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 950.0,
+    "Categories": [ "Server", "Rendering" ]
+  },
+  {
+    "Name": "ASRock Rack B650D4U",
+    "Fit": "ATX",
+    "Socket": "AM5",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 360.0,
+    "Categories": [ "Server" ]
+  },
+  {
+    "Name": "ASRock Rack X470D4U2-2T",
+    "Fit": "Micro-ATX",
+    "Socket": "AM4",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "SATA" ],
+    "Price": 330.0,
+    "Categories": [ "Server" ]
+  },
+  {
+    "Name": "Gigabyte MC13-LE0",
+    "Fit": "Mini-ITX",
+    "Socket": "AM5",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 290.0,
+    "Categories": [ "Office", "Server" ]
+  }
+]
