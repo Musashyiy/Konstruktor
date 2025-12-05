@@ -1,0 +1,52 @@
+[
+	{
+		"Name": "Noctua NH-D15",
+		"Form": "Air",
+		"Price": 99.0,
+		"Categories": [ "Gaming", "Rendering", "Server" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 16.5,
+		"Width": 15.0,
+		"Depth": 13.5
+	},
+	{
+		"Name": "be quiet! Dark Rock Pro 5",
+		"Form": "Air",
+		"Price": 94.0,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 16.8,
+		"Width": 13.6,
+		"Depth": 14.5
+	},
+	{
+		"Name": "DeepCool AK620",
+		"Form": "Air",
+		"Price": 64.0,
+		"Categories": [ "Gaming", "Office" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 16.0,
+		"Width": 13.9,
+		"Depth": 12.9
+	},
+	{
+		"Name": "Cooler Master 2U Passive Server Cooler",
+		"Form": "Passive",
+		"Price": 49.0,
+		"Categories": [ "Server" ],
+		"Sockets": [ "LGA3647" ],
+		"Height": 7.0,
+		"Width": 9.0,
+		"Depth": 8.0
+	},
+	{
+		"Name": "Noctua NH-D9 DX-3647",
+		"Form": "Air",
+		"Price": 119.0,
+		"Categories": [ "Server" ],
+		"Sockets": [ "LGA3647" ],
+		"Height": 11.4,
+		"Width": 9.5,
+		"Depth": 11.0
+	}
+]

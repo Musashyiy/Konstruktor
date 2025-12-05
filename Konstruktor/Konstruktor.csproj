@@ -8,34 +8,40 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="cases.json">
+    <None Update="json\cases.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="coolings.json">
+    <None Update="json\coolingsaio.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="cpus.json">
+    <None Update="json\coolingsair.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="drives.json">
+    <None Update="json\cpus.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="extras.json">
+    <None Update="json\NVMe.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="fans.json">
+    <None Update="json\SATA.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="gpus.json">
+    <None Update="json\extras.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="motherboards.json">
+    <None Update="json\fans.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="psus.json">
+    <None Update="json\gpus.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="rams.json">
+    <None Update="json\motherboards.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="json\psus.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="json\rams.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

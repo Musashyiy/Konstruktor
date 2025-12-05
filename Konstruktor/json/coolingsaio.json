@@ -1,0 +1,32 @@
+[
+	{
+		"Name": "Corsair iCUE H150i Elite Capellix XT (360mm)",
+		"Form": "AiO",
+		"Price": 169.0,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 2.7,
+		"Width": 12.0,
+		"Depth": 39.7
+	},
+	{
+		"Name": "Arctic Liquid Freezer II 360",
+		"Form": "AiO",
+		"Price": 119.0,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 3.8,
+		"Width": 12.0,
+		"Depth": 39.8
+	},
+	{
+		"Name": "NZXT Kraken 280",
+		"Form": "AiO",
+		"Price": 159.0,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 3.0,
+		"Width": 14.0,
+		"Depth": 31.5
+	}
+]
