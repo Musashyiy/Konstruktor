@@ -68,7 +68,7 @@ namespace Konstruktor.Methoden
                 }
 
                 else if (aioair == 2)
-                {
+            {
                     Konstruktor.Methoden.AiOCooling.AioCoolingsSelection(mypc);
                     aioorair = true;
                 }
@@ -76,7 +76,7 @@ namespace Konstruktor.Methoden
                 else
                 {
                     Console.WriteLine("Ungültige Eingabe. Bitte erneut auswählen.");
-                }
+            }
 
             } while (!aioorair);
 
@@ -133,7 +133,7 @@ namespace Konstruktor.Methoden
 
                 //Console.WriteLine("Extras: " + string.Join(", ", mypc.Extras.Select(d => d.Name)));
                 //Console.WriteLine();
-                Console.WriteLine("Gesamtpreis: " + mypc.Price + "€");
+            Console.WriteLine("Gesamtpreis: " + mypc.Price + "€");
         }
     }
 }
