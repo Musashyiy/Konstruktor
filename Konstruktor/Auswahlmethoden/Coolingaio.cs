@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Konstruktor.Methoden
 {
+<<<<<<<< HEAD:Konstruktor/Auswahlmethoden/Coolingaio.cs
     public class AiOCooling
     {
         public static void AioCoolingsSelection(MyPc mypc)
@@ -26,12 +27,34 @@ namespace Konstruktor.Methoden
             foreach (var coolingss in coolingsaio)
             {
                 Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Maße: Höhe {coolingss.Height}cm x Breite {coolingss.Width}cm x Länge {coolingss.Lenght}cm | Preis: {coolingss.Price}€");
+========
+    public class Coolings
+    {
+        public static string CoolingsSelection(MyPc mypc)
+        {
+            string jsonTextCooling = File.ReadAllText("json/coolings.json");
+            JsonArray coolingsarray = JsonNode.Parse(jsonTextCooling).AsArray();
+            int anzahlcooling = coolingsarray.Count;
+            List<Cooling>? coolings = JsonSerializer.Deserialize<List<Cooling>>(jsonTextCooling);
+            int i = 1;
+
+
+            Console.WriteLine("Coolings");
+            Console.WriteLine();
+            foreach (var coolingss in coolings)
+            {
+                Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Preis: {coolingss.Price}€");
+>>>>>>>> 8a36a486597839ee8a94795cc5827d9861c0e147:Konstruktor/Auswahlmethoden/Cooling.cs
                 Console.WriteLine();
                 i++;
             }
 
             int pick = 0;
+<<<<<<<< HEAD:Konstruktor/Auswahlmethoden/Coolingaio.cs
             bool success = false;            
+========
+            bool success = false;
+>>>>>>>> 8a36a486597839ee8a94795cc5827d9861c0e147:Konstruktor/Auswahlmethoden/Cooling.cs
 
             do
             {
@@ -45,7 +68,11 @@ namespace Konstruktor.Methoden
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
                     }
 
+<<<<<<<< HEAD:Konstruktor/Auswahlmethoden/Coolingaio.cs
                     else if (pick <= anzahlcoolingaio)
+========
+                    else if (pick <= anzahlcooling)
+>>>>>>>> 8a36a486597839ee8a94795cc5827d9861c0e147:Konstruktor/Auswahlmethoden/Cooling.cs
                     {
                         success = true;
                     }
@@ -58,6 +85,7 @@ namespace Konstruktor.Methoden
             } while (success == false);
 
             int actualpick = pick - 1;
+<<<<<<<< HEAD:Konstruktor/Auswahlmethoden/Coolingaio.cs
             mypc.Coolings = coolingsaio[actualpick];
             Console.WriteLine($"{coolingsaio[actualpick].Name} wurde als Kühlung ausgewählt.");
 
@@ -81,3 +109,23 @@ namespace Konstruktor.Methoden
 
 }
 
+========
+            mypc.Cooling = coolings[actualpick];
+            Console.WriteLine($"{coolings[actualpick].Name} wurde als Kühlung ausgewählt.");
+
+            Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ReadKey();
+
+            return mypc.Cooling.Name;
+        }
+    }
+    public class Cooling                                        ///Die Blaupause für die verscheidenen Kühlungen
+    {
+        public string Name { get; set; }
+        public string Form { get; set; }                //AiO, Aircolling....
+        public float Price { get; set; }
+        public List<string> Sockets { get; set; }
+        public List<string> Categories { get; set; }
+    }
+}
+>>>>>>>> 8a36a486597839ee8a94795cc5827d9861c0e147:Konstruktor/Auswahlmethoden/Cooling.cs
