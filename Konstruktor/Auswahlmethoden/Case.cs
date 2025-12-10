@@ -77,6 +77,7 @@ namespace Konstruktor.Methoden
         public int NumberCaseFans { get; set; }
         public string Fit { get; set; }                 //ob ATX, mini-STX etc...
         public float Price { get; set; }
+        public float MaxCoolerHeight { get; set; }
         public string[] Categories { get; set; }
     }
 }

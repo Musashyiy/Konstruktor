@@ -7,7 +7,8 @@
     "NumberCaseFans": 2,
     "Fit": "ATX",
     "Price": 110.0,
-    "Categories": [ "Gaming", "Server" ]
+    "Categories": [ "Gaming", "Server" ],
+    "MaxCoolerHeight": 16.5
   },
   {
     "Name": "Lian Li O11 Dynamic EVO",
@@ -17,7 +18,8 @@
     "NumberCaseFans": 3,
     "Fit": "ATX",
     "Price": 190.0,
-    "Categories": [ "Gaming", "Rendering" ]
+    "Categories": [ "Gaming", "Rendering" ],
+    "MaxCoolerHeight": 16.7
   },
   {
     "Name": "Corsair 4000D Airflow",
@@ -27,7 +29,8 @@
     "NumberCaseFans": 2,
     "Fit": "ATX",
     "Price": 120.0,
-    "Categories": [ "Gaming" ]
+    "Categories": [ "Gaming" ],
+    "MaxCoolerHeight": 17.0
   },
   {
     "Name": "Fractal Design Define 7",
@@ -37,7 +40,8 @@
     "NumberCaseFans": 3,
     "Fit": "ATX / E-ATX",
     "Price": 190.0,
-    "Categories": [ "Rendering", "Server" ]
+    "Categories": [ "Rendering", "Server" ],
+    "MaxCoolerHeight": 18.5
   },
   {
     "Name": "be quiet! Dark Base Pro 901",
@@ -47,7 +51,8 @@
     "NumberCaseFans": 3,
     "Fit": "E-ATX",
     "Price": 280.0,
-    "Categories": [ "Rendering", "Gaming" ]
+    "Categories": [ "Rendering", "Gaming" ],
+    "MaxCoolerHeight": 19.0
   },
   {
     "Name": "Phanteks Enthoo 719",
@@ -57,7 +62,8 @@
     "NumberCaseFans": 4,
     "Fit": "E-ATX",
     "Price": 230.0,
-    "Categories": [ "Rendering" ]
+    "Categories": [ "Rendering" ],
+    "MaxCoolerHeight": 19.5
   },
   {
     "Name": "SilverStone CS381",
@@ -67,7 +73,8 @@
     "NumberCaseFans": 2,
     "Fit": "Micro-ATX",
     "Price": 190.0,
-    "Categories": [ "Server" ]
+    "Categories": [ "Server" ],
+    "MaxCoolerHeight": 5.9
   },
   {
     "Name": "Fractal Design Node 804",
@@ -77,7 +84,8 @@
     "NumberCaseFans": 2,
     "Fit": "Micro-ATX",
     "Price": 140.0,
-    "Categories": [ "Server", "Office" ]
+    "Categories": [ "Server", "Office" ],
+    "MaxCoolerHeight": 16.0
   },
   {
     "Name": "Chenbro RM24100",
@@ -87,7 +95,8 @@
     "NumberCaseFans": 2,
     "Fit": "ATX",
     "Price": 160.0,
-    "Categories": [ "Server" ]
+    "Categories": [ "Server" ],
+    "MaxCoolerHeight": 4.0
   },
   {
     "Name": "Cooler Master NR200",
@@ -97,7 +106,8 @@
     "NumberCaseFans": 2,
     "Fit": "Mini-ITX",
     "Price": 95.0,
-    "Categories": [ "Office", "Server" ]
+    "Categories": [ "Office", "Server" ],
+    "MaxCoolerHeight": 15.5
   },
   {
     "Name": "Fractal Design Pop Mini Silent",
@@ -107,7 +117,8 @@
     "NumberCaseFans": 2,
     "Fit": "Micro-ATX",
     "Price": 100.0,
-    "Categories": [ "Office" ]
+    "Categories": [ "Office" ],
+    "MaxCoolerHeight": 17.0
   },
   {
     "Name": "be quiet! Pure Base 500",
@@ -117,6 +128,7 @@
     "NumberCaseFans": 2,
     "Fit": "ATX",
     "Price": 110.0,
-    "Categories": [ "Office", "Server" ]
+    "Categories": [ "Office", "Server" ],
+    "MaxCoolerHeight": 19.0
   }
 ]

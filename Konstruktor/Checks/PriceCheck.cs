@@ -18,25 +18,19 @@ namespace Konstruktor.Checks
             float sumFans = mypc.Fans.Sum(b => b.Price);
 
             float pricesum =
-                //mypc.Case.Price +
-                mypc.Coolings.Price; 
-                //mypc.Cpu.Price +
-                //sumExtra +
-                //sumFans +
-                //mypc.Gpu.Price +
-                //mypc.Motherboard.Price +
-                //sumNVMe +
-                //sumSATA +
-                //mypc.Psu.Price +
-                //mypc.Ram.Price;
+                mypc.Case.Price +
+                mypc.Coolings.Price +
+                mypc.Cpu.Price +
+                sumExtra +
+                sumFans +
+                mypc.Gpu.Price +
+                mypc.Motherboard.Price +
+                sumNVMe +
+                sumSATA +
+                mypc.Psu.Price +
+                mypc.Ram.Price;
 
-            mypc.Price = pricesum ;            
+                mypc.Price = pricesum ;            
         }
-    }
-
-    public class SumPrice                                         ///Gesamtpreis
-    {
-        public float Price { get; set; }
-
     }
 }

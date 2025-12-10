@@ -21,37 +21,37 @@ namespace Konstruktor.Methoden
 
             MyPc mypc = new MyPc();
 
-            //Console.WriteLine("Gehäuse auswählen:");
-            //Konstruktor.Methoden.Cases.CaseSelection(mypc);
-            //Console.Clear();
+            Console.WriteLine("Gehäuse auswählen:");
+            Konstruktor.Methoden.Cases.CaseSelection(mypc);
+            Console.Clear();
 
-            //Console.WriteLine("Netzteil auswählen:");
-            //Konstruktor.Methoden.PSUs.PSUSelection(mypc);
-            //Console.Clear();
+            Console.WriteLine("Netzteil auswählen:");
+            Konstruktor.Methoden.PSUs.PSUSelection(mypc);
+            Console.Clear();
 
-            //Console.WriteLine("Mainboard auswählen:");
-            //Mainboards.MainboardSelection(mypc);
-            //Console.Clear();
+            Console.WriteLine("Mainboard auswählen:");
+            Mainboards.MainboardSelection(mypc);
+            Console.Clear();
 
-            //Konstruktor.Checks.FormfactorCheck.FormCheck(mypc);
+            Konstruktor.Checks.FormfactorCheck.FormCheck(mypc);
 
-            //Console.WriteLine("CPU auswählen:");
-            //Konstruktor.Methoden.CPUs.CPUSelection(mypc);
-            //Console.Clear();
+            Console.WriteLine("CPU auswählen:");
+            Konstruktor.Methoden.CPUs.CPUSelection(mypc);
+            Console.Clear();
 
-            //Konstruktor.Checks.SocketCheck.CheckSocket(mypc);
+            Konstruktor.Checks.SocketCheck.CheckSocket(mypc);
 
-            //Console.WriteLine("GPU auswählen:");
-            //Konstruktor.Methoden.GPUs.GPUSelection(mypc);
-            //Console.Clear();
+            Console.WriteLine("GPU auswählen:");
+            Konstruktor.Methoden.GPUs.GPUSelection(mypc);
+            Console.Clear();
 
-            //Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
+            Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
 
-            //Console.WriteLine("RAM-Riegel auswählen:");
-            //Konstruktor.Methoden.RAMs.RAMSelection(mypc);
-            //Console.Clear();
+            Console.WriteLine("RAM-Riegel auswählen:");
+            Konstruktor.Methoden.RAMs.RAMSelection(mypc);
+            Console.Clear();
 
-            //Konstruktor.Checks.RAMCheck.RAMChecking(mypc);
+            Konstruktor.Checks.RAMCheck.RAMChecking(mypc);
 
             Console.WriteLine("Kühlung auswählen:");
             Console.WriteLine( "Wollen sie eine Luftkühlung(1) oder eine Wasserkühlung(2)?");
@@ -69,7 +69,7 @@ namespace Konstruktor.Methoden
 
                 else if (aioair == 2)
             {
-                    Konstruktor.Methoden.AiOCooling.AioCoolingsSelection(mypc);
+                    Konstruktor.Methoden.AioCoolings.AioCoolingsSelection(mypc);
                     aioorair = true;
                 }
 
@@ -81,58 +81,51 @@ namespace Konstruktor.Methoden
             } while (!aioorair);
 
 
-            //Console.WriteLine("SATA-Speicherlaufwerke auswählen:");
-            //SATADrive.SATADrivesSelection(mypc);
-            //Console.Clear();            
+            Console.WriteLine("SATA-Speicherlaufwerke auswählen:");
+            SATADrive.SATADrivesSelection(mypc);
+            Console.Clear();
 
-            //if (mypc.Motherboard.DriveSupport.Contains("PCIe 4.0"))
-            //{
-            //    Console.WriteLine("NVMe-Speicherlaufwerke auswählen:");
-            //    NVMeDrive.NVMeDrivesSelection(mypc);
-            //    Console.Clear();
-            //}
+            if (mypc.Motherboard.DriveSupport.Contains("PCIe 4.0"))
+            {
+                Console.WriteLine("NVMe-Speicherlaufwerke auswählen:");
+                NVMeDrive.NVMeDrivesSelection(mypc);
+                Console.Clear();
+            }
 
-            //NVMeDriverCheck.NVMeDriveCheck(mypc);
+            NVMeDriverCheck.NVMeDriveCheck(mypc);
 
-            //Console.WriteLine("Lüfter auswählen:");
-            //Konstruktor.Methoden.Fans.FansSelection(mypc);
-            //Console.Clear();
+            Console.WriteLine("Lüfter auswählen:");
+            Konstruktor.Methoden.Fans.FansSelection(mypc);
+            Console.Clear();
 
-            //Console.WriteLine("Extras auswählen:");
-            //Konstruktor.Methoden.Extra.ExtrasSelection(mypc);
-            //Console.Clear();
+            Console.WriteLine("Extras auswählen:");
+            Konstruktor.Methoden.Extra.ExtrasSelection(mypc);
+            Console.Clear();
 
             //Konstruktor.Checks.VolumeCheck.MeasurmentCheck(mypc);
 
             Konstruktor.Checks.PriceCheck.Pricecheck(mypc);
 
             Console.WriteLine("Ihr System:");
-            //Console.WriteLine("Gehäuse: " + mypc.Case.Name);
-            //Console.WriteLine("Netzteil: " + mypc.Psu.Name);
-            //Console.WriteLine("Motherboard: " + mypc.Motherboard.Name);
-            //Console.WriteLine("CPU: " + mypc.Cpu.Name);
-            //Console.WriteLine("Grafikkarte: " + mypc.Gpu.Name);
-            //Console.WriteLine("RAM: " + mypc.Ram.Name);
-                        
-            
+            Console.WriteLine("Gehäuse: " + mypc.Case.Name);
+            Console.WriteLine("Netzteil: " + mypc.Psu.Name);
+            Console.WriteLine("Motherboard: " + mypc.Motherboard.Name);
+            Console.WriteLine("CPU: " + mypc.Cpu.Name);
+            Console.WriteLine("Grafikkarte: " + mypc.Gpu.Name);
+            Console.WriteLine("RAM: " + mypc.Ram.Name);
             Console.WriteLine("Kühlung: " + mypc.Coolings.Name);
+            Console.WriteLine("SATA-Laufwerke: " + string.Join(", ", mypc.DriveSATA.Select(d => d.Name)));
+            Console.WriteLine("NVMe-Laufwerke: " + string.Join(", ", mypc.DriveNVMe.Select(f => f.Name)));
 
-           
+            var fanText = string.Join(", ",
+                mypc.Fans
+                    .GroupBy(m => m.Name)
+                    .Select(n => $"{n.Count()}x {n.Key}"));
 
+            Console.WriteLine("Lüfter: " + fanText);
 
-
-                //Console.WriteLine("SATA-Laufwerke: " + string.Join(", ", mypc.DriveSATA.Select(d => d.Name)));
-                //Console.WriteLine("NVMe-Laufwerke: " + string.Join(", ", mypc.DriveNVMe.Select(f => f.Name)));
-
-                //var fanText = string.Join(", ",
-                //    mypc.Fans
-                //        .GroupBy(m => m.Name)
-                //        .Select(n => $"{n.Count()}x {n.Key}"));
-
-                //Console.WriteLine("Lüfter: " + fanText);
-
-                //Console.WriteLine("Extras: " + string.Join(", ", mypc.Extras.Select(d => d.Name)));
-                //Console.WriteLine();
+            Console.WriteLine("Extras: " + string.Join(", ", mypc.Extras.Select(d => d.Name)));
+            Console.WriteLine();
             Console.WriteLine("Gesamtpreis: " + mypc.Price + "€");
         }
     }

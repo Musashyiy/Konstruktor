@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace Konstruktor.Checks.VolumeCheck
 {
-    public class CaseandGPUVolumeCheck
+    public class CaseandGPUVolCheck
     {
         static void CaseandGPUVolume(MyPc mypc)
         {
             bool successpickwidth = false;
-
-
 
             if(mypc.Gpu.Lenght >= mypc.Case.Lenght)
             {
@@ -29,14 +27,14 @@ namespace Konstruktor.Checks.VolumeCheck
                         successpickwidth = true;
                         Konstruktor.Methoden.GPUs.GPUSelection(mypc);
                         Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
-                        Konstruktor.Checks.VolumeCheck.CaseandGPUVolumeCheck.CaseandGPUVolume(mypc);
+                        Konstruktor.Checks.VolumeCheck.CaseandGPUVolCheck.CaseandGPUVolume(mypc);
                     }
 
                     else if (pick == 2)
                     {
                         successpickwidth = true;
                         Konstruktor.Methoden.Cases.CaseSelection(mypc);
-                        Konstruktor.Checks.VolumeCheck.CaseandGPUVolumeCheck.CaseandGPUVolume(mypc);
+                        Konstruktor.Checks.VolumeCheck.CaseandGPUVolCheck.CaseandGPUVolume(mypc);
                     }
 
                     else
@@ -45,8 +43,13 @@ namespace Konstruktor.Checks.VolumeCheck
                     }
                 }
             }
-                        
-            if(mypc.Gpu.Width >= mypc.Case.Width)
+
+            else
+            {
+                Console.WriteLine("Die GPU passt in der länge ind Gehäuse.");
+            }
+
+            if (mypc.Gpu.Width >= mypc.Case.Width)
             {
                 while (!successpickwidth == false)
                 {
@@ -54,19 +57,19 @@ namespace Konstruktor.Checks.VolumeCheck
                     Console.WriteLine("Die GPU passt in der Breite nicht in das Gehäuse.\nBitte wähle eine kleinere GPU(1) oder ein größeres Gehäuse(2).");
                     int.TryParse(Console.ReadLine(), out pick);
 
-                    if(pick == 1)
+                    if (pick == 1)
                     {
                         successpickwidth = true;
                         Konstruktor.Methoden.GPUs.GPUSelection(mypc);
                         Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
-                        Konstruktor.Checks.VolumeCheck.CaseandGPUVolumeCheck.CaseandGPUVolume(mypc);
+                        Konstruktor.Checks.VolumeCheck.CaseandGPUVolCheck.CaseandGPUVolume(mypc);
                     }
 
                     else if (pick == 2)
                     {
                         successpickwidth = true;
                         Konstruktor.Methoden.Cases.CaseSelection(mypc);
-                        Konstruktor.Checks.VolumeCheck.CaseandGPUVolumeCheck.CaseandGPUVolume(mypc);
+                        Konstruktor.Checks.VolumeCheck.CaseandGPUVolCheck.CaseandGPUVolume(mypc);
                     }
 
                     else
@@ -75,6 +78,12 @@ namespace Konstruktor.Checks.VolumeCheck
                     }
                 }
             }
+
+            else
+            {
+                Console.WriteLine("Die GPU passt in der Breite ind Gehäuse.");
+            }
+
         }
     }
 }
