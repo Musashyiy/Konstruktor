@@ -26,14 +26,14 @@ namespace Konstruktor.Methoden
             Console.WriteLine("Wie viele SATA-Festplatten wollen sie einbauen? Bei 0 werden keine weiteren hinzugefügt.");
             int.TryParse(Console.ReadLine(), out anzahl);
 
-            Console.WriteLine("SATA-Speicher");
+            Console.WriteLine("Auswahl SATA-Speicher:");
             Console.WriteLine();
 
             if (anzahl != 0)
             {
                 foreach (var drivess in drives)
                 {
-                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size} Euro | Preis: {drivess.Price}€");
+                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size} Euro | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Preis: {drivess.Price}€");
                     Console.WriteLine();
                     i++;
                 }
@@ -51,14 +51,9 @@ namespace Konstruktor.Methoden
 
                             if (pick == 0)
                             {
-                                Console.WriteLine("Es werden keine weiteren Laufwerke hinzugefügt.");
-                                success = true;
-                                break;
-                            }
-
-                            else if (j < anzahl)
-                            {
-
+                                Console.BackgroundColor = ConsoleColor.DarkRed;
+                                Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                                Console.ResetColor();
                             }
 
                             else if (pick <= anzahldrives)
@@ -66,9 +61,11 @@ namespace Konstruktor.Methoden
                                 success = true;
                             }
 
-                            else if (pick > anzahldrives)
+                            else
                             {
+                                Console.BackgroundColor = ConsoleColor.DarkRed;
                                 Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                                Console.ResetColor();
                             }
 
                             int actualpick = pick - 1;
@@ -80,8 +77,11 @@ namespace Konstruktor.Methoden
 
                     } while (success == false);
                 }
+            }
 
-
+            else if (anzahl == 0)
+            {
+                Console.WriteLine("Es werdenkeine weiteren Laufwerke hinzugefügt.");
             }
                 Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
                 Console.ReadKey();
@@ -92,6 +92,8 @@ namespace Konstruktor.Methoden
         public string Name { get; set; }
         public string Connection { get; set; }          //SATA, PCIe...
         public float Size { get; set; }                 //500GB, 1TB...
+        public float ReadSpeedMBs { get; set; }
+        public float WriteSpeedMBs { get; set; }
         public float Price { get; set; }
         public string[] Categories { get; set; }
     }

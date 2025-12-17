@@ -51,7 +51,9 @@ namespace Konstruktor.Checks
 
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.WriteLine("Festplatte und Mainboard sind kompatibel");
+                    Console.ResetColor();
                     success = true;
                 }
 

@@ -28,21 +28,22 @@ namespace Konstruktor.Methoden
 
             if (anzahl != 0)
             {
-                Console.WriteLine("NVMe-Speicher");
+                Console.WriteLine("Auswahl NVMe-Speicher:");
                 Console.WriteLine();
             
                 foreach (var drivess in drives)
                 {
-                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size} Euro | Preis: {drivess.Price}€");
+                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size} Euro | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs} \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs} | Preis: {drivess.Price}€");
                     Console.WriteLine();
                     i++;
                 }
+
                 int j = 1;
 
                 while (j <= anzahl)
                 {
                     do
-                    {                    
+                    {
                         if (success == false)
                         {
                             Console.WriteLine("Auswahl NVMe-Drives: ");
@@ -50,13 +51,10 @@ namespace Konstruktor.Methoden
 
                             if (pick == 0)
                             {
+                                Console.BackgroundColor = ConsoleColor.DarkRed;
                                 Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
-                            }
-
-                            else if (j < anzahl)
-                            {
-                                Console.WriteLine($"Wahl Nummer {j} wurde getroffen.");
-                            }
+                                Console.ResetColor();
+                            }                          
 
                             else if (pick <= anzahldrives)
                             {
@@ -65,7 +63,9 @@ namespace Konstruktor.Methoden
 
                             else
                             {
+                                Console.BackgroundColor = ConsoleColor.DarkRed;
                                 Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                                Console.ResetColor();
                             }
 
                             int actualpick = pick - 1;
@@ -80,13 +80,7 @@ namespace Konstruktor.Methoden
 
                     Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
                     Console.ReadKey();
-
                 }
-
-
-
-
-
             }
         }
     }
@@ -95,6 +89,8 @@ namespace Konstruktor.Methoden
         public string Name { get; set; }
         public string Connection { get; set; }          //SATA, PCIe...
         public float Size { get; set; }                 //500GB, 1TB...
+        public float ReadSpeedMBs { get; set; }
+        public float WriteSpeedMBs { get; set; }
         public float Price { get; set; }
         public string[] Categories { get; set; }
     }

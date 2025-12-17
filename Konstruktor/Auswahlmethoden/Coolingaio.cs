@@ -40,7 +40,9 @@ namespace Konstruktor.Methoden
 
                     if (pick == 0)
                     {
+                        Console.BackgroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
 
                     else if (pick <= anzahlcooling)
@@ -50,7 +52,9 @@ namespace Konstruktor.Methoden
 
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
             } while (success == false);

@@ -19,12 +19,11 @@ namespace Konstruktor.Methoden
             List<Case>? cases = JsonSerializer.Deserialize<List<Case>>(jsonTextCase);
             int i = 1;
 
-
             Console.WriteLine("Cases");
             Console.WriteLine();
             foreach (var casee in cases)
             {
-                Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    Lüfterplätze: {casee.NumberCaseFans} Stück | Formfaktor: {casee.Fit} |\n   Preis: {casee.Price}€ ");
+                Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    Lüfterplätze: {casee.NumberCaseFans} Stück | Formfaktor: {casee.Fit} |\n   Number Case Fans: {casee.NumberCaseFans} |  ");
                 Console.WriteLine();
                 i++;
             }
@@ -41,7 +40,9 @@ namespace Konstruktor.Methoden
 
                     if (pick == 0)
                     {
+                        Console.BackgroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
 
                     else if (pick <= anzahlcases)
@@ -51,7 +52,9 @@ namespace Konstruktor.Methoden
 
                     else
                     {
+                        Console.BackgroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
             } while (success == false);
@@ -74,11 +77,10 @@ namespace Konstruktor.Methoden
         public float Lenght { get; set; }               //in cm
         public float Width { get; set; }                //in cm
         public float Depth { get; set; }                //in cm
-        public int NumberCaseFans { get; set; }
+        public int NumberCaseFans { get; set; }         //Custom Größen
         public int NumberSATASlots25 { get; set; }
         public int NumberSATASlots35 { get; set; }
         public float MaxGPULength { get; set; }
-        public float MaxCoolingHeight { get; set; }
         public string Fit { get; set; }                 //ob ATX, mini-STX etc...
         public float Price { get; set; }
         public float MaxCoolerHeight { get; set; }

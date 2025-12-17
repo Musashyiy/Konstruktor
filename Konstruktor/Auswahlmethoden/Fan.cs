@@ -47,7 +47,9 @@ namespace Konstruktor.Methoden
 
                     if (pick == 0)
                     {
+                        Console.BackgroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
 
                     else if (pick <= anzahlfans)
@@ -57,7 +59,9 @@ namespace Konstruktor.Methoden
 
                     else if (pick > anzahlfans)
                     {
+                        Console.BackgroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
                 

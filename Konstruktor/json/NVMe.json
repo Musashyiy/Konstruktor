@@ -3,6 +3,8 @@
     "Name": "Samsung 980 Pro 1TB NVMe",
     "Connection": "PCIe 4.0",
     "Size": 1000.0,
+    "ReadSpeedMBs": 7000,
+    "WriteSpeedMBs": 5000,
     "Price": 119.0,
     "Categories": [ "Gaming", "Rendering" ]
   },
@@ -10,6 +12,8 @@
     "Name": "WD Black SN850X 2TB NVMe",
     "Connection": "PCIe 4.0",
     "Size": 2000.0,
+    "ReadSpeedMBs": 7300,
+    "WriteSpeedMBs": 6600,
     "Price": 169.0,
     "Categories": [ "Gaming", "Rendering" ]
   },
@@ -17,6 +21,8 @@
     "Name": "Sabrent Rocket 4 Plus 4TB",
     "Connection": "PCIe 4.0",
     "Size": 4000.0,
+    "ReadSpeedMBs": 7100,
+    "WriteSpeedMBs": 6600,
     "Price": 379.0,
     "Categories": [ "Rendering", "Server" ]
   },
@@ -24,6 +30,8 @@
     "Name": "Corsair MP600 Pro XT 2TB",
     "Connection": "PCIe 4.0",
     "Size": 2000.0,
+    "ReadSpeedMBs": 7100,
+    "WriteSpeedMBs": 6800,
     "Price": 189.0,
     "Categories": [ "Gaming", "Rendering" ]
   },
@@ -31,6 +39,8 @@
     "Name": "Samsung 990 Pro 2TB NVMe",
     "Connection": "PCIe 4.0",
     "Size": 2000.0,
+    "ReadSpeedMBs": 7450,
+    "WriteSpeedMBs": 6900,
     "Price": 189.0,
     "Categories": [ "Gaming", "Rendering" ]
   },
@@ -38,6 +48,8 @@
     "Name": "Intel Optane P5800X 1.6TB",
     "Connection": "PCIe 4.0",
     "Size": 1600.0,
+    "ReadSpeedMBs": 7200,
+    "WriteSpeedMBs": 6200,
     "Price": 1199.0,
     "Categories": [ "Server", "Rendering" ]
   },
@@ -45,6 +57,8 @@
     "Name": "WD Blue SN580 1TB NVMe",
     "Connection": "PCIe 4.0",
     "Size": 1000.0,
+    "ReadSpeedMBs": 4150,
+    "WriteSpeedMBs": 4150,
     "Price": 79.0,
     "Categories": [ "Office", "Gaming" ]
   }

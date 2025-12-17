@@ -43,7 +43,9 @@ namespace Konstruktor.Checks
 
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.WriteLine("CPU und Motherboard sind kompatibel.");
+                    Console.ResetColor();
                     success = true;
                 }
             }            

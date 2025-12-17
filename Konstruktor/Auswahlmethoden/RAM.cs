@@ -19,8 +19,7 @@ namespace Konstruktor.Methoden
             List<RAM>? rams = JsonSerializer.Deserialize<List<RAM>>(jsonTextRAM);
             int i = 1;
 
-
-            Console.WriteLine("RAMs");
+            Console.WriteLine("RAM-Riegel:");
             Console.WriteLine();
             foreach (var ramss in rams)
             {
@@ -41,7 +40,9 @@ namespace Konstruktor.Methoden
 
                     if (pick == 0)
                     {
+                        Console.BackgroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
 
                     else if (pick <= anzahlram)
@@ -51,7 +52,9 @@ namespace Konstruktor.Methoden
 
                     else
                     {
+                        Console.BackgroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
             } while (success == false);

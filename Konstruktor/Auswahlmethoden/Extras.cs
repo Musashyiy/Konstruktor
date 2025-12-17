@@ -44,7 +44,9 @@ namespace Konstruktor.Methoden
 
                         if (pick == 0)
                         {
+                            Console.BackgroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
                         }
 
                         else if (pick <= anzahlextras)
@@ -54,7 +56,9 @@ namespace Konstruktor.Methoden
 
                         else
                         {
+                            Console.BackgroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
                         }
                     }
                 } while (success == false);
@@ -85,7 +89,9 @@ namespace Konstruktor.Methoden
 
                     else
                     {
-                        Console.WriteLine("Ungültige eingabe. Bitte erneut auswählen.");
+                        Console.BackgroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("ungültige Eingabe. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
                 
