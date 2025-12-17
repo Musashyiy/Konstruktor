@@ -30,6 +30,66 @@
 		"Depth": 12.9
 	},
 	{
+		"Name": "Noctua NH-U12A",
+		"Form": "Air",
+		"Price": 109.0,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 15.8,
+		"Width": 12.5,
+		"Depth": 11.2
+	},
+	{
+		"Name": "be quiet! Dark Rock 4",
+		"Form": "Air",
+		"Price": 74.0,
+		"Categories": [ "Gaming", "Office" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 15.9,
+		"Width": 13.6,
+		"Depth": 9.6
+	},
+	{
+		"Name": "Scythe Fuma 3",
+		"Form": "Air",
+		"Price": 59.0,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 15.4,
+		"Width": 13.0,
+		"Depth": 13.1
+	},
+	{
+		"Name": "Thermalright Peerless Assassin 120",
+		"Form": "Air",
+		"Price": 45.0,
+		"Categories": [ "Gaming" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 15.7,
+		"Width": 12.5,
+		"Depth": 13.5
+	},
+	{
+		"Name": "Cooler Master Hyper 212 Black Edition",
+		"Form": "Air",
+		"Price": 39.0,
+		"Categories": [ "Office", "Gaming" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 15.8,
+		"Width": 12.0,
+		"Depth": 7.9
+	},
+	{
+		"Name": "Noctua NH-L12S",
+		"Form": "Air",
+		"Price": 59.0,
+		"Categories": [ "Office", "Server" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 7.0,
+		"Width": 12.8,
+		"Depth": 14.6
+	},
+	{
 		"Name": "Cooler Master 2U Passive Server Cooler",
 		"Form": "Passive",
 		"Price": 49.0,

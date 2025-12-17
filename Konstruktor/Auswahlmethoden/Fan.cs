@@ -106,56 +106,15 @@ namespace Konstruktor.Methoden
                 } while (!otherfansbool);
 
                 
-
-                //FanSelection fs = new FanSelection
-                //{
-                //    Model = theonefanpicked,
-                //    Quantity = numberfans
-                //};
-
-                //mypc.Fansselection.Add(fs);
-
             } while (!success);
 
-                //do
-                //{
-                //    Console.WriteLine("Wie viele Lüfter werden eingebaut?");
-                //    int.TryParse(Console.ReadLine(), out amount);
-
-                //    if (amount <= mypc.Case.NumberCaseFans)
-                //    {
-                //        Console.WriteLine($"{amount} Lüfter wurden Hinzugefügt.");
-                //        successfanamount = true;
-                //    }
-
-                //    else
-                //    {
-                //        Console.WriteLine("Es wurden mehr Lüfter ausgewählt, als das Gehäuse fassen kann.\nSind sie sicher, dass die Auswahl bestehen bleiben soll?\nJa(y) oder Nein(n)?");
-                //        char.TryParse(Console.ReadLine(), out accept);
-
-                //        if (accept == 'n')
-                //        {
-                //            Console.WriteLine("Wählen sie die neue Anzahl der Lüfter aus.");
-                //            continue;
-                //        }
-
-                //        else if (accept == 'y')
-                //        {
-                //            Console.WriteLine($"{amount} Lüfter wurden Hinzugefügt.");
-                //            successfanamount = true;
-                //        }
-
-                //        else
-                //        {
-                //            Console.WriteLine("Ungültige Auswahl. Bitte zwischen Ja(y) und Nein(n) auswählen.");
-                //        }
-                //    }
-
-                //} while (!successfanamount);
+                
 
             Console.Clear();
+
+            int fansamount = mypc.Fans.Count();
                         
-            Console.WriteLine($"{amount} Lüfter wurden ausgewählt");
+            Console.WriteLine($"{fansamount} Lüfter wurden ausgewählt");
 
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ReadKey();
@@ -170,10 +129,6 @@ namespace Konstruktor.Methoden
         public float Price { get; set; }
         public string[] Categories { get; set; }
     }
-    //public class FanSelection
-    //{
-    //    public Fan Model { get; set; }
-    //    public int Quantity { get; set; }
-    //}
+   
 }   
     

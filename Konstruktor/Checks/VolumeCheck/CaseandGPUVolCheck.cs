@@ -81,7 +81,7 @@ namespace Konstruktor.Checks.VolumeCheck
 
             else
             {
-                Console.WriteLine("Die GPU passt in der Breite ind Gehäuse.");
+                Console.WriteLine("Die GPU passt in der Breite in das Gehäuse.");
             }
 
         }

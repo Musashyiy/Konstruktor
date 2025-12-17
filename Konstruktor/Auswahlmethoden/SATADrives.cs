@@ -28,61 +28,63 @@ namespace Konstruktor.Methoden
 
             Console.WriteLine("SATA-Speicher");
             Console.WriteLine();
-            
-            foreach (var drivess in drives)
-            {
-                Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size} Euro | Preis: {drivess.Price}€"); 
-                Console.WriteLine();
-                i++;
-            }
 
-            int j=1;
-
-            while (j<=anzahl)
+            if (anzahl != 0)
             {
-                do
+                foreach (var drivess in drives)
                 {
-                    if (success == false)
+                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size} Euro | Preis: {drivess.Price}€");
+                    Console.WriteLine();
+                    i++;
+                }
+
+                int j = 1;
+
+                while (j <= anzahl)
+                {
+                    do
                     {
-                        Console.WriteLine("Auswahl SATA-Drives: ");
-                        int.TryParse(Console.ReadLine(), out pick);
-
-                        if (pick == 0)
+                        if (success == false)
                         {
-                            Console.WriteLine("Es werden keine weiteren Laufwerke hinzugefügt.");
-                            success = true;
-                            break;
+                            Console.WriteLine("Auswahl SATA-Drives: ");
+                            int.TryParse(Console.ReadLine(), out pick);
+
+                            if (pick == 0)
+                            {
+                                Console.WriteLine("Es werden keine weiteren Laufwerke hinzugefügt.");
+                                success = true;
+                                break;
+                            }
+
+                            else if (j < anzahl)
+                            {
+
+                            }
+
+                            else if (pick <= anzahldrives)
+                            {
+                                success = true;
+                            }
+
+                            else if (pick > anzahldrives)
+                            {
+                                Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            }
+
+                            int actualpick = pick - 1;
+                            var selecteddrive = drives[actualpick];
+                            mypc.DriveSATA.Add(selecteddrive);
+                            Console.WriteLine($"{selecteddrive.Name} wurde als SATA gewählt.");
+                            j++;
                         }
 
-                        else if (j<anzahl)
-                        {
+                    } while (success == false);
+                }
 
-                        }
 
-                        else if (pick <= anzahldrives)
-                        {
-                            success = true;
-                        }
-
-                        else if (pick > anzahldrives)
-                        {
-                            Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
-                        }
-
-                        int actualpick = pick - 1;
-                        var selecteddrive = drives[actualpick];
-                        mypc.DriveSATA.Add(selecteddrive);
-                        Console.WriteLine($"{selecteddrive.Name} wurde als SATA gewählt.");
-                        j++;
-                    }
-
-                } while (success == false);
             }
-                    
-            Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
-            Console.ReadKey();
-
-            
+                Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+                Console.ReadKey();
         }
     }
     public class SATADrives                                         ///Die Blaupause für die verscheidenen Festplatten

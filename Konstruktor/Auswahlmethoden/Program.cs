@@ -54,13 +54,13 @@ namespace Konstruktor.Methoden
             Konstruktor.Checks.RAMCheck.RAMChecking(mypc);
 
             Console.WriteLine("Kühlung auswählen:");
-            Console.WriteLine( "Wollen sie eine Luftkühlung(1) oder eine Wasserkühlung(2)?");
+            Console.WriteLine("Wollen sie eine Luftkühlung(1) oder eine Wasserkühlung(2)?");
             int aioair;
             bool aioorair = false;
             int.TryParse(Console.ReadLine(), out aioair);
 
             do
-            {
+                {
                 if (aioair == 1)
                 {
                     Konstruktor.Methoden.AirCooling.AirCoolingsSelection(mypc);
@@ -68,7 +68,7 @@ namespace Konstruktor.Methoden
                 }
 
                 else if (aioair == 2)
-            {
+                {
                     Konstruktor.Methoden.AioCoolings.AioCoolingsSelection(mypc);
                     aioorair = true;
                 }
@@ -76,9 +76,9 @@ namespace Konstruktor.Methoden
                 else
                 {
                     Console.WriteLine("Ungültige Eingabe. Bitte erneut auswählen.");
-            }
+                }
 
-            } while (!aioorair);
+            } while (!aioorair) ;
 
 
             Console.WriteLine("SATA-Speicherlaufwerke auswählen:");
@@ -102,7 +102,6 @@ namespace Konstruktor.Methoden
             Konstruktor.Methoden.Extra.ExtrasSelection(mypc);
             Console.Clear();
 
-            //Konstruktor.Checks.VolumeCheck.MeasurmentCheck(mypc);
 
             Konstruktor.Checks.PriceCheck.Pricecheck(mypc);
 

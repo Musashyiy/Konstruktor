@@ -58,6 +58,7 @@ namespace Konstruktor.Methoden
             } while (success == false);
 
             int actualpick = pick - 1;
+            
             mypc.Coolings = coolingsair[actualpick];
             Console.WriteLine($"{coolingsair[actualpick].Name} wurde als Kühlung ausgewählt.");
 

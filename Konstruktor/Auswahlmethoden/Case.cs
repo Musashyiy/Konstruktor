@@ -75,6 +75,10 @@ namespace Konstruktor.Methoden
         public float Width { get; set; }                //in cm
         public float Depth { get; set; }                //in cm
         public int NumberCaseFans { get; set; }
+        public int NumberSATASlots25 { get; set; }
+        public int NumberSATASlots35 { get; set; }
+        public float MaxGPULength { get; set; }
+        public float MaxCoolingHeight { get; set; }
         public string Fit { get; set; }                 //ob ATX, mini-STX etc...
         public float Price { get; set; }
         public float MaxCoolerHeight { get; set; }
