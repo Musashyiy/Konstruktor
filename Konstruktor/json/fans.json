@@ -1,38 +1,80 @@
 [
 	{
-		"Name": "Noctua NF-A12x25 PWM",
+		"Name": "Arctic P12 PWM PST",
 		"Size": 120.0,
-		"Price": 29.0,
-		"Categories": [ "Gaming", "Rendering", "Office" ]
+		"Price": 4.99,
+		"Categories": [ "Office", "Server" ]
+	},
+	{
+		"Name": "Arctic P14 PWM PST",
+		"Size": 140.0,
+		"Price": 6.99,
+		"Categories": [ "Office", "Server" ]
+	},
+	{
+		"Name": "be quiet! Pure Wings 2 140mm",
+		"Size": 140.0,
+		"Price": 10.99,
+		"Categories": [ "Office" ]
 	},
 	{
 		"Name": "be quiet! Silent Wings Pro 4 140mm",
 		"Size": 140.0,
-		"Price": 31.0,
+		"Price": 35.99,
 		"Categories": [ "Gaming", "Rendering" ]
 	},
 	{
-		"Name": "Corsair AF120 Elite",
+		"Name": "Corsair AF120 ELITE",
 		"Size": 120.0,
-		"Price": 19.0,
+		"Price": 24.90,
 		"Categories": [ "Gaming", "Office" ]
 	},
 	{
-		"Name": "Arctic P12 PWM PST",
+		"Name": "Corsair ML140 Pro",
+		"Size": 140.0,
+		"Price": 29.90,
+		"Categories": [ "Gaming", "Rendering" ]
+	},
+	{
+		"Name": "Cooler Master SickleFlow 120",
 		"Size": 120.0,
-		"Price": 7.0,
+		"Price": 12.49,
+		"Categories": [ "Gaming", "Office" ]
+	},
+	{
+		"Name": "Cooler Master MegaFlow 200",
+		"Size": 200.0,
+		"Price": 18.99,
+		"Categories": [ "Gaming", "Server" ]
+	},
+	{
+		"Name": "Lian Li UNI FAN SL120 V2",
+		"Size": 120.0,
+		"Price": 28.90,
+		"Categories": [ "Gaming", "Rendering" ]
+	},
+	{
+		"Name": "Noctua NF-A9 PWM",
+		"Size": 92.0,
+		"Price": 17.90,
 		"Categories": [ "Office", "Server" ]
 	},
 	{
-		"Name": "Lian Li UNI Fan SL120 V2",
+		"Name": "Noctua NF-A12x25 PWM",
 		"Size": 120.0,
-		"Price": 25.0,
-		"Categories": [ "Gaming", "Rendering" ]
+		"Price": 33.89,
+		"Categories": [ "Gaming", "Rendering", "Office" ]
+	},
+	{
+		"Name": "Noctua NF-A14 PWM",
+		"Size": 140.0,
+		"Price": 26.90,
+		"Categories": [ "Gaming", "Rendering", "Server" ]
 	},
 	{
 		"Name": "Phanteks T30-120",
 		"Size": 120.0,
-		"Price": 29.0,
+		"Price": 40.39,
 		"Categories": [ "Gaming", "Rendering", "Server" ]
 	}
 ]

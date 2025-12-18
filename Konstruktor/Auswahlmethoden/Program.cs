@@ -21,65 +21,65 @@ namespace Konstruktor.Methoden
 
             MyPc mypc = new MyPc();
 
-            //Konstruktor.Methoden.Cases.CaseSelection(mypc);
-            //Console.Clear();
-            //Console.WriteLine("\x1b[3J");
+            Konstruktor.Methoden.Cases.CaseSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
 
-            //Konstruktor.Methoden.PSUs.PSUSelection(mypc);
-            //Console.Clear();
-            //Console.WriteLine("\x1b[3J");
+            Konstruktor.Methoden.PSUs.PSUSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
 
             Mainboards.MainboardSelection(mypc);
             Console.Clear();
             Console.WriteLine("\x1b[3J");
 
-            //Konstruktor.Checks.FormfactorCheck.FormCheck(mypc);
+            Konstruktor.Checks.FormfactorCheck.FormCheck(mypc);
 
-            //Konstruktor.Methoden.CPUs.CPUSelection(mypc);
-            //Console.Clear();
-            //Console.WriteLine("\x1b[3J");
+            Konstruktor.Methoden.CPUs.CPUSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
 
-            //Konstruktor.Checks.SocketCheck.CheckSocket(mypc);
+            Konstruktor.Checks.SocketCheck.CheckSocket(mypc);
 
-            //Konstruktor.Methoden.GPUs.GPUSelection(mypc);
-            //Console.Clear();
-            //Console.WriteLine("\x1b[3J");
+            Konstruktor.Methoden.GPUs.GPUSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
 
-            //Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
+            Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
 
-            //Konstruktor.Methoden.RAMs.RAMSelection(mypc);
-            //Console.Clear();
-            //Console.WriteLine("\x1b[3J");
+            Konstruktor.Methoden.RAMs.RAMSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
 
-            //Konstruktor.Checks.RAMCheck.RAMChecking(mypc);
+            Konstruktor.Checks.RAMCheck.RAMChecking(mypc);
 
-            //Console.WriteLine("Wollen sie eine Luftkühlung(1) oder eine Wasserkühlung(2)?");
-            //int aioair;
-            //bool aioorair = false;
-            //int.TryParse(Console.ReadLine(), out aioair);
+            Console.WriteLine("Wollen sie eine Luftkühlung(1) oder eine Wasserkühlung(2)?");
+            int aioair;
+            bool aioorair = false;
+            int.TryParse(Console.ReadLine(), out aioair);
 
-            //do
-            //{
-            //    if (aioair == 1)
-            //    {
-            //        Konstruktor.Methoden.AirCooling.AirCoolingsSelection(mypc);
-            //        aioorair = true;
-            //    }
+            do
+            {
+                if (aioair == 1)
+                {
+                    Konstruktor.Methoden.AirCooling.AirCoolingsSelection(mypc);
+                    aioorair = true;
+                }
 
-            //    else if (aioair == 2)
-            //    {
-            //        Konstruktor.Methoden.AioCoolings.AioCoolingsSelection(mypc);
-            //        aioorair = true;
-            //    }
+                else if (aioair == 2)
+                {
+                    Konstruktor.Methoden.AioCoolings.AioCoolingsSelection(mypc);
+                    aioorair = true;
+                }
 
-            //    else
-            //    {
-            //        Console.WriteLine("Ungültige Eingabe. Bitte erneut auswählen.");
-            //    }
+                else
+                {
+                    Console.WriteLine("Ungültige Eingabe. Bitte erneut auswählen.");
+                }
 
-            //} while (!aioorair);
-            //Console.Clear();
-            //Console.WriteLine("\x1b[3J");
+            } while (!aioorair);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
 
             SATADrive.SATADrivesSelection(mypc);
             Console.Clear();
@@ -93,28 +93,30 @@ namespace Konstruktor.Methoden
                 Console.WriteLine("\x1b[3J");
             }
 
-            //NVMeDriverCheck.NVMeDriveCheck(mypc);
+            NVMeDriverCheck.NVMeDriveCheck(mypc);
 
-            //Konstruktor.Methoden.Fans.FansSelection(mypc);
-            //Console.Clear();
-            //Console.WriteLine("\x1b[3J");
+            Konstruktor.Methoden.Fans.FansSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
 
-            //Konstruktor.Methoden.Extra.ExtrasSelection(mypc);
-            //Console.Clear();
-            //Console.WriteLine("\x1b[3J");
+            Konstruktor.Methoden.Extra.ExtrasSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
 
-            //Konstruktor.Checks.PriceCheck.Pricecheck(mypc);
+            Konstruktor.Checks.FormfactorCheck.FormCheck(mypc);
+            Konstruktor.Checks.SocketCheck.CheckSocket(mypc);
+            Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
+            Konstruktor.Checks.RAMCheck.RAMChecking(mypc);
+            Konstruktor.Checks.PriceCheck.Pricecheck(mypc);
 
             Console.WriteLine("Ihr System:");
-            //Console.WriteLine("Gehäuse: " + mypc.Case.Name + " | " + mypc.Case.Price + "€");
-            //Console.WriteLine("Netzteil: " + mypc.Psu.Name + " | " + mypc.Psu.Price + "€");
-            //Console.WriteLine("Motherboard: " + mypc.Motherboard.Name + " | " + mypc.Motherboard.Price + "€");
-            //Console.WriteLine("CPU: " + mypc.Cpu.Name + " | " + mypc.Cpu.Price + "€");
-            //Console.WriteLine("Grafikkarte: " + mypc.Gpu.Name + " | " + mypc.Gpu.Price + "€");
-            //Console.WriteLine("RAM: " + mypc.Ram.Name + " | " + mypc.Ram.Price + "€");
-            //Console.WriteLine("Kühlung: " + mypc.Coolings.Name + " | " + mypc.Coolings.Price + "€");
-            //Console.WriteLine("SATA-Laufwerke: " + string.Join(", ", mypc.DriveSATA.Select(d => d.Name)));
-            //Console.WriteLine("NVMe-Laufwerke: " + string.Join(", ", mypc.DriveNVMe.Select(f => f.Name)));
+            Console.WriteLine("Gehäuse: " + mypc.Case.Name + " | " + mypc.Case.Price + "€");
+            Console.WriteLine("Netzteil: " + mypc.Psu.Name + " | " + mypc.Psu.Price + "€");
+            Console.WriteLine("Motherboard: " + mypc.Motherboard.Name + " | " + mypc.Motherboard.Price + "€");
+            Console.WriteLine("CPU: " + mypc.Cpu.Name + " | " + mypc.Cpu.Price + "€");
+            Console.WriteLine("Grafikkarte: " + mypc.Gpu.Name + " | " + mypc.Gpu.Price + "€");
+            Console.WriteLine("RAM: " + mypc.Ram.Name + " | " + mypc.Ram.Price + "€");
+            Console.WriteLine("Kühlung: " + mypc.Coolings.Name + " | " + mypc.Coolings.Price + "€");            
 
             var SATAText = string.Join(", ",
                 mypc.DriveSATA
@@ -144,24 +146,38 @@ namespace Konstruktor.Methoden
             );
             Console.WriteLine($"NVMe-Laufwerke: {NVMeText}");
 
-            //var fanText = string.Join(", ",
-            //    mypc.Fans
-            //        .GroupBy(m => m.Name)
-            //        .Select(n =>
-            //        {
-            //            int count = n.Count();
-            //            float unitPrice = n.First().Price;
-            //            float totalPrice = count * unitPrice;
+            var fanText = string.Join(", ",
+                mypc.Fans
+                    .GroupBy(m => m.Name)
+                    .Select(l =>
+                    {
+                        int count = l.Count();
+                        float unitPrice = l.First().Price;
+                        float totalPrice = count * unitPrice;
 
-            //            return $"{count}x {n.Key} ({totalPrice}€)";
-            //        })
-            //);
-            //Console.WriteLine("Lüfter: " + fanText);
-            //Console.WriteLine("Extras: " + string.Join(", ", mypc.Extras.Select(d => d.Name)));
-            //Console.WriteLine("--------------------------------------------------------------");
-            //Console.ForegroundColor = ConsoleColor.DarkGreen;
-            //Console.WriteLine("Gesamtpreis: " + mypc.Price + "€");
-            //Console.ResetColor();
+                        return $"{count}x {l.Key} ({totalPrice}€)";
+                    })
+            );
+            Console.WriteLine("Lüfter: " + fanText);
+
+            var extrasText = string.Join(", ",
+                mypc.Extras
+                    .GroupBy(e => e.Name)
+                    .Select(n =>
+                    {
+                        int count = n.Count();
+                        float unitPrice = n.First().Price;
+                        float totalPrice = count * unitPrice;
+
+                        return $"{count}x {n.Key} ({totalPrice}€)";
+                    })
+            );
+            Console.WriteLine("Lüfter: " +  extrasText);
+
+            Console.WriteLine("--------------------------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Gesamtpreis: " + mypc.Price + "€");
+            Console.ResetColor();
         }
     }
 }

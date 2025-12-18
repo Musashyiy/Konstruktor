@@ -1,47 +1,11 @@
 [
   {
-    "Name": "Samsung 980 Pro 1TB NVMe",
-    "Connection": "PCIe 4.0",
-    "Size": 1000.0,
-    "ReadSpeedMBs": 7000,
-    "WriteSpeedMBs": 5000,
-    "Price": 119.0,
-    "Categories": [ "Gaming", "Rendering" ]
-  },
-  {
-    "Name": "WD Black SN850X 2TB NVMe",
-    "Connection": "PCIe 4.0",
-    "Size": 2000.0,
-    "ReadSpeedMBs": 7300,
-    "WriteSpeedMBs": 6600,
-    "Price": 169.0,
-    "Categories": [ "Gaming", "Rendering" ]
-  },
-  {
-    "Name": "Sabrent Rocket 4 Plus 4TB",
-    "Connection": "PCIe 4.0",
-    "Size": 4000.0,
-    "ReadSpeedMBs": 7100,
-    "WriteSpeedMBs": 6600,
-    "Price": 379.0,
-    "Categories": [ "Rendering", "Server" ]
-  },
-  {
     "Name": "Corsair MP600 Pro XT 2TB",
     "Connection": "PCIe 4.0",
     "Size": 2000.0,
     "ReadSpeedMBs": 7100,
     "WriteSpeedMBs": 6800,
-    "Price": 189.0,
-    "Categories": [ "Gaming", "Rendering" ]
-  },
-  {
-    "Name": "Samsung 990 Pro 2TB NVMe",
-    "Connection": "PCIe 4.0",
-    "Size": 2000.0,
-    "ReadSpeedMBs": 7450,
-    "WriteSpeedMBs": 6900,
-    "Price": 189.0,
+    "Price": 229.99,
     "Categories": [ "Gaming", "Rendering" ]
   },
   {
@@ -54,12 +18,48 @@
     "Categories": [ "Server", "Rendering" ]
   },
   {
+    "Name": "Sabrent Rocket 4 Plus 4TB",
+    "Connection": "PCIe 4.0",
+    "Size": 4000.0,
+    "ReadSpeedMBs": 7100,
+    "WriteSpeedMBs": 6600,
+    "Price": 379.0,
+    "Categories": [ "Rendering", "Server" ]
+  },
+  {
+    "Name": "Samsung 980 Pro 1TB NVMe",
+    "Connection": "PCIe 4.0",
+    "Size": 1000.0,
+    "ReadSpeedMBs": 7000,
+    "WriteSpeedMBs": 5000,
+    "Price": 240.92,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "Samsung 990 Pro 2TB NVMe",
+    "Connection": "PCIe 4.0",
+    "Size": 2000.0,
+    "ReadSpeedMBs": 7450,
+    "WriteSpeedMBs": 6900,
+    "Price": 199.99,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "WD Black SN850X 2TB NVMe",
+    "Connection": "PCIe 4.0",
+    "Size": 2000.0,
+    "ReadSpeedMBs": 7300,
+    "WriteSpeedMBs": 6600,
+    "Price": 189.90,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
     "Name": "WD Blue SN580 1TB NVMe",
     "Connection": "PCIe 4.0",
     "Size": 1000.0,
     "ReadSpeedMBs": 4150,
     "WriteSpeedMBs": 4150,
-    "Price": 79.0,
+    "Price": 85.99,
     "Categories": [ "Office", "Gaming" ]
   }
 ]

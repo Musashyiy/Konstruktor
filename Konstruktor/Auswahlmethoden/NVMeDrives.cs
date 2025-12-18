@@ -24,7 +24,7 @@ namespace Konstruktor.Methoden
             int pick = 0;
             char jumpNVMe;
 
-            Console.WriteLine("Soll eine NVMe hinzugefügt werden?\n   Ja(y) oder Nein(n)?");
+            Console.WriteLine("Soll eine NVMe hinzugefügt werden?\n  Ja(y) oder Nein(n)?");
             char.TryParse(Console.ReadLine(), out jumpNVMe);
 
             if(jumpNVMe == 'y')
@@ -34,7 +34,7 @@ namespace Konstruktor.Methoden
             
                 foreach (var drivess in drives)
                 {
-                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size} Euro | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs} \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs} | Preis: {drivess.Price}€");
+                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size}MB  | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Preis: {drivess.Price}€");
                     Console.WriteLine();
                     i++;
                 }
