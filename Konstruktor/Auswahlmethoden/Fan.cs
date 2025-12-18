@@ -112,10 +112,6 @@ namespace Konstruktor.Methoden
                 
             } while (!success);
 
-                
-
-            Console.Clear();
-
             int fansamount = mypc.Fans.Count();
                         
             Console.WriteLine($"{fansamount} Lüfter wurden ausgewählt");

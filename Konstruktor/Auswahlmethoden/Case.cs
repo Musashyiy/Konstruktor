@@ -11,7 +11,7 @@ namespace Konstruktor.Methoden
 {
     public class Cases
     {
-        public static string CaseSelection(MyPc mypc)
+        public static void CaseSelection(MyPc mypc)
         {
             string jsonTextCase = File.ReadAllText("json/cases.json");
             JsonArray casesarray = JsonNode.Parse(jsonTextCase).AsArray();
@@ -66,7 +66,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ReadKey();
 
-            return mypc.Case.Name;
+            //return mypc.Case.Name;
         }
 
 

@@ -21,16 +21,17 @@ namespace Konstruktor.Methoden
             bool success = false;
             int anzahl;
             int pick = 0;
+            char jumpSATA;
+            bool moredrivesyesno = false;
 
-            
-            Console.WriteLine("Wie viele SATA-Festplatten wollen sie einbauen? Bei 0 werden keine weiteren hinzugefügt.");
-            int.TryParse(Console.ReadLine(), out anzahl);
+            Console.WriteLine("Soll eine SATA-Festplatte hinzugefügt werden?\n   Ja(y) oder Nein(n)?");
+            char.TryParse(Console.ReadLine(), out jumpSATA);
 
-            Console.WriteLine("Auswahl SATA-Speicher:");
-            Console.WriteLine();
-
-            if (anzahl != 0)
+            if(jumpSATA == 'y')
             {
+                Console.WriteLine("Auswahl SATA-Speicher:");
+                Console.WriteLine();
+
                 foreach (var drivess in drives)
                 {
                     Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size} Euro | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Preis: {drivess.Price}€");
@@ -38,12 +39,14 @@ namespace Konstruktor.Methoden
                     i++;
                 }
 
-                int j = 1;
-
-                while (j <= anzahl)
+                do
                 {
+                    int j = 1;                
+                
                     do
                     {
+                        success = false;
+
                         if (success == false)
                         {
                             Console.WriteLine("Auswahl SATA-Drives: ");
@@ -76,15 +79,39 @@ namespace Konstruktor.Methoden
                         }
 
                     } while (success == false);
-                }
-            }
 
-            else if (anzahl == 0)
-            {
-                Console.WriteLine("Es werdenkeine weiteren Laufwerke hinzugefügt.");
+                    bool newSATA = false;
+
+                    do
+                    {
+                        Console.WriteLine("Soll eine weitere Festplatte hinzugefügt werden?\n   Ja(y) oder Nein(n)?");
+                        char numberdriveyesno;
+                        char.TryParse(Console.ReadLine(), out numberdriveyesno);
+
+                        if (numberdriveyesno == 'y')
+                        {
+                            Console.WriteLine("Wählen sie eine weitere NVMe aus.");
+                            newSATA = true;
+                        }
+
+                        else if (numberdriveyesno == 'n')
+                        {
+                            moredrivesyesno = true;
+                            newSATA = true;
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("Ungültige Auswahl. Bitte erneut auswählen.");
+                        }
+
+                    } while (!newSATA);
+
+                } while (!moredrivesyesno);
             }
-                Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
-                Console.ReadKey();
+            
+            Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ReadKey();
         }
     }
     public class SATADrives                                         ///Die Blaupause für die verscheidenen Festplatten

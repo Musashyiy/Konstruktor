@@ -23,7 +23,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var ramss in rams)
             {
-                Console.WriteLine($"({i}) {ramss.Name} | Wattoutput: {ramss.Size} | Höhe: {ramss.Type}cm | Breite: {ramss.Design}cm \n    Tiefe: {ramss.ClockSpeed}cm  |  Preis:{ramss.Price}€");
+                Console.WriteLine($"({i}) {ramss.Name} |Speicherkapazität: {ramss.Size} | DDR-Typ: {ramss.Type} | Design: {ramss.Design} \n    Taktgeschwindigkeit: {ramss.ClockSpeed}MHz  |  Preis:{ramss.Price}€");
                 Console.WriteLine();
                 i++;
             }
