@@ -29,9 +29,9 @@ namespace Konstruktor.Methoden
             //Console.Clear();
             //Console.WriteLine("\x1b[3J");
 
-            //Mainboards.MainboardSelection(mypc);
-            //Console.Clear();
-            //Console.WriteLine("\x1b[3J");
+            Mainboards.MainboardSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
 
             //Konstruktor.Checks.FormfactorCheck.FormCheck(mypc);
 
@@ -85,13 +85,13 @@ namespace Konstruktor.Methoden
             Console.Clear();
             Console.WriteLine("\x1b[3J");
 
-            //if (mypc.Motherboard.DriveSupport.Contains("PCIe 4.0"))
-            //{
+            if (mypc.Motherboard.DriveSupport.Contains("PCIe 4.0"))
+            {
 
-            //    NVMeDrive.NVMeDrivesSelection(mypc);
-            //    Console.Clear();
-            //    Console.WriteLine("\x1b[3J");
-            //}
+                NVMeDrive.NVMeDrivesSelection(mypc);
+                Console.Clear();
+                Console.WriteLine("\x1b[3J");
+            }
 
             //NVMeDriverCheck.NVMeDriveCheck(mypc);
 
@@ -113,8 +113,37 @@ namespace Konstruktor.Methoden
             //Console.WriteLine("Grafikkarte: " + mypc.Gpu.Name + " | " + mypc.Gpu.Price + "€");
             //Console.WriteLine("RAM: " + mypc.Ram.Name + " | " + mypc.Ram.Price + "€");
             //Console.WriteLine("Kühlung: " + mypc.Coolings.Name + " | " + mypc.Coolings.Price + "€");
-            Console.WriteLine("SATA-Laufwerke: " + string.Join(", ", mypc.DriveSATA.Select(d => d.Name)) + "| " + string.Join("€, ", mypc.DriveSATA.Select(b => b.Price)));
-            //Console.WriteLine("NVMe-Laufwerke: " + string.Join(", ", mypc.DriveNVMe.Select(f => f.Name)) + "| " + string.Join("€, ", mypc.DriveNVMe.Select(p => p.Price)));
+            //Console.WriteLine("SATA-Laufwerke: " + string.Join(", ", mypc.DriveSATA.Select(d => d.Name)));
+            //Console.WriteLine("NVMe-Laufwerke: " + string.Join(", ", mypc.DriveNVMe.Select(f => f.Name)));
+
+            var SATAText = string.Join(", ",
+                mypc.DriveSATA
+                    .GroupBy(h => h.Name)
+                    .Select(k =>
+                    {
+                        int count = k.Count();
+                        float unitprice = k.First().Price;
+                        float totalPrice = count * unitprice;
+
+                        return $"{count}x {k.Key} ({totalPrice}€)";
+                    })
+            );
+            Console.WriteLine($"SATA-Laufwerke: {SATAText}");
+
+            var NVMeText = string.Join(", ",
+                mypc.DriveNVMe
+                    .GroupBy(a => a.Name)
+                    .Select(a =>
+                    {
+                        int count = a.Count();
+                        float unitprice = a.First().Price;
+                        float totalPrice = count * unitprice;
+
+                        return $"{count}x {a.Key} ({totalPrice}€)";
+                    })
+            );
+            Console.WriteLine($"NVMe-Laufwerke: {NVMeText}");
+
             //var fanText = string.Join(", ",
             //    mypc.Fans
             //        .GroupBy(m => m.Name)
@@ -128,7 +157,7 @@ namespace Konstruktor.Methoden
             //        })
             //);
             //Console.WriteLine("Lüfter: " + fanText);
-            //Console.WriteLine("Extras: " + string.Join(", ", mypc.Extras.Select(d => d.Name)) + "| " + string.Join("€, ", mypc.Extras.Select(o => o.Price)));
+            //Console.WriteLine("Extras: " + string.Join(", ", mypc.Extras.Select(d => d.Name)));
             //Console.WriteLine("--------------------------------------------------------------");
             //Console.ForegroundColor = ConsoleColor.DarkGreen;
             //Console.WriteLine("Gesamtpreis: " + mypc.Price + "€");

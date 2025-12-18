@@ -42,7 +42,7 @@ namespace Konstruktor.Methoden
 
                     if (pick == 0)
                     {
-                        Console.BackgroundColor = ConsoleColor.DarkRed;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
                         Console.ResetColor();
                     }
@@ -54,7 +54,7 @@ namespace Konstruktor.Methoden
 
                     else
                     {
-                        Console.BackgroundColor = ConsoleColor.DarkRed;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
                         Console.ResetColor();
                     }

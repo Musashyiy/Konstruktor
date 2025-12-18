@@ -22,7 +22,6 @@ namespace Konstruktor.Methoden
             int anzahl;
             int pick = 0;
             char jumpSATA;
-            bool moredrivesyesno = false;
 
             Console.WriteLine("Soll eine SATA-Festplatte hinzugefügt werden?\n   Ja(y) oder Nein(n)?");
             char.TryParse(Console.ReadLine(), out jumpSATA);
@@ -34,18 +33,21 @@ namespace Konstruktor.Methoden
 
                 foreach (var drivess in drives)
                 {
-                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size} Euro | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Preis: {drivess.Price}€");
+                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size} Euro | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs} \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs} | Preis: {drivess.Price}€");
                     Console.WriteLine();
                     i++;
                 }
 
+                bool moredrivesyesno = false;
+                int j = 1;                
+
                 do
                 {
-                    int j = 1;                
-                
+
                     do
                     {
                         success = false;
+
 
                         if (success == false)
                         {
@@ -54,7 +56,7 @@ namespace Konstruktor.Methoden
 
                             if (pick == 0)
                             {
-                                Console.BackgroundColor = ConsoleColor.DarkRed;
+                                Console.ForegroundColor = ConsoleColor.DarkRed;
                                 Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
                                 Console.ResetColor();
                             }
@@ -66,7 +68,7 @@ namespace Konstruktor.Methoden
 
                             else
                             {
-                                Console.BackgroundColor = ConsoleColor.DarkRed;
+                                Console.ForegroundColor = ConsoleColor.DarkRed;
                                 Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
                                 Console.ResetColor();
                             }
@@ -90,7 +92,7 @@ namespace Konstruktor.Methoden
 
                         if (numberdriveyesno == 'y')
                         {
-                            Console.WriteLine("Wählen sie eine weitere NVMe aus.");
+                            Console.WriteLine("Wählen sie eine weitere SATA-Festplatte aus.");
                             newSATA = true;
                         }
 
