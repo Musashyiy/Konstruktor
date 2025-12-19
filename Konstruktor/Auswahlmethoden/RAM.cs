@@ -15,13 +15,17 @@ namespace Konstruktor.Methoden
         {
             string jsonTextRAM = File.ReadAllText("json/rams.json");
             JsonArray ramsarray = JsonNode.Parse(jsonTextRAM).AsArray();
-            int anzahlram = ramsarray.Count;
+            //int anzahlram = ramsarray.Count;
             List<RAM>? rams = JsonSerializer.Deserialize<List<RAM>>(jsonTextRAM);
             int i = 1;
 
+            var compatiblerams = rams
+                .Where(ram => ram.Type == mypc.Motherboard.DDRType)
+                .ToList();
+
             Console.WriteLine("RAM-Riegel:");
             Console.WriteLine();
-            foreach (var ramss in rams)
+            foreach (var ramss in compatiblerams)
             {
                 Console.WriteLine($"({i}) {ramss.Name} |Speicherkapazität: {ramss.Size} | DDR-Typ: {ramss.Type} | Design: {ramss.Design} \n    Taktgeschwindigkeit: {ramss.ClockSpeed}MHz  |  Preis:{ramss.Price}€");
                 Console.WriteLine();
@@ -30,6 +34,7 @@ namespace Konstruktor.Methoden
 
             int pick = 0;
             bool success = false;
+            int anzahlram = compatiblerams.Count();
 
             do
             {

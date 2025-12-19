@@ -15,13 +15,17 @@ namespace Konstruktor.Methoden
         {
             string jsonTextCoolingaio = File.ReadAllText("json/coolingsaio.json");
             JsonArray coolingsaioarray = JsonNode.Parse(jsonTextCoolingaio).AsArray();
-            int anzahlcooling = coolingsaioarray.Count;
+            //int anzahlcooling = coolingsaioarray.Count;
             List<CoolingBlueprint>? coolingsaio = JsonSerializer.Deserialize<List<CoolingBlueprint>>(jsonTextCoolingaio);
             int i = 1;
 
+            var compatibleaios = coolingsaio
+                .Where(aio => aio.Sockets == mypc.Motherboard.Socket)
+                .ToList();
+
             Console.WriteLine("Coolings");
             Console.WriteLine();
-            foreach (var coolingss in coolingsaio)
+            foreach (var coolingss in compatibleaios)
             {
                 Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Preis: {coolingss.Price}€");
                 Console.WriteLine();
@@ -29,7 +33,8 @@ namespace Konstruktor.Methoden
             }
 
             int pick = 0;
-            bool success = false;            
+            bool success = false;
+            int anzahlcooling = compatibleaios;
 
             do
             {
