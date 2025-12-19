@@ -21,14 +21,6 @@ namespace Konstruktor.Methoden
 
             MyPc mypc = new MyPc();
 
-            Konstruktor.Methoden.Cases.CaseSelection(mypc);
-            Console.Clear();
-            Console.WriteLine("\x1b[3J");
-
-            Konstruktor.Methoden.PSUs.PSUSelection(mypc);
-            Console.Clear();
-            Console.WriteLine("\x1b[3J");
-
             Mainboards.MainboardSelection(mypc);
             Console.Clear();
             Console.WriteLine("\x1b[3J");
@@ -99,6 +91,14 @@ namespace Konstruktor.Methoden
             Console.Clear();
             Console.WriteLine("\x1b[3J");
 
+            Konstruktor.Methoden.PSUs.PSUSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
+
+            Konstruktor.Methoden.Cases.CaseSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
+
             Konstruktor.Methoden.Extra.ExtrasSelection(mypc);
             Console.Clear();
             Console.WriteLine("\x1b[3J");
@@ -107,6 +107,7 @@ namespace Konstruktor.Methoden
             Konstruktor.Checks.SocketCheck.CheckSocket(mypc);
             Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
             Konstruktor.Checks.RAMCheck.RAMChecking(mypc);
+            NVMeDriverCheck.NVMeDriveCheck(mypc);
             Konstruktor.Checks.PriceCheck.Pricecheck(mypc);
 
             Console.WriteLine("Ihr System:");
