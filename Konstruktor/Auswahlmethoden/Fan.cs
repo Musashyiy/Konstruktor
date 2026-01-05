@@ -25,7 +25,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var fanss in fans)
             {
-                Console.WriteLine($"({i}) {fanss.Name} | Durchmesser: {fanss.Size}mm | Preis: {fanss.Price}€");
+                Console.WriteLine($"({i}) {fanss.Name} | Durchmesser: {fanss.Size}mm | Kategorien: {string.Join(", ", fanss.Categories)} | Preis: {fanss.Price}€");
                 Console.WriteLine();
                 i++;
             }

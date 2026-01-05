@@ -27,7 +27,7 @@ namespace Konstruktor.Methoden
                 Console.WriteLine();
                 foreach (var cpuss in compatiblecpus)
                 {
-                    Console.WriteLine($"({i}) {cpuss.Name} | Kernzahl: {cpuss.Cores} | Sockel: {cpuss.Socket} | L3-Cache: {cpuss.L3Cache}  \n  Taktung: {cpuss.ClockSpeed}GHz | Leistungsaufnahme: {cpuss.PowerDraw} | Preis: {cpuss.Price}€");
+                    Console.WriteLine($"({i}) {cpuss.Name} | Kernanzahl: {cpuss.Cores} | Sockel: {cpuss.Socket} | L3-Cache: {cpuss.L3Cache} MB  \n  Taktung: {cpuss.ClockSpeed}GHz | Leistungsaufnahme: {cpuss.PowerDraw} Watt | Kategorien: {string.Join(", ", cpuss.Categories)} | Preis: {cpuss.Price}€");
                     Console.WriteLine();
                     i++;
                 }

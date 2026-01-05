@@ -27,7 +27,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var ramss in compatiblerams)
             {
-                Console.WriteLine($"({i}) {ramss.Name} |Speicherkapazität: {ramss.Size} GB | DDR-Typ: {ramss.Type} | Design: {ramss.Design} \n    Taktgeschwindigkeit: {ramss.ClockSpeed}MHz  |  Preis:{ramss.Price}€");
+                Console.WriteLine($"({i}) {ramss.Name} |Speicherkapazität: {ramss.Size} GB | DDR-Typ: {ramss.Type} | Design: {ramss.Design} \n    Taktgeschwindigkeit: {ramss.ClockSpeed}MHz | Kategorien: {string.Join(", ", ramss.Categories)} | Preis:{ramss.Price}€");
                 Console.WriteLine();
                 i++;
             }
@@ -66,8 +66,8 @@ namespace Konstruktor.Methoden
             } while (success == false);
 
             int actualpick = pick - 1;
-            mypc.Ram = rams[actualpick];
-            Console.WriteLine($"{rams[actualpick].Name} wurde als RAM gewählt.");
+            mypc.Ram = compatiblerams[actualpick];
+            Console.WriteLine($"{compatiblerams[actualpick].Name} wurde als RAM gewählt.");
 
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ReadKey();

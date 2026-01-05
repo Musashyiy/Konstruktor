@@ -24,7 +24,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var gpuss in gpus)
             {
-                Console.WriteLine($"({i}) {gpuss.Name} | Watt-Input: {gpuss.WattInput}Watt | VRAM-Kapatizität: {gpuss.VRAMcapacity} | VDDR-Typ: {gpuss.VRAMtype} \n    Preis: {gpuss.Price}€");
+                Console.WriteLine($"({i}) {gpuss.Name} | Watt-Input: {gpuss.WattInput} Watt | VRAM-Kapatizität: {gpuss.VRAMcapacity} GB | VDDR-Typ: {gpuss.VRAMtype} \n     Kategorien: {string.Join(", ", gpuss.Categories)} | Preis: {gpuss.Price}€");
                 Console.WriteLine();
                 i++;
             }

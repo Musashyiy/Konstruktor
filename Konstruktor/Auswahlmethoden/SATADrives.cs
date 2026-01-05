@@ -33,7 +33,7 @@ namespace Konstruktor.Methoden
 
                 foreach (var drivess in drives)
                 {
-                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size}MB | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Preis: {drivess.Price}€");
+                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size}MB | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Kategorien: {string.Join(", ", drivess.Categories)} | Preis: {drivess.Price}€");
                     Console.WriteLine();
                     i++;
                 }

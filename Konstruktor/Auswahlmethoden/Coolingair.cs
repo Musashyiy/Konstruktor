@@ -25,7 +25,7 @@ namespace Konstruktor.Methoden
 
             foreach (var coolingss in coolingsair)
             {
-                Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Maße: Höhe {coolingss.Height}cm x Breite {coolingss.Width}cm x Länge {coolingss.Lenght}cm | Preis: {coolingss.Price}€");
+                Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Maße: Höhe {coolingss.Height}cm x Breite {coolingss.Width}cm x Länge {coolingss.Lenght}cm | Kategorien: {string.Join(", ", coolingss.Categories)} | Preis: {coolingss.Price}€");
                 Console.WriteLine();
                 i++;
             }

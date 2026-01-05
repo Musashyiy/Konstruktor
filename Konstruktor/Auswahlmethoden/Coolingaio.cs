@@ -27,7 +27,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var coolingss in compatibleaios)
             {
-                Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Preis: {coolingss.Price}€");
+                Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Kategorien: {string.Join(", ", coolingss.Categories)} | Preis: {coolingss.Price}€");
                 Console.WriteLine();
                 i++;
             }

@@ -30,7 +30,7 @@ namespace Konstruktor.Checks
                 mypc.Psu.Price +
                 mypc.Ram.Price;
 
-                mypc.Price = pricesum ;            
+                mypc.Price = pricesum;
         }
     }
 }

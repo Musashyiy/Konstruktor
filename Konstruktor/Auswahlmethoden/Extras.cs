@@ -34,7 +34,7 @@ namespace Konstruktor.Methoden
                     Console.WriteLine();
                     foreach (var extrass in extras)
                     {
-                        Console.WriteLine($"({i}) {extrass.Name} | Durchmesser: {extrass.Description} | Preis: {extrass.Price}€");
+                        Console.WriteLine($"({i}) {extrass.Name} | Durchmesser: {extrass.Description} | Kategorien: {string.Join(", ", extrass.Categories)} | Preis: {extrass.Price}€");
                         Console.WriteLine();
                         i++;
                     }

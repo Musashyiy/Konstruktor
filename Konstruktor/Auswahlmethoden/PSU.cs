@@ -24,7 +24,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var psuss in psus)
             {
-                Console.WriteLine($"({i}) {psuss.Name} | Wattoutput: {psuss.Watt} Watt | Höhe: {psuss.Height}cm | Breite: {psuss.Width}cm \n    Tiefe: {psuss.Depth}cm  |  Preis:{psuss.Price}€");
+                Console.WriteLine($"({i}) {psuss.Name} | Wattoutput: {psuss.Watt} Watt | Höhe: {psuss.Height}cm | Breite: {psuss.Width}cm \n    Tiefe: {psuss.Depth}cm | Kategorien: {string.Join(", ", psuss.Categories)}  |  Preis:{psuss.Price}€");
                 Console.WriteLine();
                 i++;
             }

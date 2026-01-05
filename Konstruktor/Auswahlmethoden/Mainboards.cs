@@ -24,7 +24,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var motherbordss in motherboards)
             {
-                Console.WriteLine($"({i}) {motherbordss.Name} | Formfaktor: {motherbordss.Fit} | Sockel: {motherbordss.Socket} | DDR-Typ: {motherbordss.DDRType} \n |Festplattensupport: {string.Join(", ", motherbordss.DriveSupport)} |   Preis: {motherbordss.Price}€");
+                Console.WriteLine($"({i}) {motherbordss.Name} | Formfaktor: {motherbordss.Fit} | Sockel: {motherbordss.Socket} | DDR-Typ: {motherbordss.DDRType} \n Festplattensupport: {string.Join(", ", motherbordss.DriveSupport)} | Kategorien: {string.Join(", ", motherbordss.Categories)} |  Preis: {motherbordss.Price}€");
                 Console.WriteLine();
                 i++;
             }

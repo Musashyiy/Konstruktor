@@ -27,7 +27,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var casee in compatiblecases)
             {
-                Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    Custom-Lüfterplätze: {casee.NumberCaseFans} Stück | Formfaktor: {casee.Fit}");
+                Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    Custom-Lüfterplätze: {casee.NumberCaseFans} Stück | Formfaktor: {casee.Fit} | Kategorien: {string.Join(", ", casee.Categories)} | Preis: {casee.Price}€");
                 Console.WriteLine();
                 i++;
             }
@@ -70,7 +70,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ReadKey();
 
-            //return mypc.Case.Name;
+            
         }
 
 
