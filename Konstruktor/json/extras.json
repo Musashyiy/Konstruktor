@@ -1,50 +1,80 @@
 [
 	{
+		"Name": "Anti-Vibrations-Gummis für Lüfter",
+		"Description": "Set zur Entkopplung von Lüftern; reduziert Brummen und Vibrationen.",
+		"Price": 6.90,
+		"Categories": [ "Office", "Gaming", "Server" ]
+	},
+	{
 		"Name": "ARGB-Controller Hub",
 		"Description": "Steuerzentrale für adressierbare RGB-Geräte (5V 3-Pin), mehrere Kanäle, Sync mit Mainboard.",
-		"Price": 29.0,
+		"Price": 19.90,
 		"Categories": [ "Gaming", "Rendering" ]
 	},
 	{
-		"Name": "PWM-Lüfterhub 10-Port",
-		"Description": "Verteiler für bis zu 10 PWM-Lüfter, SATA-Stromversorgung, sauberes Kabelmanagement.",
-		"Price": 19.0,
+		"Name": "BIOS-Flashback-Adapter (USB)",
+		"Description": "USB-Stick für BIOS-Updates ohne CPU oder RAM; hilfreich bei neuen CPUs.",
+		"Price": 9.90,
+		"Categories": [ "Gaming", "Server" ]
+	},
+	{
+		"Name": "CMOS-Batterie CR2032",
+		"Description": "Ersatzbatterie für Mainboard-BIOS; wichtig bei älteren oder Server-Systemen.",
+		"Price": 2.90,
+		"Categories": [ "Office", "Server" ]
+	},
+	{
+		"Name": "GPU-Halter / Anti-Sag Bracket",
+		"Description": "Stützt schwere Grafikkarten; verhindert Durchbiegen des PCIe-Slots.",
+		"Price": 14.90,
+		"Categories": [ "Gaming", "Rendering" ]
+	},
+	{
+		"Name": "NVMe Heatsink M.2",
+		"Description": "Passivkühler für M.2-SSDs; reduziert Temperatur und verhindert Throttling.",
+		"Price": 12.90,
 		"Categories": [ "Gaming", "Rendering", "Server" ]
 	},
 	{
 		"Name": "PCIe 4.0 Riser-Kabel (200 mm)",
 		"Description": "Für vertikale GPU-Montage; volle PCIe 4.0 Bandbreite, EMI-Abschirmung.",
-		"Price": 39.0,
+		"Price": 44.90,
 		"Categories": [ "Gaming", "Rendering" ]
 	},
 	{
+		"Name": "PWM-Lüfterhub 10-Port",
+		"Description": "Verteiler für bis zu 10 PWM-Lüfter, SATA-Stromversorgung, sauberes Kabelmanagement.",
+		"Price": 8.90,
+		"Categories": [ "Gaming", "Rendering", "Server" ]
+	},
+	{
+		"Name": "SATA-Kabel Set (2 Stück)",
+		"Description": "Zusätzliche SATA-Datenkabel für SSDs und HDDs; oft unterschätzt.",
+		"Price": 5.90,
+		"Categories": [ "Office", "Gaming", "Server" ]
+	},
+	{
 		"Name": "Sleeved Cable Kit (ATX/PCIe/CPU)",
-		"Description": "Gesleevte Verlängerungen in Schwarz/Weiß; verbessert Optik und Kabelverlegung.",
-		"Price": 24.0,
+		"Description": "Gesleevte Verlängerungen; verbessern Optik und Kabelverlegung.",
+		"Price": 24.90,
 		"Categories": [ "Gaming", "Rendering" ]
 	},
 	{
 		"Name": "Staubfilter-Set Magnetisch",
-		"Description": "Magnetische Mesh-Filter für 120/140 mm; leicht zu reinigen, reduziert Staub.",
-		"Price": 14.0,
+		"Description": "Magnetische Mesh-Filter für 120/140 mm; leicht zu reinigen.",
+		"Price": 14.90,
 		"Categories": [ "Office", "Gaming", "Server" ]
-	},
-	{
-		"Name": "NVMe Heatsink M.2",
-		"Description": "Passivkühler für M.2-SSDs, verbessert Thermik und verhindert Throttling.",
-		"Price": 12.0,
-		"Categories": [ "Gaming", "Rendering", "Server" ]
 	},
 	{
 		"Name": "Thermal Grizzly Kryonaut 1g",
-		"Description": "Wärmeleitpaste mit hoher Leitfähigkeit; ideal für High-End-CPUs/GPUs.",
-		"Price": 9.0,
+		"Description": "Hochwertige Wärmeleitpaste für CPUs und GPUs.",
+		"Price": 18.90,
 		"Categories": [ "Gaming", "Rendering", "Server" ]
 	},
 	{
-		"Name": "Anti-Vibrations-Gummis für Lüfter",
-		"Description": "Set zur Entkopplung von Lüftern; reduziert Brummen und Vibrationen.",
-		"Price": 6.0,
-		"Categories": [ "Office", "Gaming", "Server" ]
+		"Name": "USB-Header-Erweiterung (Internal Hub)",
+		"Description": "Erweitert interne USB-Header für Frontpanel, AIOs und RGB-Controller.",
+		"Price": 16.90,
+		"Categories": [ "Gaming", "Rendering" ]
 	}
 ]

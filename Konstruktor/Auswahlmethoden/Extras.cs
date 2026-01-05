@@ -19,7 +19,10 @@ namespace Konstruktor.Methoden
             int anzahlextras = Extrasarray.Count;
             List<Extras>? extras = JsonSerializer.Deserialize<List<Extras>>(jsonTextExtra);
             int i = 1;
-          
+
+
+            Console.WriteLine("Extras:");
+            Console.WriteLine();
             foreach (var extrass in extras)
             {
                 Console.WriteLine($"({i}) {extrass.Name} | Durchmesser: {extrass.Description} | Preis: {extrass.Price}€");
@@ -44,7 +47,9 @@ namespace Konstruktor.Methoden
 
                         if (pick == 0)
                         {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
                         }
 
                         else if (pick <= anzahlextras)
@@ -54,7 +59,9 @@ namespace Konstruktor.Methoden
 
                         else
                         {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
                         }
                     }
                 } while (success == false);
@@ -85,7 +92,9 @@ namespace Konstruktor.Methoden
 
                     else
                     {
-                        Console.WriteLine("Ungültige eingabe. Bitte erneut auswählen.");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("ungültige Eingabe. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
                 
@@ -93,6 +102,7 @@ namespace Konstruktor.Methoden
 
             Console.WriteLine("Als Extras wurden Ausgewählt: " + string.Join(", ", mypc.Extras.Select(d => d.Name)));
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            
             Console.ReadKey();
         }
     }

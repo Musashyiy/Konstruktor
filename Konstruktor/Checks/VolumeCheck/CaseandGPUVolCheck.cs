@@ -44,12 +44,9 @@ namespace Konstruktor.Checks.VolumeCheck
                 }
             }
 
-            else
-            {
-                Console.WriteLine("Die GPU passt in der länge ind Gehäuse.");
-            }
+            
 
-            if (mypc.Gpu.Width >= mypc.Case.Width)
+            else if (mypc.Gpu.Width >= mypc.Case.Width)
             {
                 while (!successpickwidth == false)
                 {
@@ -81,7 +78,9 @@ namespace Konstruktor.Checks.VolumeCheck
 
             else
             {
-                Console.WriteLine("Die GPU passt in der Breite ind Gehäuse.");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Die GPU passt in der Breite in das Gehäuse.");
+                Console.ResetColor();
             }
 
         }

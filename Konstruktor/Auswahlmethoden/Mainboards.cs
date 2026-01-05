@@ -41,7 +41,9 @@ namespace Konstruktor.Methoden
 
                     if (pick == 0)
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
 
                     else if (pick <= anzahlmb)
@@ -51,7 +53,9 @@ namespace Konstruktor.Methoden
 
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
             } while (success == false);
@@ -74,6 +78,7 @@ namespace Konstruktor.Methoden
         public float Price { get; set; }
         public string DDRType { get; set; }             //DDR-4, DDR-5, DDR-5 RDIMM...
         public List <string> DriveSupport { get; set; }
+        public List <string> NVMeSlots { get; set; }
         public string[] Categories { get; set; }
     }
 }

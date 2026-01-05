@@ -1,18 +1,18 @@
 [
 	{
-		"Name": "Corsair iCUE H150i Elite Capellix XT (360mm)",
+		"Name": "Arctic Liquid Freezer II 240",
 		"Form": "AiO",
-		"Price": 169.0,
+		"Price": 99.99,
 		"Categories": [ "Gaming", "Rendering" ],
 		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
-		"Height": 2.7,
+		"Height": 3.8,
 		"Width": 12.0,
-		"Depth": 39.7
+		"Depth": 27.7
 	},
 	{
 		"Name": "Arctic Liquid Freezer II 360",
 		"Form": "AiO",
-		"Price": 119.0,
+		"Price": 315.00,
 		"Categories": [ "Gaming", "Rendering" ],
 		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
 		"Height": 3.8,
@@ -20,9 +20,79 @@
 		"Depth": 39.8
 	},
 	{
+		"Name": "be quiet! Pure Loop 2 FX 240",
+		"Form": "AiO",
+		"Price": 119.00,
+		"Categories": [ "Gaming" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 2.7,
+		"Width": 12.0,
+		"Depth": 27.7
+	},
+	{
+		"Name": "be quiet! Pure Loop 2 FX 360",
+		"Form": "AiO",
+		"Price": 149.00,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 2.7,
+		"Width": 12.0,
+		"Depth": 39.7
+	},
+	{
+		"Name": "Cooler Master MasterLiquid ML360 Illusion",
+		"Form": "AiO",
+		"Price": 159.00,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 2.7,
+		"Width": 12.0,
+		"Depth": 39.4
+	},
+	{
+		"Name": "Corsair H100i RGB Elite (240mm)",
+		"Form": "AiO",
+		"Price": 129.99,
+		"Categories": [ "Gaming" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 2.7,
+		"Width": 12.0,
+		"Depth": 27.7
+	},
+	{
+		"Name": "Corsair iCUE H150i Elite Capellix XT (360mm)",
+		"Form": "AiO",
+		"Price": 249.00,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 2.7,
+		"Width": 12.0,
+		"Depth": 39.7
+	},
+	{
+		"Name": "Lian Li Galahad II Trinity 360",
+		"Form": "AiO",
+		"Price": 179.00,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 2.7,
+		"Width": 12.0,
+		"Depth": 39.6
+	},
+	{
 		"Name": "NZXT Kraken 280",
 		"Form": "AiO",
-		"Price": 159.0,
+		"Price": 154.90,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Height": 3.0,
+		"Width": 14.0,
+		"Depth": 31.5
+	},
+	{
+		"Name": "NZXT Kraken X63 (280mm)",
+		"Form": "AiO",
+		"Price": 179.00,
 		"Categories": [ "Gaming", "Rendering" ],
 		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
 		"Height": 3.0,

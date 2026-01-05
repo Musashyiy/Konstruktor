@@ -15,22 +15,26 @@ namespace Konstruktor.Methoden
         {
             string jsonTextRAM = File.ReadAllText("json/rams.json");
             JsonArray ramsarray = JsonNode.Parse(jsonTextRAM).AsArray();
-            int anzahlram = ramsarray.Count;
+            //int anzahlram = ramsarray.Count;
             List<RAM>? rams = JsonSerializer.Deserialize<List<RAM>>(jsonTextRAM);
             int i = 1;
 
+            var compatiblerams = rams
+                .Where(ram => ram.Type == mypc.Motherboard.DDRType)
+                .ToList();
 
-            Console.WriteLine("RAMs");
+            Console.WriteLine("RAM-Riegel:");
             Console.WriteLine();
-            foreach (var ramss in rams)
+            foreach (var ramss in compatiblerams)
             {
-                Console.WriteLine($"({i}) {ramss.Name} | Wattoutput: {ramss.Size} | Höhe: {ramss.Type}cm | Breite: {ramss.Design}cm \n    Tiefe: {ramss.ClockSpeed}cm  |  Preis:{ramss.Price}€");
+                Console.WriteLine($"({i}) {ramss.Name} |Speicherkapazität: {ramss.Size} | DDR-Typ: {ramss.Type} | Design: {ramss.Design} \n    Taktgeschwindigkeit: {ramss.ClockSpeed}MHz  |  Preis:{ramss.Price}€");
                 Console.WriteLine();
                 i++;
             }
 
             int pick = 0;
             bool success = false;
+            int anzahlram = compatiblerams.Count();
 
             do
             {
@@ -41,7 +45,9 @@ namespace Konstruktor.Methoden
 
                     if (pick == 0)
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
 
                     else if (pick <= anzahlram)
@@ -51,9 +57,12 @@ namespace Konstruktor.Methoden
 
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
+
             } while (success == false);
 
             int actualpick = pick - 1;

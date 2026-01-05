@@ -56,7 +56,9 @@ namespace Konstruktor.Checks
 
                 else if (allwattageinput < mypc.Psu.Watt)
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.WriteLine("Die Mindestanforderungen für die Leistungsabgabe sind erfüllt");
+                    Console.ResetColor();
                     success = true;
                 }
 

@@ -42,7 +42,9 @@ namespace Konstruktor.Methoden
 
                     if (pick == 0)
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
 
                     else if (pick <= anzahlcoolingair)
@@ -52,12 +54,15 @@ namespace Konstruktor.Methoden
 
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
             } while (success == false);
 
             int actualpick = pick - 1;
+            
             mypc.Coolings = coolingsair[actualpick];
             Console.WriteLine($"{coolingsair[actualpick].Name} wurde als Kühlung ausgewählt.");
 

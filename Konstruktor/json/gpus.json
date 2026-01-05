@@ -1,13 +1,68 @@
 [
   {
-    "Name": "NVIDIA GeForce RTX 4070 Super",
-    "WattInput": 220.0,
+    "Name": "NVIDIA GeForce RTX 5090",
+    "WattInput": 450.0,
+    "VRAMcapacity": 32.0,
+    "VRAMtype": "GDDR7",
+    "Lenght": 33.6,
+    "Width": 15.0,
+    "Depth": 7.0,
+    "Price": 2699.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "NVIDIA GeForce RTX 5080",
+    "WattInput": 350.0,
+    "VRAMcapacity": 20.0,
+    "VRAMtype": "GDDR7",
+    "Lenght": 30.4,
+    "Width": 13.7,
+    "Depth": 6.1,
+    "Price": 1039.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "NVIDIA GeForce RTX 5070 Ti",
+    "WattInput": 275.0,
+    "VRAMcapacity": 16.0,
+    "VRAMtype": "GDDR7",
+    "Lenght": 28.5,
+    "Width": 13.4,
+    "Depth": 5.0,
+    "Price": 759.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "NVIDIA GeForce RTX 5060",
+    "WattInput": 180.0,
     "VRAMcapacity": 12.0,
-    "VRAMtype": "GDDR6X",
-    "Lenght": 26.7,
+    "VRAMtype": "GDDR7",
+    "Lenght": 26.0,
+    "Width": 11.2,
+    "Depth": 4.2,
+    "Price": 276.0,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "NVIDIA GeForce RTX 5050",
+    "WattInput": 130.0,
+    "VRAMcapacity": 8.0,
+    "VRAMtype": "GDDR7",
+    "Lenght": 24.5,
     "Width": 11.2,
     "Depth": 4.0,
-    "Price": 599.0,
+    "Price": 237.9,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "NVIDIA GeForce RTX 4090",
+    "WattInput": 450.0,
+    "VRAMcapacity": 24.0,
+    "VRAMtype": "GDDR6X",
+    "Lenght": 30.4,
+    "Width": 13.7,
+    "Depth": 6.1,
+    "Price": 2899.0,
     "Categories": [ "Gaming", "Rendering" ]
   },
   {
@@ -18,7 +73,18 @@
     "Lenght": 30.4,
     "Width": 13.7,
     "Depth": 6.1,
-    "Price": 999.0,
+    "Price": 1199.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "NVIDIA GeForce RTX 4070 Super",
+    "WattInput": 220.0,
+    "VRAMcapacity": 12.0,
+    "VRAMtype": "GDDR6X",
+    "Lenght": 26.7,
+    "Width": 11.2,
+    "Depth": 4.0,
+    "Price": 1128.0,
     "Categories": [ "Gaming", "Rendering" ]
   },
   {
@@ -29,30 +95,85 @@
     "Lenght": 24.2,
     "Width": 11.2,
     "Depth": 4.0,
-    "Price": 299.0,
+    "Price": 343.29,
     "Categories": [ "Gaming" ]
   },
   {
-    "Name": "AMD Radeon RX 7800 XT",
-    "WattInput": 263.0,
-    "VRAMcapacity": 16.0,
+    "Name": "NVIDIA GeForce RTX 3090",
+    "WattInput": 350.0,
+    "VRAMcapacity": 24.0,
+    "VRAMtype": "GDDR6X",
+    "Lenght": 31.3,
+    "Width": 13.8,
+    "Depth": 5.5,
+    "Price": 1589.99,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "NVIDIA GeForce RTX 3080",
+    "WattInput": 320.0,
+    "VRAMcapacity": 10.0,
+    "VRAMtype": "GDDR6X",
+    "Lenght": 28.5,
+    "Width": 11.2,
+    "Depth": 4.0,
+    "Price": 729.0,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "NVIDIA GeForce RTX 3070",
+    "WattInput": 220.0,
+    "VRAMcapacity": 8.0,
     "VRAMtype": "GDDR6",
-    "Lenght": 26.7,
-    "Width": 13.5,
-    "Depth": 5.0,
+    "Lenght": 24.2,
+    "Width": 11.2,
+    "Depth": 4.0,
     "Price": 499.0,
     "Categories": [ "Gaming" ]
   },
   {
-    "Name": "AMD Radeon RX 7900 XTX",
-    "WattInput": 355.0,
+    "Name": "NVIDIA RTX 6000 Ada Generation",
+    "WattInput": 300.0,
+    "VRAMcapacity": 48.0,
+    "VRAMtype": "GDDR6 ECC",
+    "Lenght": 26.7,
+    "Width": 11.2,
+    "Depth": 4.9,
+    "Price": 6965.49,
+    "Categories": [ "Rendering" ]
+  },
+  {
+    "Name": "NVIDIA RTX 5000 Ada Generation",
+    "WattInput": 250.0,
+    "VRAMcapacity": 32.0,
+    "VRAMtype": "GDDR6 ECC",
+    "Lenght": 26.7,
+    "Width": 11.2,
+    "Depth": 4.9,
+    "Price": 6055.02,
+    "Categories": [ "Rendering" ]
+  },
+  {
+    "Name": "NVIDIA RTX A5500 (Workstation)",
+    "WattInput": 230.0,
     "VRAMcapacity": 24.0,
-    "VRAMtype": "GDDR6",
-    "Lenght": 28.7,
-    "Width": 13.5,
-    "Depth": 5.5,
-    "Price": 999.0,
-    "Categories": [ "Gaming" ]
+    "VRAMtype": "GDDR6 ECC",
+    "Lenght": 26.7,
+    "Width": 11.2,
+    "Depth": 4.9,
+    "Price": 2990.0,
+    "Categories": [ "Rendering" ]
+  },
+  {
+    "Name": "NVIDIA RTX A4000",
+    "WattInput": 140.0,
+    "VRAMcapacity": 16.0,
+    "VRAMtype": "GDDR6 ECC",
+    "Lenght": 24.1,
+    "Width": 11.2,
+    "Depth": 4.2,
+    "Price": 1239.87,
+    "Categories": [ "Rendering" ]
   },
   {
     "Name": "NVIDIA RTX 4000 SFF Ada (Workstation)",
@@ -66,116 +187,6 @@
     "Categories": [ "Rendering" ]
   },
   {
-    "Name": "NVIDIA T1000 8GB (Low-Profile)",
-    "WattInput": 50.0,
-    "VRAMcapacity": 8.0,
-    "VRAMtype": "GDDR6",
-    "Lenght": 15.5,
-    "Width": 6.9,
-    "Depth": 1.8,
-    "Price": 420.0,
-    "Categories": [ "Office" ]
-  },
-  {
-    "Name": "Intel Arc A750",
-    "WattInput": 225.0,
-    "VRAMcapacity": 8.0,
-    "VRAMtype": "GDDR6",
-    "Lenght": 28.0,
-    "Width": 13.3,
-    "Depth": 4.2,
-    "Price": 249.0,
-    "Categories": [ "Gaming" ]
-  },
-  {
-    "Name": "NVIDIA GeForce RTX 5090",
-    "WattInput": 450.0,
-    "VRAMcapacity": 32.0,
-    "VRAMtype": "GDDR7",
-    "Lenght": 33.6,
-    "Width": 15.0,
-    "Depth": 7.0,
-    "Price": 1999.0,
-    "Categories": [ "Gaming", "Rendering" ]
-  },
-  {
-    "Name": "NVIDIA GeForce RTX 5080",
-    "WattInput": 350.0,
-    "VRAMcapacity": 20.0,
-    "VRAMtype": "GDDR7",
-    "Lenght": 30.4,
-    "Width": 13.7,
-    "Depth": 6.1,
-    "Price": 1299.0,
-    "Categories": [ "Gaming", "Rendering" ]
-  },
-  {
-    "Name": "NVIDIA GeForce RTX 5070 Ti",
-    "WattInput": 275.0,
-    "VRAMcapacity": 16.0,
-    "VRAMtype": "GDDR7",
-    "Lenght": 28.5,
-    "Width": 13.4,
-    "Depth": 5.0,
-    "Price": 849.0,
-    "Categories": [ "Gaming", "Rendering" ]
-  },
-  {
-    "Name": "NVIDIA GeForce RTX 5060",
-    "WattInput": 180.0,
-    "VRAMcapacity": 12.0,
-    "VRAMtype": "GDDR7",
-    "Lenght": 26.0,
-    "Width": 11.2,
-    "Depth": 4.2,
-    "Price": 429.0,
-    "Categories": [ "Gaming" ]
-  },
-  {
-    "Name": "NVIDIA GeForce RTX 5050",
-    "WattInput": 130.0,
-    "VRAMcapacity": 8.0,
-    "VRAMtype": "GDDR7",
-    "Lenght": 24.5,
-    "Width": 11.2,
-    "Depth": 4.0,
-    "Price": 329.0,
-    "Categories": [ "Gaming" ]
-  },
-  {
-    "Name": "NVIDIA RTX A5500 (Workstation)",
-    "WattInput": 230.0,
-    "VRAMcapacity": 24.0,
-    "VRAMtype": "GDDR6 ECC",
-    "Lenght": 26.7,
-    "Width": 11.2,
-    "Depth": 4.9,
-    "Price": 2490.0,
-    "Categories": [ "Rendering" ]
-  },
-  {
-    "Name": "NVIDIA RTX 6000 Ada Generation",
-    "WattInput": 300.0,
-    "VRAMcapacity": 48.0,
-    "VRAMtype": "GDDR6 ECC",
-    "Lenght": 26.7,
-    "Width": 11.2,
-    "Depth": 4.9,
-    "Price": 6990.0,
-    "Categories": [ "Rendering" ]
-  },
-  {
-    "Name": "NVIDIA RTX A4000",
-    "WattInput": 140.0,
-    "VRAMcapacity": 16.0,
-    "VRAMtype": "GDDR6 ECC",
-    "Lenght": 24.1,
-    "Width": 11.2,
-    "Depth": 4.2,
-    "Price": 1199.0,
-    "Categories": [ "Rendering" ]
-  },
-  {
     "Name": "NVIDIA RTX A2000 12GB",
     "WattInput": 70.0,
     "VRAMcapacity": 12.0,
@@ -183,29 +194,18 @@
     "Lenght": 16.9,
     "Width": 6.9,
     "Depth": 4.0,
-    "Price": 499.0,
+    "Price": 733.69,
     "Categories": [ "Rendering" ]
   },
   {
-    "Name": "NVIDIA RTX 5000 Ada Generation",
-    "WattInput": 250.0,
-    "VRAMcapacity": 32.0,
-    "VRAMtype": "GDDR6 ECC",
-    "Lenght": 26.7,
-    "Width": 11.2,
-    "Depth": 4.9,
-    "Price": 3490.0,
-    "Categories": [ "Rendering" ]
-  },
-  {
-    "Name": "NVIDIA T400 4GB (Low-Profile)",
-    "WattInput": 30.0,
-    "VRAMcapacity": 4.0,
+    "Name": "NVIDIA T1000 8GB (Low-Profile)",
+    "WattInput": 50.0,
+    "VRAMcapacity": 8.0,
     "VRAMtype": "GDDR6",
-    "Lenght": 14.5,
+    "Lenght": 15.5,
     "Width": 6.9,
     "Depth": 1.8,
-    "Price": 150.0,
+    "Price": 427.52,
     "Categories": [ "Office" ]
   },
   {
@@ -216,40 +216,18 @@
     "Lenght": 15.4,
     "Width": 6.9,
     "Depth": 1.8,
-    "Price": 180.0,
+    "Price": 451.46,
     "Categories": [ "Office" ]
   },
   {
-    "Name": "Intel Arc A310",
-    "WattInput": 75.0,
-    "VRAMcapacity": 4.0,
-    "VRAMtype": "GDDR6",
-    "Lenght": 17.0,
-    "Width": 11.2,
-    "Depth": 4.0,
-    "Price": 120.0,
-    "Categories": [ "Office" ]
-  },
-  {
-    "Name": "AMD Radeon RX 6400 LP",
-    "WattInput": 53.0,
-    "VRAMcapacity": 4.0,
-    "VRAMtype": "GDDR6",
-    "Lenght": 15.5,
-    "Width": 6.9,
-    "Depth": 1.8,
-    "Price": 135.0,
-    "Categories": [ "Office" ]
-  },
-  {
-    "Name": "NVIDIA GT 1030 2GB",
+    "Name": "NVIDIA T400 4GB (Low-Profile)",
     "WattInput": 30.0,
-    "VRAMcapacity": 2.0,
-    "VRAMtype": "GDDR5",
-    "Lenght": 15.0,
+    "VRAMcapacity": 4.0,
+    "VRAMtype": "GDDR6",
+    "Lenght": 14.5,
     "Width": 6.9,
     "Depth": 1.8,
-    "Price": 90.0,
+    "Price": 182.18,
     "Categories": [ "Office" ]
   },
   {
@@ -260,7 +238,75 @@
     "Lenght": 16.0,
     "Width": 6.9,
     "Depth": 1.8,
-    "Price": 160.0,
+    "Price": 102.4,
+    "Categories": [ "Office" ]
+  },
+  {
+    "Name": "NVIDIA GT 1030 2GB",
+    "WattInput": 30.0,
+    "VRAMcapacity": 2.0,
+    "VRAMtype": "GDDR5",
+    "Lenght": 15.0,
+    "Width": 6.9,
+    "Depth": 1.8,
+    "Price": 70.9,
+    "Categories": [ "Office" ]
+  },
+
+  {
+    "Name": "AMD Radeon RX 7900 XTX",
+    "WattInput": 355.0,
+    "VRAMcapacity": 24.0,
+    "VRAMtype": "GDDR6",
+    "Lenght": 28.7,
+    "Width": 13.5,
+    "Depth": 5.5,
+    "Price": 1024.95,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "AMD Radeon RX 7800 XT",
+    "WattInput": 263.0,
+    "VRAMcapacity": 16.0,
+    "VRAMtype": "GDDR6",
+    "Lenght": 26.7,
+    "Width": 13.5,
+    "Depth": 5.0,
+    "Price": 619.38,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "AMD Radeon RX 6400 LP",
+    "WattInput": 53.0,
+    "VRAMcapacity": 4.0,
+    "VRAMtype": "GDDR6",
+    "Lenght": 15.5,
+    "Width": 6.9,
+    "Depth": 1.8,
+    "Price": 233.0,
+    "Categories": [ "Office" ]
+  },
+
+  {
+    "Name": "Intel Arc A750",
+    "WattInput": 225.0,
+    "VRAMcapacity": 8.0,
+    "VRAMtype": "GDDR6",
+    "Lenght": 28.0,
+    "Width": 13.3,
+    "Depth": 4.2,
+    "Price": 199.0,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "Intel Arc A310",
+    "WattInput": 75.0,
+    "VRAMcapacity": 4.0,
+    "VRAMtype": "GDDR6",
+    "Lenght": 17.0,
+    "Width": 11.2,
+    "Depth": 4.0,
+    "Price": 96.67,
     "Categories": [ "Office" ]
   }
 ]

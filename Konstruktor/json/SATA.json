@@ -1,37 +1,74 @@
 [
   {
     "Name": "Crucial MX500 1TB SSD",
-    "Connection": "SATA" ,
+    "Connection": "SATA",
     "Size": 1000.0,
-    "Price": 69.0,
+    "ReadSpeedMBs": 560,
+    "WriteSpeedMBs": 510,
+    "Price": 128.44,
     "Categories": [ "Office", "Gaming" ]
-  },
-  {
-    "Name": "Samsung 870 QVO 2TB SSD",
-    "Connection": "SATA",
-    "Size": 2000.0,
-    "Price": 99.0,
-    "Categories": [ "Office", "Server" ]
-  },
-  {
-    "Name": "Seagate Exos X20 16TB",
-    "Connection": "SATA",
-    "Size": 16000.0,
-    "Price": 389.0,
-    "Categories": [ "Server" ]
-  },
-  {
-    "Name": "WD Gold 12TB HDD",
-    "Connection": "SATA",
-    "Size": 12000.0,
-    "Price": 329.0,
-    "Categories": [ "Server" ]
   },
   {
     "Name": "Kingston A400 480GB SSD",
     "Connection": "SATA",
     "Size": 480.0,
-    "Price": 29.0,
+    "ReadSpeedMBs": 500,
+    "WriteSpeedMBs": 450,
+    "Price": 35.99,
     "Categories": [ "Office" ]
+  },
+  {
+    "Name": "Samsung 870 EVO 1TB SSD",
+    "Connection": "SATA",
+    "Size": 1000.0,
+    "ReadSpeedMBs": 560,
+    "WriteSpeedMBs": 530,
+    "Price": 119.99,
+    "Categories": [ "Gaming", "Office" ]
+  },
+  {
+    "Name": "Samsung 870 QVO 2TB SSD",
+    "Connection": "SATA",
+    "Size": 2000.0,
+    "ReadSpeedMBs": 560,
+    "WriteSpeedMBs": 530,
+    "Price": 167.89,
+    "Categories": [ "Office", "Server", "Gaming" ]
+  },
+  {
+    "Name": "SanDisk Ultra 3D 1TB SSD",
+    "Connection": "SATA",
+    "Size": 1000.0,
+    "ReadSpeedMBs": 560,
+    "WriteSpeedMBs": 530,
+    "Price": 104.90,
+    "Categories": [ "Gaming", "Office" ]
+  },
+  {
+    "Name": "Seagate Exos X20 16TB",
+    "Connection": "SATA",
+    "Size": 16000.0,
+    "ReadSpeedMBs": 285,
+    "WriteSpeedMBs": 285,
+    "Price": 294.88,
+    "Categories": [ "Server" ]
+  },
+  {
+    "Name": "WD Blue 3D NAND 1TB SSD",
+    "Connection": "SATA",
+    "Size": 1000.0,
+    "ReadSpeedMBs": 560,
+    "WriteSpeedMBs": 530,
+    "Price": 99.90,
+    "Categories": [ "Gaming", "Office" ]
+  },
+  {
+    "Name": "WD Gold 12TB HDD",
+    "Connection": "SATA",
+    "Size": 12000.0,
+    "ReadSpeedMBs": 255,
+    "WriteSpeedMBs": 255,
+    "Price": 333.00,
+    "Categories": [ "Server" ]
   }
 ]

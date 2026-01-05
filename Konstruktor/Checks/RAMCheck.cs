@@ -44,7 +44,9 @@ namespace Konstruktor.Checks
 
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.WriteLine("RAM und Mainboard sind Kompatiebel.");
+                    Console.ResetColor();
                     success = true;
                 }
 

@@ -43,7 +43,9 @@ namespace Konstruktor.Checks
 
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.WriteLine("Gehäuse und Mainboard sind kompatibel");
+                    Console.ResetColor();
                     success = true;
                 }
 

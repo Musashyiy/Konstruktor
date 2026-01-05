@@ -5,7 +5,116 @@
     "L3Cache": 64.0,
     "ClockSpeed": 4.5,
     "PowerDraw": 170.0,
-    "Price": 599.99,
+    "Price": 579.90,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "AMD Ryzen 9 9950X",
+    "Socket": "AM5",
+    "L3Cache": 64.0,
+    "ClockSpeed": 4.3,
+    "PowerDraw": 170.0,
+    "Price": 465.92,
+    "Categories": [ "Rendering" ]
+  },
+  {
+    "Name": "AMD Ryzen 7 9800X3D",
+    "Socket": "AM5",
+    "L3Cache": 96.0,
+    "ClockSpeed": 4.7,
+    "PowerDraw": 120.0,
+    "Price": 433.20,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "AMD Ryzen 7 7800X3D",
+    "Socket": "AM5",
+    "L3Cache": 96.0,
+    "ClockSpeed": 4.2,
+    "PowerDraw": 120.0,
+    "Price": 309.99,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "AMD Ryzen 7 9700X",
+    "Socket": "AM5",
+    "L3Cache": 32.0,
+    "ClockSpeed": 3.8,
+    "PowerDraw": 65.0,
+    "Price": 258.00,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "AMD Ryzen 9 7900",
+    "Socket": "AM5",
+    "L3Cache": 64.0,
+    "ClockSpeed": 3.7,
+    "PowerDraw": 120.0,
+    "Price": 285.00,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "AMD Ryzen 7 7700",
+    "Socket": "AM5",
+    "L3Cache": 32.0,
+    "ClockSpeed": 3.8,
+    "PowerDraw": 65.0,
+    "Price": 209.00,
+    "Categories": [ "Gaming", "Office" ]
+  },
+  {
+    "Name": "AMD Ryzen 5 9600X",
+    "Socket": "AM5",
+    "L3Cache": 32.0,
+    "ClockSpeed": 3.9,
+    "PowerDraw": 65.0,
+    "Price": 185.90,
+    "Categories": [ "Gaming", "Office" ]
+  },
+  {
+    "Name": "AMD Ryzen 5 7600",
+    "Socket": "AM5",
+    "L3Cache": 32.0,
+    "ClockSpeed": 3.8,
+    "PowerDraw": 65.0,
+    "Price": 158.90,
+    "Categories": [ "Gaming", "Office" ]
+  },
+  {
+    "Name": "AMD Ryzen 5 5600G",
+    "Socket": "AM4",
+    "L3Cache": 16.0,
+    "ClockSpeed": 3.9,
+    "PowerDraw": 65.0,
+    "Price": 134.95,
+    "Categories": [ "Office" ]
+  },
+  {
+    "Name": "AMD Ryzen Threadripper 7960X",
+    "Socket": "sTR5",
+    "L3Cache": 128.0,
+    "ClockSpeed": 4.2,
+    "PowerDraw": 350.0,
+    "Price": 1011.79,
+    "Categories": [ "Rendering", "Server" ]
+  },
+  {
+    "Name": "AMD EPYC 7232P",
+    "Socket": "SP3",
+    "L3Cache": 32.0,
+    "ClockSpeed": 3.1,
+    "PowerDraw": 120.0,
+    "Price": 189.00,
+    "Categories": [ "Server" ]
+  },
+
+  {
+    "Name": "Intel Core i9-14900K",
+    "Socket": "LGA1700",
+    "L3Cache": 36.0,
+    "ClockSpeed": 3.2,
+    "PowerDraw": 125.0,
+    "Price": 439.99,
     "Categories": [ "Gaming", "Rendering" ]
   },
   {
@@ -14,53 +123,35 @@
     "L3Cache": 36.0,
     "ClockSpeed": 3.0,
     "PowerDraw": 125.0,
-    "Price": 649.99,
+    "Price": 435.95,
     "Categories": [ "Gaming", "Rendering" ]
   },
   {
-    "Name": "AMD Ryzen Threadripper 7960X",
-    "Socket": "sTR5",
-    "L3Cache": 128.0,
-    "ClockSpeed": 4.2,
-    "PowerDraw": 350.0,
-    "Price": 1099.99,
-    "Categories": [ "Rendering", "Server" ]
-  },
-  {
-    "Name": "Intel Xeon E-2388G",
-    "Socket": "LGA1200",
-    "L3Cache": 16.0,
-    "ClockSpeed": 3.2,
-    "PowerDraw": 95.0,
-    "Price": 449.00,
-    "Categories": [ "Server", "Office" ]
-  },
-  {
-    "Name": "AMD EPYC 7232P",
-    "Socket": "SP3",
-    "L3Cache": 32.0,
-    "ClockSpeed": 3.1,
-    "PowerDraw": 120.0,
-    "Price": 399.00,
-    "Categories": [ "Server" ]
-  },
-  {
-    "Name": "AMD Ryzen 9 7900",
-    "Socket": "AM5",
-    "L3Cache": 76.0,
-    "ClockSpeed": 3.7,
-    "PowerDraw": 120.0,
-    "Price": 429.00,
+    "Name": "Intel Core i7-14700K",
+    "Socket": "LGA1700",
+    "L3Cache": 33.0,
+    "ClockSpeed": 3.4,
+    "PowerDraw": 125.0,
+    "Price": 343.90,
     "Categories": [ "Gaming", "Rendering" ]
   },
   {
-    "Name": "AMD Ryzen 5 5600G",
-    "Socket": "AM4",
-    "L3Cache": 16.0,
-    "ClockSpeed": 3.9,
+    "Name": "Intel Core i5-14600K",
+    "Socket": "LGA1700",
+    "L3Cache": 24.0,
+    "ClockSpeed": 3.5,
+    "PowerDraw": 125.0,
+    "Price": 202.01,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "Intel Core i5-14400F",
+    "Socket": "LGA1700",
+    "L3Cache": 20.0,
+    "ClockSpeed": 2.5,
     "PowerDraw": 65.0,
-    "Price": 129.99,
-    "Categories": [ "Office" ]
+    "Price": 164.72,
+    "Categories": [ "Office", "Gaming" ]
   },
   {
     "Name": "Intel Core i3-13100",
@@ -68,7 +159,7 @@
     "L3Cache": 12.0,
     "ClockSpeed": 3.4,
     "PowerDraw": 60.0,
-    "Price": 119.99,
+    "Price": 183.01,
     "Categories": [ "Office" ]
   },
   {
@@ -77,7 +168,16 @@
     "L3Cache": 6.0,
     "ClockSpeed": 3.7,
     "PowerDraw": 46.0,
-    "Price": 69.99,
+    "Price": 91.90,
     "Categories": [ "Office" ]
+  },
+  {
+    "Name": "Intel Xeon E-2388G",
+    "Socket": "LGA1200",
+    "L3Cache": 16.0,
+    "ClockSpeed": 3.2,
+    "PowerDraw": 95.0,
+    "Price": 736.88,
+    "Categories": [ "Server", "Office" ]
   }
 ]
