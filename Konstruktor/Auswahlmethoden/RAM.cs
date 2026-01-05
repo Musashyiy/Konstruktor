@@ -69,7 +69,9 @@ namespace Konstruktor.Methoden
             mypc.Ram = compatiblerams[actualpick];
             Console.WriteLine($"{compatiblerams[actualpick].Name} wurde als RAM gewählt.");
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();
 
             

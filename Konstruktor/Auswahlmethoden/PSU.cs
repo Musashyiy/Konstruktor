@@ -36,7 +36,7 @@ namespace Konstruktor.Methoden
             {
                 if (success == false)
                 {
-                    Console.WriteLine("Auswahl PSUs: ");
+                    Console.WriteLine("Auswahl PSUs:");
                     int.TryParse(Console.ReadLine(), out pick);
 
                     if (pick == 0)
@@ -64,7 +64,9 @@ namespace Konstruktor.Methoden
             mypc.Psu = psus[actualpick];
             Console.WriteLine($"{psus[actualpick].Name} wurde als GPU gewählt.");
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();
 
             return mypc.Psu.Name;

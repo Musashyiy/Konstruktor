@@ -42,9 +42,7 @@ namespace Konstruktor.Checks.VolumeCheck
                         Console.WriteLine("Ungültige Eingabe. Bitte erneut auswählen.");
                     }
                 }
-            }
-
-            
+            }            
 
             else if (mypc.Gpu.Width >= mypc.Case.Width)
             {

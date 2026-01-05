@@ -103,16 +103,20 @@ namespace Konstruktor.Methoden
 
                         else
                         {
-                            Console.WriteLine("Ungültige Auswahl. Bitte erneut auswählen.");
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
                         }
 
                     } while (!newNVMe);
 
                 } while (!moredrivesyesno);
 
-            }            
+            }
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();
         }
     }

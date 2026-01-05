@@ -64,7 +64,9 @@ namespace Konstruktor.Methoden
             mypc.Motherboard = motherboards[actualpick];
             Console.WriteLine($"{motherboards[actualpick].Name} wurde als Motherboard gewählt.");
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();
 
             return mypc.Motherboard.Name;

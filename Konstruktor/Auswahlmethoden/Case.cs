@@ -67,7 +67,9 @@ namespace Konstruktor.Methoden
             mypc.Case = cases[actualpick];
             Console.WriteLine($"{cases[actualpick].Name} wurde als Case gewählt.");
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();
 
             

@@ -68,7 +68,9 @@ namespace Konstruktor.Methoden
             mypc.Coolings = coolingsaio[actualpick];
             Console.WriteLine($"{coolingsaio[actualpick].Name} wurde als Kühlung ausgewählt.");
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();                                  
         }        
     }

@@ -68,7 +68,9 @@ namespace Konstruktor.Methoden
             mypc.Cpu = cpus[actualpick];
             Console.WriteLine($"{cpus[actualpick].Name} wurde als CPU gewählt.");
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();            
         }        
     }

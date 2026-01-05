@@ -66,7 +66,9 @@ namespace Konstruktor.Methoden
             mypc.Coolings = coolingsair[actualpick];
             Console.WriteLine($"{coolingsair[actualpick].Name} wurde als Kühlung ausgewählt.");
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();            
         }        
     } 

@@ -104,15 +104,19 @@ namespace Konstruktor.Methoden
 
                         else
                         {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("Ungültige Auswahl. Bitte erneut auswählen.");
+                            Console.ResetColor();
                         }
 
                     } while (!newSATA);
 
                 } while (!moredrivesyesno);
             }
-            
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();
         }
     }

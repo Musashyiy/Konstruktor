@@ -64,7 +64,9 @@ namespace Konstruktor.Methoden
             mypc.Gpu = gpus[actualpick];
             Console.WriteLine($"{gpus[actualpick].Name} wurde als GPU gewählt.");
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();
 
             return mypc.Gpu.Name;

@@ -126,9 +126,11 @@ namespace Konstruktor.Methoden
             }
 
                 Console.WriteLine("Als Extras wurden Ausgewählt: " + string.Join(", ", mypc.Extras.Select(d => d.Name)));
-            Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
-            
-            Console.ReadKey();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+                Console.ResetColor();
+
+                Console.ReadKey();
         }
     }
     public class Extras                                         ///Die zubuchbaren Extras

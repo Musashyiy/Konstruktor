@@ -103,7 +103,10 @@ namespace Konstruktor.Methoden
 
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("Ungültige Eingabe. Bitte versuchen sie es erneut.");
+                        Console.ResetColor();
+                        
                         otherfansbool = false;
                     }
 
@@ -116,7 +119,9 @@ namespace Konstruktor.Methoden
                         
             Console.WriteLine($"{fansamount} Lüfter wurden ausgewählt");
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
             Console.ReadKey();
                         
         }
