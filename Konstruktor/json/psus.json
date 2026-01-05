@@ -71,7 +71,7 @@
 
     {
       "Name": "be quiet! Pure Power 11 FM 750W",
-      "WattageOutput": 750.0,
+      "Watt": 750.0,
       "Height": 8.6,
       "Width": 15.0,
       "Depth": 14.0,
@@ -80,8 +80,8 @@
     },
 
     {
-      "Name": "Seasonic Focus GX 850W",
-      "WattageOutput": 850.0,
+      "Name": "Seasonic Focus GX-850W",
+      "Watt": 850.0,
       "Height": 8.6,
       "Width": 15.0,
       "Depth": 14.0,

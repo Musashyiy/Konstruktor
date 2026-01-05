@@ -38,7 +38,7 @@
     "Width": 24.0,
     "Lenght": 54.0,
     "NumberCaseFans": 3,
-    "Fit": "ATX / E-ATX",
+    "Fit": "ATX",
     "Price": 190.0,
     "Categories": [ "Rendering", "Server" ],
     "MaxCoolerHeight": 18.5

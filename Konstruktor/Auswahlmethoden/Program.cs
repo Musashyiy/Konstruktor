@@ -68,7 +68,7 @@ namespace Konstruktor.Methoden
                 }
 
                 else if (aioair == 2)
-            {
+                {
                     Konstruktor.Methoden.AioCoolings.AioCoolingsSelection(mypc);
                     aioorair = true;
                 }
@@ -76,7 +76,7 @@ namespace Konstruktor.Methoden
                 else
                 {
                     Console.WriteLine("Ungültige Eingabe. Bitte erneut auswählen.");
-            }
+                }
 
             } while (!aioorair);
 
