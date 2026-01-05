@@ -14,37 +14,32 @@ namespace Konstruktor.Methoden
 {
     class Program
     {
-        MyPc mypc = new MyPc();
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
             //Console.SetWindowSize(250, 30);
 
-            
+            MyPc mypc = new MyPc();
+
 
             Mainboards.MainboardSelection(mypc);
             Console.Clear();
             Console.WriteLine("\x1b[3J");
 
-            //Konstruktor.Checks.FormfactorCheck.FormCheck(mypc);
+            //Konstruktor.Methoden.CPUs.CPUSelection(mypc);
+            //Console.Clear();
+            //Console.WriteLine("\x1b[3J");
 
-            Konstruktor.Methoden.CPUs.CPUSelection(mypc);
-            Console.Clear();
-            Console.WriteLine("\x1b[3J");
-
-            //Konstruktor.Checks.SocketCheck.CheckSocket(mypc);
 
             //Konstruktor.Methoden.GPUs.GPUSelection(mypc);
             //Console.Clear();
             //Console.WriteLine("\x1b[3J");
 
-            ////Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
 
-            //Konstruktor.Methoden.RAMs.RAMSelection(mypc);
-            //Console.Clear();
-            //Console.WriteLine("\x1b[3J");
+            Konstruktor.Methoden.RAMs.RAMSelection(mypc);
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
 
-            ////Konstruktor.Checks.RAMCheck.RAMChecking(mypc);
 
             //Console.WriteLine("Wollen sie eine Luftkühlung(1) oder eine Wasserkühlung(2)?");
             //int aioair;
@@ -86,7 +81,7 @@ namespace Konstruktor.Methoden
             //    Console.WriteLine("\x1b[3J");
             //}
 
-            //NVMeDriverCheck.NVMeDriveCheck(mypc);
+
 
             //Konstruktor.Methoden.Fans.FansSelection(mypc);
             //Console.Clear();
@@ -111,11 +106,11 @@ namespace Konstruktor.Methoden
             //NVMeDriverCheck.NVMeDriveCheck(mypc);
             //Konstruktor.Checks.PriceCheck.Pricecheck(mypc);
 
-            Console.WriteLine("Ihr System:");
+            //Console.WriteLine("Ihr System:");
             //Console.WriteLine("Gehäuse: " + mypc.Case.Name + " | " + mypc.Case.Price + "€");
             //Console.WriteLine("Netzteil: " + mypc.Psu.Name + " | " + mypc.Psu.Price + "€");
-            Console.WriteLine("Motherboard: " + mypc.Motherboard.Name + " | " + mypc.Motherboard.Price + "€");
-            Console.WriteLine("CPU: " + mypc.Cpu.Name + " | " + mypc.Cpu.Price + "€");
+            //Console.WriteLine("Motherboard: " + mypc.Motherboard.Name + " | " + mypc.Motherboard.Price + "€");
+            //Console.WriteLine("CPU: " + mypc.Cpu.Name + " | " + mypc.Cpu.Price + "€");
             //Console.WriteLine("Grafikkarte: " + mypc.Gpu.Name + " | " + mypc.Gpu.Price + "€");
             //Console.WriteLine("RAM: " + mypc.Ram.Name + " | " + mypc.Ram.Price + "€");
             //Console.WriteLine("Kühlung: " + mypc.Coolings.Name + " | " + mypc.Coolings.Price + "€");
@@ -174,7 +169,7 @@ namespace Konstruktor.Methoden
             //            return $"{count}x {n.Key} ({totalPrice}€)";
             //        })
             //);
-            //Console.WriteLine("Lüfter: " +  extrasText);
+            //Console.WriteLine("Extras: " + extrasText);
 
             //Console.WriteLine("--------------------------------------------------------------");
             //Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -200,5 +195,5 @@ namespace Components
         public List<Fan> Fans { get; set; } = new();
         public List<Extras> Extras { get; set; } = new();
         public float Price { get; set; }
-    }        
+    }
 }

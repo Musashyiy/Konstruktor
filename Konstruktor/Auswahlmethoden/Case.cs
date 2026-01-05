@@ -11,7 +11,7 @@ namespace Konstruktor.Methoden
 {
     public class Cases
     {
-        public static string CaseSelection(MyPc mypc)
+        public static void CaseSelection(MyPc mypc)
         {
             string jsonTextCase = File.ReadAllText("json/cases.json");
             JsonArray casesarray = JsonNode.Parse(jsonTextCase).AsArray();
@@ -19,12 +19,15 @@ namespace Konstruktor.Methoden
             List<Case>? cases = JsonSerializer.Deserialize<List<Case>>(jsonTextCase);
             int i = 1;
 
+            var compatiblecases = cases
+                .Where(casse => casse.Fit == mypc.Motherboard.Fit)
+                .ToList();
 
             Console.WriteLine("Cases");
             Console.WriteLine();
-            foreach (var casee in cases)
+            foreach (var casee in compatiblecases)
             {
-                Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    Lüfterplätze: {casee.NumberCaseFans} Stück | Formfaktor: {casee.Fit} |\n   Preis: {casee.Price}€ ");
+                Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    Custom-Lüfterplätze: {casee.NumberCaseFans} Stück | Formfaktor: {casee.Fit}");
                 Console.WriteLine();
                 i++;
             }
@@ -41,7 +44,9 @@ namespace Konstruktor.Methoden
 
                     if (pick == 0)
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
 
                     else if (pick <= anzahlcases)
@@ -51,7 +56,9 @@ namespace Konstruktor.Methoden
 
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
             } while (success == false);
@@ -63,7 +70,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ReadKey();
 
-            return mypc.Case.Name;
+            //return mypc.Case.Name;
         }
 
 
@@ -74,7 +81,10 @@ namespace Konstruktor.Methoden
         public float Lenght { get; set; }               //in cm
         public float Width { get; set; }                //in cm
         public float Depth { get; set; }                //in cm
-        public int NumberCaseFans { get; set; }
+        public int NumberCaseFans { get; set; }         //Custom Größen
+        public int NumberSATASlots25 { get; set; }
+        public int NumberSATASlots35 { get; set; }
+        public float MaxGPULength { get; set; }
         public string Fit { get; set; }                 //ob ATX, mini-STX etc...
         public float Price { get; set; }
         public float MaxCoolerHeight { get; set; }

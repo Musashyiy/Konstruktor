@@ -11,26 +11,30 @@ namespace Konstruktor.Methoden
 {
     public class CPUs
     {
-        public static string CPUSelection(MyPc mypc)
+        public static void CPUSelection(MyPc mypc)
         {
             string jsonTextCPU = File.ReadAllText("json/cpus.json");
             JsonArray cpusarray = JsonNode.Parse(jsonTextCPU).AsArray();
-            int anzahlcpu = cpusarray.Count;
+            //int anzahlcpu = cpusarray.Count;
             List<CPU>? cpus = JsonSerializer.Deserialize<List<CPU>>(jsonTextCPU);
             int i = 1;
 
-
-            Console.WriteLine("CPUs");
-            Console.WriteLine();
-            foreach (var cpuss in cpus)
-            {
-                Console.WriteLine($"({i}) {cpuss.Name} | Sockel: {cpuss.Socket} | L3-Cache: {cpuss.L3Cache} | Taktung: {cpuss.ClockSpeed}GHz \n    Leistungsaufnahme: {cpuss.PowerDraw} | Preis: {cpuss.Price}€");
+            var compatiblecpus = cpus
+                .Where(cpu => cpu.Socket == mypc.Motherboard.Socket)
+                .ToList();
+            
+                Console.WriteLine("CPUs");
                 Console.WriteLine();
-                i++;
-            }
+                foreach (var cpuss in compatiblecpus)
+                {
+                    Console.WriteLine($"({i}) {cpuss.Name} | Kernzahl: {cpuss.Cores} | Sockel: {cpuss.Socket} | L3-Cache: {cpuss.L3Cache}  \n  Taktung: {cpuss.ClockSpeed}GHz | Leistungsaufnahme: {cpuss.PowerDraw} | Preis: {cpuss.Price}€");
+                    Console.WriteLine();
+                    i++;
+                }
 
             int pick = 0;
             bool success = false;
+            int anzahlcpu = compatiblecpus.Count;
 
             do
             {
@@ -41,7 +45,9 @@ namespace Konstruktor.Methoden
 
                     if (pick == 0)
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
 
                     else if (pick <= anzahlcpu)
@@ -51,7 +57,9 @@ namespace Konstruktor.Methoden
 
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                        Console.ResetColor();
                     }
                 }
             } while (success == false);
@@ -61,9 +69,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine($"{cpus[actualpick].Name} wurde als CPU gewählt.");
 
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
-            Console.ReadKey();
-
-            return mypc.Cpu.Name;
+            Console.ReadKey();            
         }        
     }
     public class CPU                                            ///Die Blaupause für die verscheidenen CPUs
@@ -73,6 +79,7 @@ namespace Konstruktor.Methoden
         public float L3Cache { get; set; }              //128MB, 256MB...
         public float ClockSpeed { get; set; }           //4,1GHz...
         public float PowerDraw { get; set; }
+        public int Cores { get; set; }
         public float Price { get; set; }
         public string[] Categories { get; set; }
     }

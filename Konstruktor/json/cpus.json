@@ -2,6 +2,7 @@
   {
     "Name": "AMD Ryzen 9 7950X",
     "Socket": "AM5",
+    "Cores": 16,
     "L3Cache": 64.0,
     "ClockSpeed": 4.5,
     "PowerDraw": 170.0,
@@ -11,6 +12,7 @@
   {
     "Name": "AMD Ryzen 9 9950X",
     "Socket": "AM5",
+    "Cores": 16,
     "L3Cache": 64.0,
     "ClockSpeed": 4.3,
     "PowerDraw": 170.0,
@@ -20,6 +22,7 @@
   {
     "Name": "AMD Ryzen 7 9800X3D",
     "Socket": "AM5",
+    "Cores": 8,
     "L3Cache": 96.0,
     "ClockSpeed": 4.7,
     "PowerDraw": 120.0,
@@ -29,6 +32,7 @@
   {
     "Name": "AMD Ryzen 7 7800X3D",
     "Socket": "AM5",
+    "Cores": 8,
     "L3Cache": 96.0,
     "ClockSpeed": 4.2,
     "PowerDraw": 120.0,
@@ -38,6 +42,7 @@
   {
     "Name": "AMD Ryzen 7 9700X",
     "Socket": "AM5",
+    "Cores": 8,
     "L3Cache": 32.0,
     "ClockSpeed": 3.8,
     "PowerDraw": 65.0,
@@ -47,6 +52,7 @@
   {
     "Name": "AMD Ryzen 9 7900",
     "Socket": "AM5",
+    "Cores": 12,
     "L3Cache": 64.0,
     "ClockSpeed": 3.7,
     "PowerDraw": 120.0,
@@ -56,6 +62,7 @@
   {
     "Name": "AMD Ryzen 7 7700",
     "Socket": "AM5",
+    "Cores": 8,
     "L3Cache": 32.0,
     "ClockSpeed": 3.8,
     "PowerDraw": 65.0,
@@ -65,6 +72,7 @@
   {
     "Name": "AMD Ryzen 5 9600X",
     "Socket": "AM5",
+    "Cores": 6,
     "L3Cache": 32.0,
     "ClockSpeed": 3.9,
     "PowerDraw": 65.0,
@@ -74,6 +82,7 @@
   {
     "Name": "AMD Ryzen 5 7600",
     "Socket": "AM5",
+    "Cores": 6,
     "L3Cache": 32.0,
     "ClockSpeed": 3.8,
     "PowerDraw": 65.0,
@@ -83,6 +92,7 @@
   {
     "Name": "AMD Ryzen 5 5600G",
     "Socket": "AM4",
+    "Cores": 6,
     "L3Cache": 16.0,
     "ClockSpeed": 3.9,
     "PowerDraw": 65.0,
@@ -92,6 +102,7 @@
   {
     "Name": "AMD Ryzen Threadripper 7960X",
     "Socket": "sTR5",
+    "Cores": 24,
     "L3Cache": 128.0,
     "ClockSpeed": 4.2,
     "PowerDraw": 350.0,
@@ -101,6 +112,7 @@
   {
     "Name": "AMD EPYC 7232P",
     "Socket": "SP3",
+    "Cores": 8,
     "L3Cache": 32.0,
     "ClockSpeed": 3.1,
     "PowerDraw": 120.0,
@@ -111,6 +123,7 @@
   {
     "Name": "Intel Core i9-14900K",
     "Socket": "LGA1700",
+    "Cores": 24,
     "L3Cache": 36.0,
     "ClockSpeed": 3.2,
     "PowerDraw": 125.0,
@@ -120,6 +133,7 @@
   {
     "Name": "Intel Core i9-13900K",
     "Socket": "LGA1700",
+    "Cores": 24,
     "L3Cache": 36.0,
     "ClockSpeed": 3.0,
     "PowerDraw": 125.0,
@@ -129,6 +143,7 @@
   {
     "Name": "Intel Core i7-14700K",
     "Socket": "LGA1700",
+    "Cores": 20,
     "L3Cache": 33.0,
     "ClockSpeed": 3.4,
     "PowerDraw": 125.0,
@@ -138,6 +153,7 @@
   {
     "Name": "Intel Core i5-14600K",
     "Socket": "LGA1700",
+    "Cores": 14,
     "L3Cache": 24.0,
     "ClockSpeed": 3.5,
     "PowerDraw": 125.0,
@@ -147,6 +163,7 @@
   {
     "Name": "Intel Core i5-14400F",
     "Socket": "LGA1700",
+    "Cores": 10,
     "L3Cache": 20.0,
     "ClockSpeed": 2.5,
     "PowerDraw": 65.0,
@@ -156,6 +173,7 @@
   {
     "Name": "Intel Core i3-13100",
     "Socket": "LGA1700",
+    "Cores": 4,
     "L3Cache": 12.0,
     "ClockSpeed": 3.4,
     "PowerDraw": 60.0,
@@ -165,6 +183,7 @@
   {
     "Name": "Intel Pentium Gold G7400",
     "Socket": "LGA1700",
+    "Cores": 2,
     "L3Cache": 6.0,
     "ClockSpeed": 3.7,
     "PowerDraw": 46.0,
@@ -174,6 +193,7 @@
   {
     "Name": "Intel Xeon E-2388G",
     "Socket": "LGA1200",
+    "Cores": 8,
     "L3Cache": 16.0,
     "ClockSpeed": 3.2,
     "PowerDraw": 95.0,

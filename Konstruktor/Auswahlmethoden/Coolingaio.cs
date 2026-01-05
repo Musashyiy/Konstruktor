@@ -20,7 +20,7 @@ namespace Konstruktor.Methoden
             int i = 1;
 
             var compatibleaios = coolingsaio
-                .Where(aio => aio.Sockets == mypc.Motherboard.Socket)
+                .Where(aio => aio.Sockets.Contains(mypc.Motherboard.Socket))
                 .ToList();
 
             Console.WriteLine("Coolings");
@@ -34,7 +34,7 @@ namespace Konstruktor.Methoden
 
             int pick = 0;
             bool success = false;
-            int anzahlcooling = compatibleaios;
+            int anzahlcooling = compatibleaios.Count();
 
             do
             {

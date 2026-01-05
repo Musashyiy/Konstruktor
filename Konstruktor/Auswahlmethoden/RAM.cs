@@ -11,7 +11,7 @@ namespace Konstruktor.Methoden
 {
     public class RAMs
     {
-        public static string RAMSelection(MyPc mypc)
+        public static void RAMSelection(MyPc mypc)
         {
             string jsonTextRAM = File.ReadAllText("json/rams.json");
             JsonArray ramsarray = JsonNode.Parse(jsonTextRAM).AsArray();
@@ -27,7 +27,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var ramss in compatiblerams)
             {
-                Console.WriteLine($"({i}) {ramss.Name} |Speicherkapazität: {ramss.Size} | DDR-Typ: {ramss.Type} | Design: {ramss.Design} \n    Taktgeschwindigkeit: {ramss.ClockSpeed}MHz  |  Preis:{ramss.Price}€");
+                Console.WriteLine($"({i}) {ramss.Name} |Speicherkapazität: {ramss.Size} GB | DDR-Typ: {ramss.Type} | Design: {ramss.Design} \n    Taktgeschwindigkeit: {ramss.ClockSpeed}MHz  |  Preis:{ramss.Price}€");
                 Console.WriteLine();
                 i++;
             }
@@ -72,7 +72,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ReadKey();
 
-            return mypc.Ram.Name;
+            
         }
 
     }

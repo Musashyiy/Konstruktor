@@ -78,7 +78,7 @@
     "NumberSATASlots25": 4,
     "NumberSATASlots35": 6,
     "MaxGPULength": 49.0,
-    "Fit": "ATX / E-ATX",
+    "Fit": "ATX",
     "Price": 209.0,
     "MaxCoolerHeight": 18.5,
     "Categories": [ "Rendering", "Server" ]

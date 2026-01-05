@@ -27,12 +27,14 @@ namespace Konstruktor.Checks
                     {
                         RAMs.RAMSelection(mypc);
                         RAMChecking(mypc);
+                        break;
                     }
 
                     else if (selection == 2)
                     {
                         Mainboards.MainboardSelection(mypc);
                         RAMChecking(mypc);
+                        break;
                     }
 
                     else
