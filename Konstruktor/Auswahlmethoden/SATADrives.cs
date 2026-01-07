@@ -22,97 +22,120 @@ namespace Konstruktor.Methoden
             int anzahl;
             int pick = 0;
             char jumpSATA;
+            bool SATAyn = false;
 
-            Console.WriteLine("Soll eine SATA-Festplatte hinzugefügt werden?\n  Ja(y) oder Nein(n)?");
-            char.TryParse(Console.ReadLine(), out jumpSATA);
 
-            if(jumpSATA == 'y')
+
+            do
             {
-                Console.WriteLine("Auswahl SATA-Speicher:");
-                Console.WriteLine();
 
-                foreach (var drivess in drives)
+                Console.WriteLine("Soll eine SATA-Festplatte hinzugefügt werden?\n  Ja(y) oder Nein(n)?");
+                char.TryParse(Console.ReadLine(), out jumpSATA);
+
+                if(jumpSATA == 'y')
                 {
-                    Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size}MB | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Kategorien: {string.Join(", ", drivess.Categories)} | Preis: {drivess.Price}€");
+                    Console.WriteLine("Auswahl SATA-Speicher:");
                     Console.WriteLine();
-                    i++;
-                }
 
-                bool moredrivesyesno = false;
-                int j = 1;                
+                    foreach (var drivess in drives)
+                    {
+                        Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size}MB | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Kategorien: {string.Join(", ", drivess.Categories)} | Preis: {drivess.Price}€");
+                        Console.WriteLine();
+                        i++;
+                    }
 
-                do
-                {
+                    bool moredrivesyesno = false;
+                    int j = 1;                
 
                     do
                     {
-                        success = false;
 
-
-                        if (success == false)
+                        do
                         {
-                            Console.WriteLine("Auswahl SATA-Drives: ");
-                            int.TryParse(Console.ReadLine(), out pick);
+                            success = false;
 
-                            if (pick == 0)
+
+                            if (success == false)
                             {
-                                Console.ForegroundColor = ConsoleColor.DarkRed;
-                                Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
-                                Console.ResetColor();
+                                Console.WriteLine("Auswahl SATA-Drives: ");
+                                int.TryParse(Console.ReadLine(), out pick);
+
+                                if (pick == 0)
+                                {
+                                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                                    Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                                    Console.ResetColor();
+                                }
+
+                                else if (pick <= anzahldrives)
+                                {
+                                    success = true;
+                                }
+
+                                else
+                                {
+                                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                                    Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                                    Console.ResetColor();
+                                }
+
+                                int actualpick = pick - 1;
+                                var selecteddrive = drives[actualpick];
+                                mypc.DriveSATA.Add(selecteddrive);
+                                Console.WriteLine($"{selecteddrive.Name} wurde als SATA gewählt.");
+                                j++;
                             }
 
-                            else if (pick <= anzahldrives)
+                        } while (success == false);
+
+                        bool newSATA = false;
+
+                        do
+                        {
+                            Console.WriteLine("Soll eine weitere Festplatte hinzugefügt werden?\n   Ja(y) oder Nein(n)?");
+                            char numberdriveyesno;
+                            char.TryParse(Console.ReadLine(), out numberdriveyesno);
+
+                            if (numberdriveyesno == 'y')
                             {
-                                success = true;
+                                Console.WriteLine("Wählen sie eine weitere SATA-Festplatte aus.");
+                                newSATA = true;
+                            }
+
+                            else if (numberdriveyesno == 'n')
+                            {
+                                moredrivesyesno = true;
+                                newSATA = true;
                             }
 
                             else
                             {
                                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                                Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                                Console.WriteLine("Ungültige Auswahl. Bitte erneut auswählen.");
                                 Console.ResetColor();
                             }
 
-                            int actualpick = pick - 1;
-                            var selecteddrive = drives[actualpick];
-                            mypc.DriveSATA.Add(selecteddrive);
-                            Console.WriteLine($"{selecteddrive.Name} wurde als SATA gewählt.");
-                            j++;
-                        }
+                        } while (!newSATA);
 
-                    } while (success == false);
+                    } while (!moredrivesyesno);
 
-                    bool newSATA = false;
+                    SATAyn = true;
+                }
 
-                    do
-                    {
-                        Console.WriteLine("Soll eine weitere Festplatte hinzugefügt werden?\n   Ja(y) oder Nein(n)?");
-                        char numberdriveyesno;
-                        char.TryParse(Console.ReadLine(), out numberdriveyesno);
+                else if (jumpSATA == 'n')
+                {
+                    Console.WriteLine("Es wird keine SATA-Festplatte hinzugefügt.");
+                    SATAyn = true;
+                }
 
-                        if (numberdriveyesno == 'y')
-                        {
-                            Console.WriteLine("Wählen sie eine weitere SATA-Festplatte aus.");
-                            newSATA = true;
-                        }
+                else
+                {
+                    Console.WriteLine("Ungültige Eingabe. Bitte nochmals wählen.");
+                }
 
-                        else if (numberdriveyesno == 'n')
-                        {
-                            moredrivesyesno = true;
-                            newSATA = true;
-                        }
+            } while (!SATAyn);
 
-                        else
-                        {
-                            Console.ForegroundColor = ConsoleColor.DarkRed;
-                            Console.WriteLine("Ungültige Auswahl. Bitte erneut auswählen.");
-                            Console.ResetColor();
-                        }
-
-                    } while (!newSATA);
-
-                } while (!moredrivesyesno);
-            }
+                
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");

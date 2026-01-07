@@ -44,10 +44,13 @@ namespace Konstruktor.Methoden
             Console.WriteLine("Wollen sie eine Luftkühlung(1) oder eine Wasserkühlung(2)?");
             int aioair;
             bool aioorair = false;
-            int.TryParse(Console.ReadLine(), out aioair);
+            
 
             do
             {
+                int.TryParse(Console.ReadLine(), out aioair);
+
+                
                 if (aioair == 1)
                 {
                     Konstruktor.Methoden.AirCooling.AirCoolingsSelection(mypc);
@@ -66,6 +69,7 @@ namespace Konstruktor.Methoden
                 }
 
             } while (!aioorair);
+
             Console.Clear();
             Console.WriteLine("\x1b[3J");
 
@@ -104,6 +108,7 @@ namespace Konstruktor.Methoden
             //Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
             //Konstruktor.Checks.RAMCheck.RAMChecking(mypc);
             //NVMeDriverCheck.NVMeDriveCheck(mypc);
+            Konstruktor.Checks.VolumeCheck.VolumeCheck.MeasurmentCheck(mypc);
             Konstruktor.Checks.PriceCheck.Pricecheck(mypc);
 
             Console.WriteLine("Ihr System:");

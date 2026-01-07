@@ -27,7 +27,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var casee in compatiblecases)
             {
-                Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    Custom-Lüfterplätze: {casee.NumberCaseFans} Stück | Formfaktor: {casee.Fit} | Kategorien: {string.Join(", ", casee.Categories)} | Preis: {casee.Price}€");
+                Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    Custom-Lüfterplätze: {casee.NumberCaseFans} Stück | Formfaktor: {casee.Fit} | Maximale Kühlerhöhe: {casee.MaxCoolerHeight}cm | Kategorien: {string.Join(", ", casee.Categories)} | Preis: {casee.Price}€");
                 Console.WriteLine();
                 i++;
             }
@@ -60,23 +60,53 @@ namespace Konstruktor.Methoden
                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
                         Console.ResetColor();
                     }
-                }
+                }                
+
             } while (success == false);
 
             int actualpick = pick - 1;
             mypc.Case = cases[actualpick];
-            Console.WriteLine($"{cases[actualpick].Name} wurde als Case gewählt.");
+            int anzahlfans = mypc.Fans.Count();
+            Console.WriteLine($"{cases[actualpick].Name} wurde als Case gewählt.");            
+
+            if (anzahlfans > mypc.Case.NumberCaseFans)
+            {
+                bool numberok = false;
+
+                do
+                {
+                    Console.WriteLine($"Es wurden {anzahlfans} Lüfter ausgewählt. Das sind mehr als das ausgewählte Gehäuse fassen kann. Wollen sie die Lüfter beibehalten(y) oder ändern(n)?");
+                    char numbertoomuchfans;
+                    char.TryParse(Console.ReadLine(), out numbertoomuchfans);
+
+                    if (numbertoomuchfans == 'y')
+                    {
+                        mypc.Fans.Clear();
+                        Konstruktor.Methoden.Fans.FansSelection(mypc);
+                        numberok = true;
+                    }
+
+                    else if (numbertoomuchfans == 'n')
+                    {
+                        Console.WriteLine("Die Auswahl der Lüfter bleibt bestehen.");
+                        numberok = true;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte wählen sie erneut aus.");
+                    }
+
+                } while (!numberok);
+            }
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ResetColor();
-            Console.ReadKey();
-
-            
+            Console.ReadKey();            
         }
-
-
     }
+
     public class Case                                          ///Die Blaupause für die verscheidenen Cases
     {
         public string Name { get; set; }

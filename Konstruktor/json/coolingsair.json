@@ -1,10 +1,80 @@
 [
 	{
+		"Name": "Cooler Master Hyper 212 Black Edition",
+		"Form": "Air",
+		"Price": 65.34,
+		"Categories": [ "Office", "Gaming" ],
+		"Sockets": [ "AM4", "AM5", "LGA1200", "LGA1700" ],
+		"Height": 15.2,
+		"Width": 12.0,
+		"Depth": 7.9
+	},
+	{
+		"Name": "DeepCool AK620",
+		"Form": "Air",
+		"Price": 64.00,
+		"Categories": [ "Gaming", "Office" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
+		"Height": 16.0,
+		"Width": 13.9,
+		"Depth": 12.9
+	},
+	{
+		"Name": "Noctua NH-D15",
+		"Form": "Air",
+		"Price": 109.90,
+		"Categories": [ "Gaming", "Rendering", "Server" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
+		"Height": 16.5,
+		"Width": 15.0,
+		"Depth": 13.5
+	},
+	{
+		"Name": "Noctua NH-L12S",
+		"Form": "Air",
+		"Price": 59.00,
+		"Categories": [ "Office", "Server" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
+		"Height": 7.0,
+		"Width": 12.8,
+		"Depth": 14.6
+	},
+	{
+		"Name": "Noctua NH-U12A",
+		"Form": "Air",
+		"Price": 132.58,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
+		"Height": 15.8,
+		"Width": 12.5,
+		"Depth": 11.2
+	},
+	{
+		"Name": "Scythe Fuma 3",
+		"Form": "Air",
+		"Price": 55.90,
+		"Categories": [ "Gaming", "Rendering" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
+		"Height": 15.4,
+		"Width": 13.0,
+		"Depth": 13.1
+	},
+	{
+		"Name": "Thermalright Peerless Assassin 120",
+		"Form": "Air",
+		"Price": 51.99,
+		"Categories": [ "Gaming" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
+		"Height": 15.5,
+		"Width": 12.5,
+		"Depth": 13.5
+	},
+	{
 		"Name": "be quiet! Dark Rock 4",
 		"Form": "Air",
 		"Price": 74.90,
 		"Categories": [ "Gaming", "Office" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 15.9,
 		"Width": 13.6,
 		"Depth": 9.6
@@ -14,11 +84,12 @@
 		"Form": "Air",
 		"Price": 131.24,
 		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 16.8,
 		"Width": 13.6,
 		"Depth": 14.5
 	},
+
 	{
 		"Name": "Cooler Master 2U Passive Server Cooler",
 		"Form": "Passive",
@@ -30,36 +101,6 @@
 		"Depth": 8.0
 	},
 	{
-		"Name": "Cooler Master Hyper 212 Black Edition",
-		"Form": "Air",
-		"Price": 65.34,
-		"Categories": [ "Office", "Gaming" ],
-		"Sockets": [ "LGA1700", "LGA1200", "AM5", "AM4" ],
-		"Height": 15.2,
-		"Width": 12.0,
-		"Depth": 7.9
-	},
-	{
-		"Name": "DeepCool AK620",
-		"Form": "Air",
-		"Price": 64.00,
-		"Categories": [ "Gaming", "Office" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
-		"Height": 16.0,
-		"Width": 13.9,
-		"Depth": 12.9
-	},
-	{
-		"Name": "Noctua NH-D15",
-		"Form": "Air",
-		"Price": 109.90,
-		"Categories": [ "Gaming", "Rendering", "Server" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
-		"Height": 16.5,
-		"Width": 15.0,
-		"Depth": 13.5
-	},
-	{
 		"Name": "Noctua NH-D9 DX-3647",
 		"Form": "Air",
 		"Price": 119.00,
@@ -69,44 +110,35 @@
 		"Width": 9.5,
 		"Depth": 11.0
 	},
+
 	{
-		"Name": "Noctua NH-L12S",
+		"Name": "Dynatron A39 SP5 Active Cooler",
 		"Form": "Air",
-		"Price": 59.00,
-		"Categories": [ "Office", "Server" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
-		"Height": 7.0,
-		"Width": 12.8,
-		"Depth": 14.6
+		"Price": 159.00,
+		"Categories": [ "Server" ],
+		"Sockets": [ "SP5" ],
+		"Height": 6.5,
+		"Width": 12.0,
+		"Depth": 10.0
 	},
 	{
-		"Name": "Noctua NH-U12A",
+		"Name": "Noctua NH-U14S SP5",
 		"Form": "Air",
-		"Price": 132.58,
-		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
-		"Height": 15.8,
-		"Width": 12.5,
-		"Depth": 11.2
+		"Price": 129.00,
+		"Categories": [ "Server" ],
+		"Sockets": [ "SP5" ],
+		"Height": 16.5,
+		"Width": 15.0,
+		"Depth": 14.0
 	},
 	{
-		"Name": "Scythe Fuma 3",
+		"Name": "Supermicro SNK-P0064AP4 SP5",
 		"Form": "Air",
-		"Price": 55.90,
-		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
-		"Height": 15.4,
+		"Price": 189.00,
+		"Categories": [ "Server" ],
+		"Sockets": [ "SP5" ],
+		"Height": 7.5,
 		"Width": 13.0,
-		"Depth": 13.1
-	},
-	{
-		"Name": "Thermalright Peerless Assassin 120",
-		"Form": "Air",
-		"Price": 51.99,
-		"Categories": [ "Gaming" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
-		"Height": 15.5,
-		"Width": 12.5,
-		"Depth": 13.5
+		"Depth": 11.0
 	}
 ]

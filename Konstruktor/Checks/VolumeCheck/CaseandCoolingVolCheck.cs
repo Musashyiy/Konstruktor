@@ -16,17 +16,17 @@ namespace Konstruktor.Checks.VolumeCheck
 
             if (mypc.Coolings.Form == "Air" || mypc.Coolings.Form == "Passive")
             {
-                if(mypc.Case.MaxCoolerHeight <= mypc.Coolings.Height)
+                if(mypc.Case.MaxCoolerHeight >= mypc.Coolings.Height)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Die Kühlung passt in das Gehäuse.");
+                    Console.WriteLine($"Die Kühlung passt in das Gehäuse.\n  Der Kühler ist {mypc.Coolings.Height}cm hoch und darf maximal {mypc.Case.MaxCoolerHeight}cm hoch sein.");
                     Console.ResetColor();
                 }
 
-                else if(mypc.Case.MaxCoolerHeight > mypc.Coolings.Height)
+                else if(mypc.Case.MaxCoolerHeight < mypc.Coolings.Height)
                 {
                     Console.BackgroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine("Die Külhung passt nicht in das Gehäuse.\nBitte suchen sie sich entweder ein neues Gehäuse(1) oder eine neue Kühlung(2) aus.");
+                    Console.WriteLine($"{mypc.Case.MaxCoolerHeight}cm ist die maximale Höhe für den Kühler. Die Höhe dieses Kühlers beträgt{mypc.Coolings.Height}cm.\n  Bitte suchen sie sich entweder ein neues Gehäuse(1) oder eine neue Kühlung(2) aus.");
                     Console.ResetColor();
                     int coolingorcase;
                     int.TryParse(Console.ReadLine(), out coolingorcase);
@@ -56,13 +56,7 @@ namespace Konstruktor.Checks.VolumeCheck
                     } while (!success);                        
                 }
             }
-
-            //Aio Cooling Check
-
-            else if (mypc.Coolings.Form == "AiO")
-            {
-                                
-            }
+            //Aio-Cooling Check ist nicht nötig            
         }
     }
 }

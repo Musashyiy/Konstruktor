@@ -222,7 +222,36 @@
     "Price": 91.90,
     "Categories": [ "Office" ]
   },
-
+  {
+    "Name": "AMD EPYC 9124",
+    "Socket": "SP5",
+    "Cores": 16,
+    "L3Cache": 64.0,
+    "ClockSpeed": 3.0,
+    "PowerDraw": 200.0,
+    "Price": 1450.00,
+    "Categories": [ "Server" ]
+  },
+  {
+    "Name": "AMD EPYC 9354",
+    "Socket": "SP5",
+    "Cores": 32,
+    "L3Cache": 256.0,
+    "ClockSpeed": 3.25,
+    "PowerDraw": 280.0,
+    "Price": 2950.00,
+    "Categories": [ "Server", "Rendering" ]
+  },
+  {
+    "Name": "AMD EPYC 9654",
+    "Socket": "SP5",
+    "Cores": 96,
+    "L3Cache": 384.0,
+    "ClockSpeed": 2.4,
+    "PowerDraw": 360.0,
+    "Price": 11800.00,
+    "Categories": [ "Server", "Rendering" ]
+  },
   {
     "Name": "AMD EPYC 7232P",
     "Socket": "SP3",
@@ -243,7 +272,6 @@
     "Price": 899.00,
     "Categories": [ "Server" ]
   },
-
   {
     "Name": "AMD Ryzen Threadripper 7960X",
     "Socket": "sTR5",

@@ -10,7 +10,7 @@ namespace Konstruktor.Checks.VolumeCheck
 {
     public class CaseandGPUVolCheck
     {
-        static void CaseandGPUVolume(MyPc mypc)
+        public static void CaseandGPUVolume(MyPc mypc)
         {
             bool successpickwidth = false;
 
@@ -19,7 +19,7 @@ namespace Konstruktor.Checks.VolumeCheck
                 while (!successpickwidth == false)
                 {
                     int pick;
-                    Console.WriteLine("Die GPU passt in der Länge nicht in das Gehäuse.\nBitte wähle eine kleinere GPU(1) oder ein größeres Gehäuse(2).");
+                    Console.WriteLine($"{mypc.Case.Lenght}cm ist die maximale Länge, die die Grafikkarte haben darf. Diese Grafikkarte ist {mypc.Gpu.Lenght}cm lang.\n  Bitte wähle eine kürzere GPU(1) oder ein größeres Gehäuse(2).");
                     int.TryParse(Console.ReadLine(), out pick);
 
                     if (pick == 1)
@@ -44,12 +44,12 @@ namespace Konstruktor.Checks.VolumeCheck
                 }
             }            
 
-            else if (mypc.Gpu.Width >= mypc.Case.Width)
+            if (mypc.Gpu.Width >= mypc.Case.Width)
             {
                 while (!successpickwidth == false)
                 {
                     int pick;
-                    Console.WriteLine("Die GPU passt in der Breite nicht in das Gehäuse.\nBitte wähle eine kleinere GPU(1) oder ein größeres Gehäuse(2).");
+                    Console.WriteLine($"{mypc.Case.Width}cm ist die maximale Breite, die die Grafikkarte haben darf. Diese Grafikkarte ist {mypc.Gpu.Width}cm breit.\n  Bitte wähle eine kleinere GPU(1) oder ein größeres Gehäuse(2).");
                     int.TryParse(Console.ReadLine(), out pick);
 
                     if (pick == 1)
@@ -77,7 +77,7 @@ namespace Konstruktor.Checks.VolumeCheck
             else
             {
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Die GPU passt in der Breite in das Gehäuse.");
+                Console.WriteLine($"Die GPU passt in das Gehäuse.\n  GPU länge und breite: {mypc.Gpu.Lenght}cm x {mypc.Gpu.Width}cm\n  Gehäuse länge und breite: {mypc.Case.Lenght}cm x {mypc.Case.Width}cm");
                 Console.ResetColor();
             }
 

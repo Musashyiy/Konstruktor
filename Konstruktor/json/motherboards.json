@@ -115,14 +115,5 @@
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
     "Price": 849.00,
     "Categories": [ "Server", "Rendering" ]
-  },
-  {
-    "Name": "Supermicro X12SPA-T",
-    "Fit": "E-ATX",
-    "Socket": "LGA4189",
-    "DDRType": "DDR4",
-    "DriveSupport": [ "PCIe 4.0", "SATA" ],
-    "Price": 950.00,
-    "Categories": [ "Server", "Rendering" ]
-  }
+  }  
 ]
