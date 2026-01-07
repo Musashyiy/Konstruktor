@@ -17,13 +17,16 @@ namespace Konstruktor.Methoden
             JsonArray coolingairsarray = JsonNode.Parse(jsonTextCoolingair).AsArray();
             int anzahlcoolingair = coolingairsarray.Count;
             List<CoolingBlueprint>? coolingsair = JsonSerializer.Deserialize<List<CoolingBlueprint>>(jsonTextCoolingair);
-
             int i = 1;
-                     
+
+            var compatibleair = coolingsair
+                .Where(air => air.Sockets.Contains(mypc.Motherboard.Socket))
+                .ToList();
+
             Console.WriteLine("Luft-Kühlung");
             Console.WriteLine();
 
-            foreach (var coolingss in coolingsair)
+            foreach (var coolingss in compatibleair)
             {
                 Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Maße: Höhe {coolingss.Height}cm x Breite {coolingss.Width}cm x Länge {coolingss.Lenght}cm | Kategorien: {string.Join(", ", coolingss.Categories)} | Preis: {coolingss.Price}€");
                 Console.WriteLine();
@@ -63,8 +66,8 @@ namespace Konstruktor.Methoden
 
             int actualpick = pick - 1;
             
-            mypc.Coolings = coolingsair[actualpick];
-            Console.WriteLine($"{coolingsair[actualpick].Name} wurde als Kühlung ausgewählt.");
+            mypc.Coolings = compatibleair[actualpick];
+            Console.WriteLine($"{compatibleair[actualpick].Name} wurde als Kühlung ausgewählt.");
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
