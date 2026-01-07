@@ -77,7 +77,7 @@ namespace Konstruktor.Methoden
             Console.Clear();
             Console.WriteLine("\x1b[3J");
 
-            if (mypc.Motherboard.DriveSupport.Contains("PCIe 4.0"))
+            if (mypc.Motherboard.DriveSupport.Contains("PCIe 4.0") || mypc.Motherboard.DriveSupport.Contains("PCIe 5.0"))
             {
 
                 NVMeDrive.NVMeDrivesSelection(mypc);
@@ -105,7 +105,7 @@ namespace Konstruktor.Methoden
 
             //Konstruktor.Checks.FormfactorCheck.FormCheck(mypc);
             //Konstruktor.Checks.SocketCheck.CheckSocket(mypc);
-            //Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
+            Konstruktor.Checks.PSUCheck.CheckPSU(mypc);
             //Konstruktor.Checks.RAMCheck.RAMChecking(mypc);
             //NVMeDriverCheck.NVMeDriveCheck(mypc);
             Konstruktor.Checks.VolumeCheck.VolumeCheck.MeasurmentCheck(mypc);

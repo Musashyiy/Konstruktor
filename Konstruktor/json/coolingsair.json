@@ -112,6 +112,37 @@
 	},
 
 	{
+		"Name": "Dynatron A32 SP3 Active Cooler",
+		"Form": "Air",
+		"Price": 149.00,
+		"Categories": [ "Server" ],
+		"Sockets": [ "SP3" ],
+		"Height": 6.2,
+		"Width": 12.0,
+		"Depth": 10.0
+	},
+	{
+		"Name": "Noctua NH-U12S TR4-SP3",
+		"Form": "Air",
+		"Price": 99.00,
+		"Categories": [ "Server", "Rendering" ],
+		"Sockets": [ "SP3" ],
+		"Height": 15.8,
+		"Width": 12.5,
+		"Depth": 7.1
+	},
+	{
+		"Name": "Supermicro SNK-P0063AP4 SP3",
+		"Form": "Air",
+		"Price": 179.00,
+		"Categories": [ "Server" ],
+		"Sockets": [ "SP3" ],
+		"Height": 7.3,
+		"Width": 13.0,
+		"Depth": 11.0
+	},
+
+	{
 		"Name": "Dynatron A39 SP5 Active Cooler",
 		"Form": "Air",
 		"Price": 159.00,

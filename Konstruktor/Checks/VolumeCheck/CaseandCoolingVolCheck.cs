@@ -56,7 +56,15 @@ namespace Konstruktor.Checks.VolumeCheck
                     } while (!success);                        
                 }
             }
+
             //Aio-Cooling Check ist nicht nötig            
+
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Es wurde eine AiO-Kühlung ausgewählt. Eine Prüfung ist nicht nötig, da alle Gehäuse mit allen AiO-Kühlungen kompatibel sind.");
+                Console.ResetColor();
+            }
         }
     }
 }

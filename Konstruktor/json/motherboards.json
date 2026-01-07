@@ -9,39 +9,40 @@
     "Categories": [ "Office" ]
   },
   {
-    "Name": "ASRock Rack B650D4U",
-    "Fit": "ATX",
-    "Socket": "AM5",
-    "DDRType": "DDR5",
-    "DriveSupport": [ "PCIe 4.0", "SATA" ],
-    "Price": 379.90,
-    "Categories": [ "Server" ]
-  },
-  {
-    "Name": "ASRock Rack ROMED8-2T",
-    "Fit": "E-ATX",
-    "Socket": "SP3",
-    "DDRType": "DDR4",
-    "DriveSupport": [ "PCIe 4.0", "SATA" ],
-    "Price": 639.00,
-    "Categories": [ "Server" ]
-  },
-  {
-    "Name": "ASRock Rack W680D4U-2L2T",
-    "Fit": "ATX",
-    "Socket": "LGA1700",
-    "DDRType": "DDR4",
-    "DriveSupport": [ "PCIe 4.0", "SATA" ],
-    "Price": 489.90,
-    "Categories": [ "Server", "Office" ]
-  },
-  {
     "Name": "ASRock Rack X470D4U2-2T",
     "Fit": "Micro-ATX",
     "Socket": "AM4",
     "DDRType": "DDR4",
     "DriveSupport": [ "SATA" ],
     "Price": 339.00,
+    "Categories": [ "Server" ]
+  },
+  {
+    "Name": "ASUS TUF Gaming B550-Plus",
+    "Fit": "ATX",
+    "Socket": "AM4",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 159.90,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "MSI B450 Tomahawk Max II",
+    "Fit": "ATX",
+    "Socket": "AM4",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "SATA" ],
+    "Price": 109.90,
+    "Categories": [ "Gaming", "Office" ]
+  },
+
+  {
+    "Name": "ASRock Rack B650D4U",
+    "Fit": "ATX",
+    "Socket": "AM5",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 379.90,
     "Categories": [ "Server" ]
   },
   {
@@ -63,6 +64,24 @@
     "Categories": [ "Gaming", "Rendering" ]
   },
   {
+    "Name": "MSI MAG B650 Tomahawk WiFi",
+    "Fit": "ATX",
+    "Socket": "AM5",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 219.90,
+    "Categories": [ "Gaming" ]
+  },
+  {
+    "Name": "ASRock Rack W680D4U-2L2T",
+    "Fit": "ATX",
+    "Socket": "LGA1700",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 489.90,
+    "Categories": [ "Server", "Office" ]
+  },
+  {
     "Name": "Gigabyte B760I Aorus Pro DDR5",
     "Fit": "Mini-ITX",
     "Socket": "LGA1700",
@@ -81,15 +100,6 @@
     "Categories": [ "Gaming", "Rendering" ]
   },
   {
-    "Name": "MSI MAG B650 Tomahawk WiFi",
-    "Fit": "ATX",
-    "Socket": "AM5",
-    "DDRType": "DDR5",
-    "DriveSupport": [ "PCIe 4.0", "SATA" ],
-    "Price": 219.90,
-    "Categories": [ "Gaming" ]
-  },
-  {
     "Name": "MSI PRO H610M-G",
     "Fit": "Micro-ATX",
     "Socket": "LGA1700",
@@ -98,6 +108,26 @@
     "Price": 79.90,
     "Categories": [ "Office" ]
   },
+
+  {
+    "Name": "ASRock Rack ROMED8-2T",
+    "Fit": "E-ATX",
+    "Socket": "SP3",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 639.00,
+    "Categories": [ "Server" ]
+  },
+  {
+    "Name": "Gigabyte MZ32-AR0",
+    "Fit": "ATX",
+    "Socket": "SP3",
+    "DDRType": "DDR4",
+    "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "Price": 589.00,
+    "Categories": [ "Server" ]
+  },
+
   {
     "Name": "Supermicro H12SSL-i",
     "Fit": "ATX",
@@ -105,6 +135,25 @@
     "DDRType": "DDR4",
     "DriveSupport": [ "SATA" ],
     "Price": 529.00,
+    "Categories": [ "Server" ]
+  },
+
+  {
+    "Name": "ASUS Pro WS WRX90E-SAGE SE",
+    "Fit": "E-ATX",
+    "Socket": "SP5",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 5.0", "SATA" ],
+    "Price": 999.00,
+    "Categories": [ "Server", "Rendering" ]
+  },
+  {
+    "Name": "Gigabyte MZ73-LM0",
+    "Fit": "E-ATX",
+    "Socket": "SP5",
+    "DDRType": "DDR5",
+    "DriveSupport": [ "PCIe 5.0", "SATA" ],
+    "Price": 829.00,
     "Categories": [ "Server" ]
   },
   {
@@ -115,5 +164,5 @@
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
     "Price": 849.00,
     "Categories": [ "Server", "Rendering" ]
-  }  
+  }
 ]

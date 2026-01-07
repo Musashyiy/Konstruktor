@@ -4,7 +4,7 @@
 		"Form": "AiO",
 		"Price": 99.99,
 		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 3.8,
 		"Width": 12.0,
 		"Depth": 27.7
@@ -14,7 +14,7 @@
 		"Form": "AiO",
 		"Price": 315.00,
 		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 3.8,
 		"Width": 12.0,
 		"Depth": 39.8
@@ -24,7 +24,7 @@
 		"Form": "AiO",
 		"Price": 119.00,
 		"Categories": [ "Gaming" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 2.7,
 		"Width": 12.0,
 		"Depth": 27.7
@@ -34,7 +34,7 @@
 		"Form": "AiO",
 		"Price": 149.00,
 		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 2.7,
 		"Width": 12.0,
 		"Depth": 39.7
@@ -44,7 +44,7 @@
 		"Form": "AiO",
 		"Price": 159.00,
 		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 2.7,
 		"Width": 12.0,
 		"Depth": 39.4
@@ -54,7 +54,7 @@
 		"Form": "AiO",
 		"Price": 129.99,
 		"Categories": [ "Gaming" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 2.7,
 		"Width": 12.0,
 		"Depth": 27.7
@@ -64,7 +64,7 @@
 		"Form": "AiO",
 		"Price": 249.00,
 		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 2.7,
 		"Width": 12.0,
 		"Depth": 39.7
@@ -74,7 +74,7 @@
 		"Form": "AiO",
 		"Price": 179.00,
 		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 2.7,
 		"Width": 12.0,
 		"Depth": 39.6
@@ -84,7 +84,7 @@
 		"Form": "AiO",
 		"Price": 154.90,
 		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 3.0,
 		"Width": 14.0,
 		"Depth": 31.5
@@ -94,9 +94,61 @@
 		"Form": "AiO",
 		"Price": 179.00,
 		"Categories": [ "Gaming", "Rendering" ],
-		"Sockets": [ "LGA1700", "LGA1200", "LGA115x", "AM5", "AM4" ],
+		"Sockets": [ "AM4", "AM5", "LGA115x", "LGA1200", "LGA1700" ],
 		"Height": 3.0,
 		"Width": 14.0,
 		"Depth": 31.5
+	},
+
+	{
+		"Name": "Asetek 690LX-PN SP3",
+		"Form": "AiO",
+		"Price": 329.00,
+		"Categories": [ "Server" ],
+		"Sockets": [ "SP3" ],
+		"Height": 3.5,
+		"Width": 12.0,
+		"Depth": 40.0
+	},
+	{
+		"Name": "CoolIT OMNI CPU AIO SP3",
+		"Form": "AiO",
+		"Price": 349.00,
+		"Categories": [ "Server" ],
+		"Sockets": [ "SP3" ],
+		"Height": 3.8,
+		"Width": 12.0,
+		"Depth": 41.0
+	},
+	{
+		"Name": "Supermicro SNK-C0050AP4 SP3",
+		"Form": "AiO",
+		"Price": 379.00,
+		"Categories": [ "Server" ],
+		"Sockets": [ "SP3" ],
+		"Height": 3.8,
+		"Width": 12.0,
+		"Depth": 42.0
+	},
+
+	{
+		"Name": "Dynatron L35 (SP5)",
+		"Form": "AiO",
+		"Price": 349.00,
+		"Categories": [ "Server" ],
+		"Sockets": [ "SP5" ],
+		"Height": 3.5,
+		"Width": 12.0,
+		"Depth": 40.0
+	},
+	{
+		"Name": "Supermicro SNK-C0057A4L (SP5)",
+		"Form": "AiO",
+		"Price": 389.00,
+		"Categories": [ "Server" ],
+		"Sockets": [ "SP5" ],
+		"Height": 3.8,
+		"Width": 12.0,
+		"Depth": 42.0
 	}
 ]

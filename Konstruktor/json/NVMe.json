@@ -61,5 +61,69 @@
     "WriteSpeedMBs": 4150,
     "Price": 85.99,
     "Categories": [ "Office", "Gaming" ]
+  },
+
+  {
+    "Name": "ADATA XPG Project NeonStorm 2TB",
+    "Connection": "PCIe 5.0",
+    "Size": 2000.0,
+    "ReadSpeedMBs": 14000,
+    "WriteSpeedMBs": 13000,
+    "Price": 319.00,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "Corsair MP700 Pro 2TB NVMe",
+    "Connection": "PCIe 5.0",
+    "Size": 2000.0,
+    "ReadSpeedMBs": 12400,
+    "WriteSpeedMBs": 11800,
+    "Price": 299.99,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "Crucial T705 2TB NVMe",
+    "Connection": "PCIe 5.0",
+    "Size": 2000.0,
+    "ReadSpeedMBs": 14500,
+    "WriteSpeedMBs": 12700,
+    "Price": 329.99,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "Gigabyte Aorus Gen5 12000 SSD 2TB",
+    "Connection": "PCIe 5.0",
+    "Size": 2000.0,
+    "ReadSpeedMBs": 12400,
+    "WriteSpeedMBs": 11800,
+    "Price": 289.00,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "MSI Spatium M580 Frozr 2TB",
+    "Connection": "PCIe 5.0",
+    "Size": 2000.0,
+    "ReadSpeedMBs": 14000,
+    "WriteSpeedMBs": 13000,
+    "Price": 339.00,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "PNY CS3150 Gen5 2TB NVMe",
+    "Connection": "PCIe 5.0",
+    "Size": 2000.0,
+    "ReadSpeedMBs": 12000,
+    "WriteSpeedMBs": 11000,
+    "Price": 269.90,
+    "Categories": [ "Gaming", "Rendering" ]
+  },
+  {
+    "Name": "Seagate FireCuda 540 2TB NVMe",
+    "Connection": "PCIe 5.0",
+    "Size": 2000.0,
+    "ReadSpeedMBs": 10000,
+    "WriteSpeedMBs": 10000,
+    "Price": 279.90,
+    "Categories": [ "Gaming", "Rendering" ]
   }
 ]
