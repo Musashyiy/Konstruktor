@@ -70,17 +70,35 @@ namespace Konstruktor.Methoden
                 string selectedfans = fans[actualpick].Name;
                 var theonefanpicked = fans[actualpick];
                 int numberfans;
+                bool fansnummerok = false;
 
-                Console.WriteLine("Wie viele Lüfter sollen von diesem Modell hinzugefügt werden?");
-                int.TryParse(Console.ReadLine(), out numberfans);
+                do
+                {
+                    Console.WriteLine("Wie viele Lüfter sollen von diesem Modell hinzugefügt werden?");
+                    int.TryParse(Console.ReadLine(), out numberfans);
 
-                
+                    if (numberfans >= 1)
+                    {
+                        fansnummerok = true;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Bitte eine Zahl angeben.");
+                    }
+
+                } while (!fansnummerok);
+
                 Console.WriteLine($"{selectedfans} wurde als Lüfter gewählt.");
 
                 for (int j = 1; j <= numberfans; j++)
                 {
                     mypc.Fans.Add(theonefanpicked);
                 }
+
+                
+
+
                 
 
                 do
