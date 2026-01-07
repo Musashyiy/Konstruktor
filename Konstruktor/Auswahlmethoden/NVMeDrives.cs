@@ -34,8 +34,11 @@ namespace Konstruktor.Methoden
                 if(jumpNVMe == 'y')
                 {
                     Console.WriteLine("Auswahl NVMe-Speicher:");
+                    Console.WriteLine($"Sie können maximal {mypc.Motherboard.NVMeplaces} NVMe-Festplatten auswählen.");
                     Console.WriteLine();
-            
+                    int numberplacesNVMe = mypc.Motherboard.NVMeplaces;
+
+
                     foreach (var drivess in drives)
                     {
                         Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size}MB  | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Kategorien: {string.Join(", ", drivess.Categories)} | Preis: {drivess.Price}€");
@@ -45,28 +48,83 @@ namespace Konstruktor.Methoden
 
                     int j = 1;
                     bool moredrivesyesno = false;
-
+                    int h = 1;
+                    
+                    
                     do
                     {
-                        do
+
+                        for (h = 1; h <= numberplacesNVMe; h++)
                         {
-                            success = false;
 
-                            if (success == false)
+                            if (h == numberplacesNVMe)
                             {
-                                Console.WriteLine("Auswahl NVMe-Drives: ");
-                                int.TryParse(Console.ReadLine(), out pick);
+                                success = true;
+                            }
 
-                                if (pick == 0)
-                                {
-                                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                                    Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
-                                    Console.ResetColor();
-                                }                          
+                            do
+                            {
+                                success = false;
 
-                                else if (pick <= anzahldrives)
+                                if (success == false)
                                 {
-                                    success = true;
+                                    Console.WriteLine("Auswahl NVMe-Drives: ");
+                                    int.TryParse(Console.ReadLine(), out pick);
+
+                                    if (pick == 0)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                                        Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                                        Console.ResetColor();
+                                    }                          
+
+                                    else if (pick <= anzahldrives)
+                                    {
+                                        success = true;
+                                    }
+
+                                    else
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                                        Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                                        Console.ResetColor();
+                                    }
+
+                                    int actualpick = pick - 1;
+                                    var selecteddrive = drives[actualpick];
+                                    mypc.DriveNVMe.Add(selecteddrive);
+                                    Console.WriteLine($"{selecteddrive.Name} wurde als NVMe gewählt.");
+                                    h++;
+                                }                     
+
+                            } while (success == false);
+
+                            bool newNVMe = false;
+
+                            if (h == numberplacesNVMe)
+                            {
+                                newNVMe = true;
+                            }
+
+                            do
+                            {
+                                char numberdriveyesno;
+                                numberplacesNVMe = numberplacesNVMe - 1;
+                                Console.WriteLine($"Sie können noch {numberplacesNVMe} NVMe-Festplatten auswählen.");
+                                Console.WriteLine("Soll noch eine NVMe hiunzugefügt werden?\n  Ja(y) oder Nein(n)?");
+                                char.TryParse(Console.ReadLine(), out numberdriveyesno);
+                    
+                                if (numberdriveyesno == 'y')
+                                {
+                                    Console.WriteLine("Wählen sie eine weitere NVMe aus.");
+                                    newNVMe = true;
+                                }
+
+                                else if (numberdriveyesno == 'n')
+                                {
+                                    moredrivesyesno = true;
+                                    newNVMe = true;
+                                    break;
                                 }
 
                                 else
@@ -76,43 +134,20 @@ namespace Konstruktor.Methoden
                                     Console.ResetColor();
                                 }
 
-                                int actualpick = pick - 1;
-                                var selecteddrive = drives[actualpick];
-                                mypc.DriveNVMe.Add(selecteddrive);
-                                Console.WriteLine($"{selecteddrive.Name} wurde als NVMe gewählt.");
-                                j++;
-                            }                     
+                            } while (!newNVMe);
 
-                        } while (success == false);
-
-                        bool newNVMe = false;
-
-                        do
-                        {
-                            char numberdriveyesno;
-                            Console.WriteLine("Soll noch eine NVMe hiunzugefügt werden?\n  Ja(y) oder Nein(n)?");
-                            char.TryParse(Console.ReadLine(), out numberdriveyesno);
-                    
-                            if (numberdriveyesno == 'y')
-                            {
-                                Console.WriteLine("Wählen sie eine weitere NVMe aus.");
-                                newNVMe = true;
-                            }
-
-                            else if (numberdriveyesno == 'n')
+                            if (h == numberplacesNVMe)
                             {
                                 moredrivesyesno = true;
-                                newNVMe = true;
                             }
 
-                            else
-                            {
-                                Console.ForegroundColor = ConsoleColor.DarkRed;
-                                Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
-                                Console.ResetColor();
-                            }
+                        }
 
-                        } while (!newNVMe);
+                        if (numberplacesNVMe == 0)
+                        {
+                            moredrivesyesno = true;
+                        }
+
 
                     } while (!moredrivesyesno);
 

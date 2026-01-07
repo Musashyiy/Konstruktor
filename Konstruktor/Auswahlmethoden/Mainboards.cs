@@ -24,7 +24,7 @@ namespace Konstruktor.Methoden
             Console.WriteLine();
             foreach (var motherbordss in motherboards)
             {
-                Console.WriteLine($"({i}) {motherbordss.Name} | Formfaktor: {motherbordss.Fit} | Sockel: {motherbordss.Socket} | DDR-Typ: {motherbordss.DDRType} \n Festplattensupport: {string.Join(", ", motherbordss.DriveSupport)} | Kategorien: {string.Join(", ", motherbordss.Categories)} | Preis: {motherbordss.Price}€");
+                Console.WriteLine($"({i}) {motherbordss.Name} | Formfaktor: {motherbordss.Fit} | Sockel: {motherbordss.Socket} | DDR-Typ: {motherbordss.DDRType} \n Festplattensupport: {string.Join(", ", motherbordss.DriveSupport)} | SATA-Plätze: {motherbordss.SATAplaces} | NVMe.Plätze: {motherbordss.NVMeplaces} | Kategorien: {string.Join(", ", motherbordss.Categories)} | Preis: {motherbordss.Price}€");
                 Console.WriteLine();
                 i++;
             }
@@ -80,7 +80,8 @@ namespace Konstruktor.Methoden
         public float Price { get; set; }
         public string DDRType { get; set; }             //DDR-4, DDR-5, DDR-5 RDIMM...
         public List <string> DriveSupport { get; set; }
-        public List <string> NVMeSlots { get; set; }
+        public int SATAplaces { get; set; }
+        public int NVMeplaces { get; set; }
         public string[] Categories { get; set; }
     }
 }

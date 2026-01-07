@@ -5,6 +5,8 @@
     "Socket": "AM4",
     "DDRType": "DDR4",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 6,
+    "NVMeplaces": 2,
     "Price": 99.99,
     "Categories": [ "Office" ]
   },
@@ -14,6 +16,8 @@
     "Socket": "AM4",
     "DDRType": "DDR4",
     "DriveSupport": [ "SATA" ],
+    "SATAplaces": 6,
+    "NVMeplaces": 2,
     "Price": 339.00,
     "Categories": [ "Server" ]
   },
@@ -23,6 +27,8 @@
     "Socket": "AM4",
     "DDRType": "DDR4",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 6,
+    "NVMeplaces": 2,
     "Price": 159.90,
     "Categories": [ "Gaming" ]
   },
@@ -32,6 +38,8 @@
     "Socket": "AM4",
     "DDRType": "DDR4",
     "DriveSupport": [ "SATA" ],
+    "SATAplaces": 6,
+    "NVMeplaces": 1,
     "Price": 109.90,
     "Categories": [ "Gaming", "Office" ]
   },
@@ -42,6 +50,8 @@
     "Socket": "AM5",
     "DDRType": "DDR5",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 8,
+    "NVMeplaces": 2,
     "Price": 379.90,
     "Categories": [ "Server" ]
   },
@@ -51,6 +61,8 @@
     "Socket": "AM5",
     "DDRType": "DDR5",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 2,
+    "NVMeplaces": 2,
     "Price": 349.00,
     "Categories": [ "Gaming" ]
   },
@@ -60,6 +72,8 @@
     "Socket": "AM5",
     "DDRType": "DDR5",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 4,
+    "NVMeplaces": 4,
     "Price": 524.39,
     "Categories": [ "Gaming", "Rendering" ]
   },
@@ -69,15 +83,20 @@
     "Socket": "AM5",
     "DDRType": "DDR5",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 6,
+    "NVMeplaces": 3,
     "Price": 219.90,
     "Categories": [ "Gaming" ]
   },
+
   {
     "Name": "ASRock Rack W680D4U-2L2T",
     "Fit": "ATX",
     "Socket": "LGA1700",
     "DDRType": "DDR4",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 4,
+    "NVMeplaces": 1,
     "Price": 489.90,
     "Categories": [ "Server", "Office" ]
   },
@@ -87,6 +106,8 @@
     "Socket": "LGA1700",
     "DDRType": "DDR5",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 4,
+    "NVMeplaces": 2,
     "Price": 219.90,
     "Categories": [ "Gaming", "Office" ]
   },
@@ -96,6 +117,8 @@
     "Socket": "LGA1700",
     "DDRType": "DDR5",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 6,
+    "NVMeplaces": 4,
     "Price": 224.90,
     "Categories": [ "Gaming", "Rendering" ]
   },
@@ -105,6 +128,8 @@
     "Socket": "LGA1700",
     "DDRType": "DDR4",
     "DriveSupport": [ "SATA" ],
+    "SATAplaces": 4,
+    "NVMeplaces": 1,
     "Price": 79.90,
     "Categories": [ "Office" ]
   },
@@ -115,6 +140,8 @@
     "Socket": "SP3",
     "DDRType": "DDR4",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 8,
+    "NVMeplaces": 2,
     "Price": 639.00,
     "Categories": [ "Server" ]
   },
@@ -124,16 +151,19 @@
     "Socket": "SP3",
     "DDRType": "DDR4",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 8,
+    "NVMeplaces": 2,
     "Price": 589.00,
     "Categories": [ "Server" ]
   },
-
   {
     "Name": "Supermicro H12SSL-i",
     "Fit": "ATX",
     "Socket": "SP3",
     "DDRType": "DDR4",
     "DriveSupport": [ "SATA" ],
+    "SATAplaces": 8,
+    "NVMeplaces": 1,
     "Price": 529.00,
     "Categories": [ "Server" ]
   },
@@ -144,6 +174,8 @@
     "Socket": "SP5",
     "DDRType": "DDR5",
     "DriveSupport": [ "PCIe 5.0", "SATA" ],
+    "SATAplaces": 4,
+    "NVMeplaces": 3,
     "Price": 999.00,
     "Categories": [ "Server", "Rendering" ]
   },
@@ -153,6 +185,8 @@
     "Socket": "SP5",
     "DDRType": "DDR5",
     "DriveSupport": [ "PCIe 5.0", "SATA" ],
+    "SATAplaces": 8,
+    "NVMeplaces": 2,
     "Price": 829.00,
     "Categories": [ "Server" ]
   },
@@ -162,6 +196,8 @@
     "Socket": "SP5",
     "DDRType": "DDR5",
     "DriveSupport": [ "PCIe 4.0", "SATA" ],
+    "SATAplaces": 8,
+    "NVMeplaces": 2,
     "Price": 849.00,
     "Categories": [ "Server", "Rendering" ]
   }

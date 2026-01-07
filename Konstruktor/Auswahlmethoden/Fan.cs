@@ -96,11 +96,6 @@ namespace Konstruktor.Methoden
                     mypc.Fans.Add(theonefanpicked);
                 }
 
-                
-
-
-                
-
                 do
                 {
                     char answerotherfans;
