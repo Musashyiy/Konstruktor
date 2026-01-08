@@ -46,22 +46,15 @@ namespace Konstruktor.Methoden
                         i++;
                     }
 
-                    int j = 1;
-                    bool moredrivesyesno = false;
-                    int h = 1;
                     
+                    bool moredrivesyesno = false; 
                     
                     do
                     {
+                        char numberdriveyesno = 'n';
 
-                        for (h = 1; h <= numberplacesNVMe; h++)
+                        for (int h = 1 ; h <=  numberplacesNVMe; h++)
                         {
-
-                            if (h == numberplacesNVMe)
-                            {
-                                success = true;
-                            }
-
                             do
                             {
                                 success = false;
@@ -93,8 +86,7 @@ namespace Konstruktor.Methoden
                                     int actualpick = pick - 1;
                                     var selecteddrive = drives[actualpick];
                                     mypc.DriveNVMe.Add(selecteddrive);
-                                    Console.WriteLine($"{selecteddrive.Name} wurde als NVMe gewählt.");
-                                    h++;
+                                    Console.WriteLine($"{selecteddrive.Name} wurde als NVMe gewählt.");                                    
                                 }                     
 
                             } while (success == false);
@@ -106,16 +98,17 @@ namespace Konstruktor.Methoden
                                 newNVMe = true;
                             }
 
-                            do
+                            while (!newNVMe || numberplacesNVMe == 0)
                             {
-                                char numberdriveyesno;
-                                numberplacesNVMe = numberplacesNVMe - 1;
-                                Console.WriteLine($"Sie können noch {numberplacesNVMe} NVMe-Festplatten auswählen.");
+                                
+                                
                                 Console.WriteLine("Soll noch eine NVMe hiunzugefügt werden?\n  Ja(y) oder Nein(n)?");
                                 char.TryParse(Console.ReadLine(), out numberdriveyesno);
                     
                                 if (numberdriveyesno == 'y')
                                 {
+                                    numberplacesNVMe = numberplacesNVMe - 1;
+                                    Console.WriteLine($"Sie können noch {numberplacesNVMe} NVMe-Festplatten auswählen.");
                                     Console.WriteLine("Wählen sie eine weitere NVMe aus.");
                                     newNVMe = true;
                                 }
@@ -123,8 +116,7 @@ namespace Konstruktor.Methoden
                                 else if (numberdriveyesno == 'n')
                                 {
                                     moredrivesyesno = true;
-                                    newNVMe = true;
-                                    break;
+                                    newNVMe = true;                                    
                                 }
 
                                 else
@@ -134,20 +126,19 @@ namespace Konstruktor.Methoden
                                     Console.ResetColor();
                                 }
 
-                            } while (!newNVMe);
-
-                            if (h == numberplacesNVMe)
-                            {
-                                moredrivesyesno = true;
                             }
 
+                            if (numberdriveyesno == 'n' || numberplacesNVMe == 0)
+                            {
+                                break;
+                            }
                         }
 
-                        if (numberplacesNVMe == 0)
+                        if (numberdriveyesno == 'n' || numberplacesNVMe == 0)
                         {
-                            moredrivesyesno = true;
-                        }
-
+                            Console.WriteLine("Es werden/können keine weiteren Festplatten mehr ausgew#hlt werden.");
+                            break;
+                        }                        
 
                     } while (!moredrivesyesno);
 
@@ -165,9 +156,7 @@ namespace Konstruktor.Methoden
                     Console.WriteLine("Ungültige Auswahl. Bitte wählen sie nochmal.");
                 }
 
-            } while (!NVMeys);
-
-                
+            } while (!NVMeys);                
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
