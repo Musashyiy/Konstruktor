@@ -140,7 +140,6 @@ namespace Konstruktor.Methoden
                     }
                 }
 
-
                 Console.WriteLine("--------------------------------------------------------------");
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine("Gesamtpreis: " + mypc.Price + "€");

@@ -75,16 +75,6 @@ namespace Konstruktor.Methoden
         }        
     }
 
-    public class CoolingBlueprint                                        ///Die Blaupause für die verscheidenen Kühlungen
-    {
-        public string Name { get; set; }
-        public string Form { get; set; }                    //AiO, Aircolling....
-        public float Price { get; set; }
-        public List<string> Sockets { get; set; }
-        public float Height { get; set; }
-        public float Width { get; set; }
-        public float Lenght { get; set; }
-        public List<string> Categories { get; set; }
-    }
+    
 
 }
