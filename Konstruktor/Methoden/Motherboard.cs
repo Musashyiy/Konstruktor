@@ -9,10 +9,20 @@ using System.Threading.Tasks;
 
 namespace Konstruktor.Methoden
 {
-    public class Mainboards
+    public class Motherboard : IComponent                                    ///Die Blaupause für die verscheidenen Motherboards
     {
-        public static string MainboardSelection(MyPc mypc)
+        public string Name { get; set; }
+        public string Fit { get; set; }                 //ATX, mini-ATX etc...
+        public string Socket { get; set; }              //AM5, AM4, Z890...
+        public float Price { get; set; }
+        public string DDRType { get; set; }             //DDR-4, DDR-5, DDR-5 RDIMM...
+        public List<string> DriveSupport { get; set; }
+        public int SATAplaces { get; set; }
+        public int NVMeplaces { get; set; }
+        public string[] Categories { get; set; }
+        public void Select(MyPc mypc)
         {
+            Console.Clear();
             string jsonTextMB = File.ReadAllText("json/motherboards.json");
             JsonArray motherboardsarray = JsonNode.Parse(jsonTextMB).AsArray();
             int anzahlmb = motherboardsarray.Count;
@@ -63,25 +73,13 @@ namespace Konstruktor.Methoden
             int actualpick = pick - 1;
             mypc.Motherboard = motherboards[actualpick];
             Console.WriteLine($"{motherboards[actualpick].Name} wurde als Motherboard gewählt.");
-
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ResetColor();
-            Console.ReadKey();
-
-            return mypc.Motherboard.Name;
+            Console.ReadKey();            
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
         }
-    }
-    public class Motherboard                                    ///Die Blaupause für die verscheidenen Motherboards
-    {
-        public string Name { get; set; }
-        public string Fit { get; set; }                 //ATX, mini-ATX etc...
-        public string Socket { get; set; }              //AM5, AM4, Z890...
-        public float Price { get; set; }
-        public string DDRType { get; set; }             //DDR-4, DDR-5, DDR-5 RDIMM...
-        public List <string> DriveSupport { get; set; }
-        public int SATAplaces { get; set; }
-        public int NVMeplaces { get; set; }
-        public string[] Categories { get; set; }
-    }
+    }        
+        
 }

@@ -11,10 +11,16 @@ using System.Threading.Tasks;
 
 namespace Konstruktor.Methoden
 {
-    public class Fans
+    public class Fan : IComponent                                            ///Die Blaupause für die verscheidenen Lüfter
     {
-        public static void FansSelection(MyPc mypc)
+        public string Name { get; set; }
+        public int FanNum { get; set; }
+        public float Size { get; set; }                 //120mm, 140mm...
+        public float Price { get; set; }
+        public string[] Categories { get; set; }
+        public void Select(MyPc mypc)
         {
+            Console.Clear();
             string jsonTextFAN = File.ReadAllText("json/fans.json");
             JsonArray Fansarray = JsonNode.Parse(jsonTextFAN).AsArray();
             int anzahlfans = Fansarray.Count;
@@ -64,7 +70,7 @@ namespace Konstruktor.Methoden
                         Console.ResetColor();
                     }
                 }
-                
+
                 int actualpick = pick - 1;
 
                 string selectedfans = fans[actualpick].Name;
@@ -119,34 +125,27 @@ namespace Konstruktor.Methoden
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("Ungültige Eingabe. Bitte versuchen sie es erneut.");
                         Console.ResetColor();
-                        
+
                         otherfansbool = false;
                     }
 
                 } while (!otherfansbool);
 
-                
+
             } while (!success);
 
             int fansamount = mypc.Fans.Count();
-                        
+
             Console.WriteLine($"{fansamount} Lüfter wurden ausgewählt");
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ResetColor();
             Console.ReadKey();
-                        
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
         }
-    }
-    public class Fan                                            ///Die Blaupause für die verscheidenen Lüfter
-    {
-        public string Name { get; set; }
-        public int FanNum { get; set; }
-        public float Size { get; set; }                 //120mm, 140mm...
-        public float Price { get; set; }
-        public string[] Categories { get; set; }
-    }
+    }                
    
 }   
     

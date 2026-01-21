@@ -9,10 +9,22 @@ using System.Threading.Tasks;
 
 namespace Konstruktor.Methoden
 {
-    internal class GPUs
+    
+
+    public class GPU : IComponent                                            ///Die Blaupause für die verscheidenen GPUs
     {
-        public static string GPUSelection(MyPc mypc)
+        public string Name { get; set; }
+        public float WattInput { get; set; }
+        public float VRAMcapacity { get; set; }         //6GB, 8GB, 12GB...
+        public string VRAMtype { get; set; }            //GDDR6, GDDR6x, GDDR7...
+        public float Width { get; set; }
+        public float Depth { get; set; }
+        public float Lenght { get; set; }
+        public float Price { get; set; }
+        public string[] Categories { get; set; }
+        public void Select(MyPc mypc)
         {
+            Console.Clear();
             string jsonTextGPU = File.ReadAllText("json/gpus.json");
             JsonArray gpusarray = JsonNode.Parse(jsonTextGPU).AsArray();
             int anzahlgpu = gpusarray.Count;
@@ -67,21 +79,10 @@ namespace Konstruktor.Methoden
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ResetColor();
-            Console.ReadKey();
-
-            return mypc.Gpu.Name;
+            Console.ReadKey();           
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
         }
     }
-    public class GPU                                            ///Die Blaupause für die verscheidenen GPUs
-    {
-        public string Name { get; set; }
-        public float WattInput { get; set; }
-        public float VRAMcapacity { get; set; }         //6GB, 8GB, 12GB...
-        public string VRAMtype { get; set; }            //GDDR6, GDDR6x, GDDR7...
-        public float Width { get; set; }
-        public float Depth { get; set; }
-        public float Lenght { get; set; }
-        public float Price { get; set; }
-        public string[] Categories { get; set; }
-    }
+        
 }

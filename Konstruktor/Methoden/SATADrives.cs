@@ -9,10 +9,21 @@ using System.Threading.Tasks;
 
 namespace Konstruktor.Methoden
 {
-    public class SATADrive
+    
+    
+
+    public class SATADrives : IComponent                                         ///Die Blaupause für die verscheidenen Festplatten
     {
-        public static void SATADrivesSelection(MyPc mypc)
+        public string Name { get; set; }
+        public string Connection { get; set; }          //SATA, PCIe...
+        public float Size { get; set; }                 //500GB, 1TB...
+        public float ReadSpeedMBs { get; set; }
+        public float WriteSpeedMBs { get; set; }
+        public float Price { get; set; }
+        public string[] Categories { get; set; }
+        public void Select(MyPc mypc)
         {
+            Console.Clear();
             string jsonTextDrive = File.ReadAllText("json/SATA.json");
             JsonArray SATAdrivesarray = JsonNode.Parse(jsonTextDrive).AsArray();
             int anzahldrives = SATAdrivesarray.Count;
@@ -23,29 +34,37 @@ namespace Konstruktor.Methoden
             int pick = 0;
             char jumpSATA;
             bool SATAyn = false;
+            int numberplacesSATA;
+            bool moredrivesyesno = false;
+            bool SATAnummax = false;
 
             do
             {
-
                 Console.WriteLine("Soll eine SATA-Festplatte hinzugefügt werden?\n  Ja(y) oder Nein(n)?");
                 char.TryParse(Console.ReadLine(), out jumpSATA);
 
-                if(jumpSATA == 'y')
+                if (jumpSATA == 'y')
                 {
-                    Console.WriteLine("Auswahl SATA-Speicher:");
-                    Console.WriteLine($"Sie können maximal {mypc.Motherboard.SATAplaces} SATA-Festplatten auswählen.");
-                    Console.WriteLine();
-                    int numberplacesSATA = mypc.Motherboard.SATAplaces;
-
-                    foreach (var drivess in drives)
+                    if (mypc.Motherboard != null)
                     {
-                        Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size}MB | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Kategorien: {string.Join(", ", drivess.Categories)} | Preis: {drivess.Price}€");
+                        Console.WriteLine("Auswahl SATA-Speicher:");
+                        Console.WriteLine($"Sie können maximal {mypc.Motherboard.SATAplaces} SATA-Festplatten auswählen.");
                         Console.WriteLine();
-                        i++;
+                        numberplacesSATA = mypc.Motherboard.SATAplaces;
+
+                        foreach (var drivess in drives)
+                        {
+                            Console.WriteLine($"({i}) {drivess.Name} | Speichergröße: {drivess.Size}MB | Schreibgeschwindigkeit: {drivess.WriteSpeedMBs}MB/s \n   Lesegeschwindigkeit: {drivess.ReadSpeedMBs}MB/s | Kategorien: {string.Join(", ", drivess.Categories)} | Preis: {drivess.Price}€");
+                            Console.WriteLine();
+                            i++;
+                        }   
                     }
 
-                    bool moredrivesyesno = false;
-                                    
+                    else
+                    {
+                        numberplacesSATA = 10;
+                        Console.WriteLine("Sie haben noch kein Motherboard ausgewählt, deswegen wird ihre Auswahl auf 10 begrenz");
+                    }
 
                     do
                     {
@@ -80,25 +99,29 @@ namespace Konstruktor.Methoden
                                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
                                         Console.ResetColor();
                                     }
-
+                                    
+                                    if (h == numberplacesSATA)
+                                    {
+                                        SATAnummax = true;
+                                        Console.WriteLine("Die maximale Anzahl an SATA-Festplatten wurde erreicht.");
+                                        break;
+                                    }
+                                                                      
+                                    
                                     int actualpick = pick - 1;
                                     var selecteddrive = drives[actualpick];
                                     mypc.DriveSATA.Add(selecteddrive);
-                                    Console.WriteLine($"{selecteddrive.Name} wurde als SATA gewählt.");                                    
+                                    Console.WriteLine($"{selecteddrive.Name} wurde als SATA gewählt.");
+                                    
                                 }
 
                             } while (success == false);
 
-                            bool newSATA = false;
-
-                            if (h == numberplacesSATA)
-                            {
-                                newSATA = true;
-                            }
+                            bool newSATA = false;                            
 
                             while (!newSATA || numberplacesSATA == 0)
                             {
-                                
+
                                 Console.WriteLine("Soll eine weitere Festplatte hinzugefügt werden?\n   Ja(y) oder Nein(n)?");
                                 char.TryParse(Console.ReadLine(), out numberdriveyesno);
 
@@ -113,7 +136,7 @@ namespace Konstruktor.Methoden
                                 else if (numberdriveyesno == 'n')
                                 {
                                     moredrivesyesno = true;
-                                    newSATA = true;                                    
+                                    newSATA = true;
                                 }
 
                                 else
@@ -128,13 +151,13 @@ namespace Konstruktor.Methoden
                             {
                                 break;
                             }
-                        }                        
+                        }
 
                         if (numberplacesSATA == 0 || numberdriveyesno == 'n')
                         {
-                            Console.WriteLine("Es werden/können keine weiteren Festplatten mehr ausgew#hlt werden.");
+                            Console.WriteLine("Es werden/können keine weiteren Festplatten mehr ausgewählt werden.");
                             break;
-                        }                        
+                        }
 
                     } while (!moredrivesyesno);
 
@@ -152,22 +175,14 @@ namespace Konstruktor.Methoden
                     Console.WriteLine("Ungültige Eingabe. Bitte nochmals wählen.");
                 }
 
-            } while (!SATAyn);                
+            } while (!SATAyn);
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ResetColor();
             Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
         }
-    }
-    public class SATADrives                                         ///Die Blaupause für die verscheidenen Festplatten
-    {
-        public string Name { get; set; }
-        public string Connection { get; set; }          //SATA, PCIe...
-        public float Size { get; set; }                 //500GB, 1TB...
-        public float ReadSpeedMBs { get; set; }
-        public float WriteSpeedMBs { get; set; }
-        public float Price { get; set; }
-        public string[] Categories { get; set; }
-    }
+    } 
 }

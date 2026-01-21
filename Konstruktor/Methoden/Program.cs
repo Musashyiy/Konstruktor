@@ -1,6 +1,7 @@
 ﻿using Components;
-using Konstruktor.Checks;
+
 using Konstruktor.Methoden;
+using System.ComponentModel;
 using System.Dynamic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -17,103 +18,121 @@ namespace Konstruktor.Methoden
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
-            //Console.SetWindowSize(250, 30);
-
             MyPc mypc = new MyPc();
-
-            bool ready = false;
-            while (!ready)
+            bool nextcomp = false;
+            string SATAText;
+            string NVMeText;
+            string fanText;
+            string extrasText;
+            while (!nextcomp)
             {
-                Console.WriteLine("Willkommen!\nWelche Komponenten wollen sie bearbeiten?\n(1)Motherboard\n(2)CPU\n(3)GPU\n(4)RAM\n(5)CPU-Kühlung\n(6)SATA-Festplatte\n(7)NVMe-Festplatte\n(8)Lüfter\n(9)Netzteil\n(10)Gehäuse\n(11)Extras\n(12)Oder sie sind fertig mit der Auswahl");
-                int compselect;
-                int.TryParse(Console.ReadLine(), out compselect);
+                Console.OutputEncoding = Encoding.UTF8;
+                //Console.SetWindowSize(250, 30);
+                List<IComponent> components = new List<IComponent>();
+                components.Add(new Motherboard());
+                components.Add(new CPU());
+                components.Add(new GPU());
+                components.Add(new RAM());
+                components.Add(new CoolingBlueprint());
+                components.Add(new SATADrives());                
+                components.Add(new NVMeDrive());                              
+                components.Add(new Fan());
+                components.Add(new PSU());
+                components.Add(new Case());
+                components.Add(new Extra());
+                Console.WriteLine("Willkommen zum PC-Konfigurator!\nSuchen sie sich eine Komponente aus, die bearbeitet werden soll.\n(1)Motherboad\n(2)CPU\n(3)GPU\n(4)RAM\n(5)CPU-Kühlung\n(6)SATA-Festplatten\n(7)NVMe-Festplatten\n(8)Lüfter\n(9)Netzteil\n(10)Gehäuse\n(11)Extras");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Es wird empfohen mit dem Motherboard anzufangen.");
+                Console.ResetColor();
+                Console.WriteLine();
+                Console.WriteLine("Ihr System:");
+                Console.WriteLine("Gehäuse: " + (mypc.Case == null ? "- keine ausgewählt -" : $"{mypc.Case.Name}  |  {mypc.Case.Price:0.00}€"));
+                Console.WriteLine("Netzteil: " + (mypc.Psu == null ? "- keine ausgewählt -" : $"{mypc.Psu.Name}  |  {mypc.Psu.Price:0.00}€")); ;
+                Console.WriteLine("Motherboard: " + (mypc.Motherboard == null ? "- keine ausgewählt -" : $"{mypc.Motherboard.Name}  |  {mypc.Motherboard.Price:0.00}€"));
+                Console.WriteLine("CPU: " + (mypc.Cpu == null ? "- keine ausgewählt -" : $"{mypc.Cpu.Name}  |  {mypc.Cpu.Price:0.00}€"));
+                Console.WriteLine("Grafikkarte: " + (mypc.Gpu == null ? "- keine ausgewählt -" : $"{mypc.Gpu.Name}  |  {mypc.Gpu.Price:0.00}€"));
+                Console.WriteLine("RAM: " + (mypc.Ram == null ? "- keine ausgewählt -" : $"{mypc.Ram.Name}  |  {mypc.Ram.Price:0.00}€"));
+                Console.WriteLine("Kühlung: " + (mypc.Coolings == null ? "- keine ausgewählt -" : $"{mypc.Coolings.Name}  |  {mypc.Coolings.Price:0.00}€"));
 
-                if (compselect == 1)
+                if (mypc.DriveSATA == null || mypc.DriveSATA.Count == 0)
                 {
-                    Mainboards.MainboardSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
-                }
-                else if (compselect == 2)
-                {
-                    CPUs.CPUSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
-                }
-                else if (compselect == 3)
-                {
-                    GPUs.GPUSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
-                }
-                else if (compselect == 4)
-                {
-                    RAMs.RAMSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
-                }
-                else if (compselect == 5)
-                {
-                    CoolingsSelection.CoolingSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
-                }
-                else if (compselect == 6)
-                {
-                    SATADrive.SATADrivesSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
-                }
-                else if (compselect == 7)
-                {
-                    if (mypc.Motherboard.DriveSupport.Contains("PCIe 4.0") || mypc.Motherboard.DriveSupport.Contains("PCIe 5.0"))
-                    {
-                        NVMeDrive.NVMeDrivesSelection(mypc);
-                        Console.Clear();
-                        Console.WriteLine("\x1b[3J");
-                    }
-                    else if (mypc.Motherboard.DriveSupport.Equals(String.Empty))
-                    {
-
-                    }
-                }
-                else if (compselect == 8)
-                {
-                    Fans.FansSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
-                }
-                else if (compselect == 9)
-                {
-                    PSUs.PSUSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
-                }
-                else if (compselect == 10)
-                {
-                    Cases.CaseSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
-                }
-                else if (compselect == 11)
-                {
-                    PSUs.PSUSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
-                }
-                else if (compselect == 12)
-                {
-                    Extra.ExtrasSelection(mypc);
-                    Console.Clear();
-                    Console.WriteLine("\x1b[3J");
+                    SATAText = "— keine ausgewählt —";
                 }
                 else
                 {
-                    ready = true;
-                    Console.WriteLine("Alle Komponenten wurden gespeichert.");
+                    SATAText = string.Join(", ",
+                        mypc.DriveSATA
+                            .GroupBy(h => h.Name)
+                            .Select(k =>
+                                $"{k.Count()}x {k.Key} ({k.Count() * k.First().Price}€)"
+                            )
+                    );
                 }
+
+                Console.WriteLine($"SATA-Laufwerke: {SATAText}");
+
+                if (mypc.DriveNVMe == null || mypc.DriveNVMe.Count == 0)
+                {
+                    NVMeText = "— keine ausgewählt —";
+                }
+                else
+                {
+                    NVMeText = string.Join(", ",
+                        mypc.DriveNVMe
+                            .GroupBy(a => a.Name)
+                            .Select(a =>
+                                $"{a.Count()}x {a.Key} ({a.Count() * a.First().Price}€)"
+                            )
+                    );
+                }
+                Console.WriteLine($"NVMe-Laufwerke: {NVMeText}");
+
+                if (mypc.Fans == null || mypc.Fans.Count == 0)
+                {
+                    fanText = "— keine ausgewählt —";
+                }
+                else
+                {
+                    fanText = string.Join(", ",
+                        mypc.Fans
+                            .GroupBy(m => m.Name)
+                            .Select(l =>
+                                $"{l.Count()}x {l.Key} ({l.Count() * l.First().Price}€)"
+                            )
+                    );
+                }
+                Console.WriteLine("Lüfter: " + fanText);
+
+                if (mypc.Extras == null || mypc.Extras.Count == 0)
+                {
+                    extrasText = "— keine ausgewählt —";
+                }
+                else
+                {
+                    extrasText = string.Join(", ",
+                        mypc.Extras
+                            .GroupBy(e => e.Name)
+                            .Select(n =>
+                                $"{n.Count()}x {n.Key} ({n.Count() * n.First().Price}€)"
+                            )
+                    );
+                }
+                Console.WriteLine("Extras: " + extrasText);
+
+                int compselect;
+                int.TryParse(Console.ReadLine(), out compselect);
+                components[compselect - 1].Select(mypc);
+                Console.WriteLine("Wollen sie eine weitere Komponente aussuchen?\n  Ja(y) oder Nein(n)?");
+                char anothercomp;
+                char.TryParse(Console.ReadLine(), out anothercomp);
+                if (anothercomp == 'n') nextcomp = true;
+                Console.Clear();
             }
+            //Checks.PriceCheck.Pricecheck(mypc);
+            //Console.WriteLine($"Gesamtsumme des Systems: {mypc.Price}€");
+
+            
+
             //Console.OutputEncoding = Encoding.UTF8;
             ////Console.SetWindowSize(250, 30);
 
@@ -177,7 +196,7 @@ namespace Konstruktor.Methoden
             //Checks.VolumeCheck.VolumeCheck.MeasurmentCheck(mypc);
             //PriceCheck.Pricecheck(mypc);
 
-            Checkout.Checkoutgenerate(mypc);
+            //Checkout.Checkoutgenerate(mypc);
 
         }
     }
@@ -194,10 +213,10 @@ namespace Components
         public Motherboard Motherboard { get; set; }
         public RAM Ram { get; set; }
         public List<SATADrives> DriveSATA { get; set; } = new();
-        public List<NVMeDrives> DriveNVMe { get; set; } = new();
+        public List<NVMeDrive> DriveNVMe { get; set; } = new();
         public CoolingBlueprint Coolings { get; set; }
         public List<Fan> Fans { get; set; } = new();
-        public List<Extras> Extras { get; set; } = new();
+        public List<Extra> Extras { get; set; } = new();
         public float Price { get; set; }
     }
 

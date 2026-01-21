@@ -10,14 +10,21 @@ using System.Threading.Tasks;
 
 namespace Konstruktor.Methoden
 {
-    public class Extra
+    
+    
+
+    public class Extra : IComponent                                         ///Die zubuchbaren Extras
     {
-        public static void ExtrasSelection(MyPc mypc)
+        public string Name { get; set; }                //RGB-Module, Verkabelungen
+        public string Description { get; set; }
+        public float Price { get; set; }
+        public string[] Categories { get; set; }
+        public void Select(MyPc mypc)
         {
             string jsonTextExtra = File.ReadAllText("json/extras.json");
             JsonArray Extrasarray = JsonNode.Parse(jsonTextExtra).AsArray();
             int anzahlextras = Extrasarray.Count;
-            List<Extras>? extras = JsonSerializer.Deserialize<List<Extras>>(jsonTextExtra);
+            List<Extra>? extras = JsonSerializer.Deserialize<List<Extra>>(jsonTextExtra);
             int i = 1;
             char extrasyesno;
             bool ready = false;
@@ -125,19 +132,15 @@ namespace Konstruktor.Methoden
 
             }
 
-                Console.WriteLine("Als Extras wurden Ausgewählt: " + string.Join(", ", mypc.Extras.Select(d => d.Name)));
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
-                Console.ResetColor();
+            Console.WriteLine("Als Extras wurden Ausgewählt: " + string.Join(", ", mypc.Extras.Select(d => d.Name)));
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+            Console.ResetColor();
 
-                Console.ReadKey();
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
         }
     }
-    public class Extras                                         ///Die zubuchbaren Extras
-    {
-        public string Name { get; set; }                //RGB-Module, Verkabelungen
-        public string Description { get; set; }
-        public float Price { get; set; }
-        public string[] Categories { get; set; }
-    }
+       
 }

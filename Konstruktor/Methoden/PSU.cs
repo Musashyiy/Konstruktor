@@ -9,10 +9,20 @@ using System.Threading.Tasks;
 
 namespace Konstruktor.Methoden
 {
-    public class PSUs
+    
+
+    public class PSU : IComponent                                            ///Die Blaupause für die verscheidenen PSUs
     {
-        public static string PSUSelection(MyPc mypc)
+        public string Name { get; set; }
+        public float Watt { get; set; }                 //in Watt
+        public float Height { get; set; }               //in cm
+        public float Width { get; set; }                //in cm
+        public float Depth { get; set; }                //in cm
+        public float Price { get; set; }
+        public string[] Categories { get; set; }
+        public void Select(MyPc mypc)
         {
+            Console.Clear();
             string jsonTextPSU = File.ReadAllText("json/psus.json");
             JsonArray psusarray = JsonNode.Parse(jsonTextPSU).AsArray();
             int anzahlpsu = psusarray.Count;
@@ -69,17 +79,9 @@ namespace Konstruktor.Methoden
             Console.ResetColor();
             Console.ReadKey();
 
-            return mypc.Psu.Name;
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
         }
-    }
-    public class PSU                                            ///Die Blaupause für die verscheidenen PSUs
-    {
-        public string Name { get; set; }
-        public float Watt { get; set; }                 //in Watt
-        public float Height { get; set; }               //in cm
-        public float Width { get; set; }                //in cm
-        public float Depth { get; set; }                //in cm
-        public float Price { get; set; }
-        public string[] Categories { get; set; }
-    }
+    }                
+        
 }

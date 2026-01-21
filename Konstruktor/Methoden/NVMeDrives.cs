@@ -10,14 +10,22 @@ using System.Threading.Tasks;
 
 namespace Konstruktor.Methoden
 {
-    public class NVMeDrive
+    public class NVMeDrive : IComponent                                         ///Die Blaupause für die verscheidenen Festplatten
     {
-        public static void NVMeDrivesSelection(MyPc mypc)
+        public string Name { get; set; }
+        public string Connection { get; set; }          //SATA, PCIe...
+        public float Size { get; set; }                 //500GB, 1TB...
+        public float ReadSpeedMBs { get; set; }
+        public float WriteSpeedMBs { get; set; }
+        public float Price { get; set; }
+        public string[] Categories { get; set; }
+        public void Select(MyPc mypc)
         {
+            Console.Clear();
             string jsonTextDrive = File.ReadAllText("json/NVMe.json");
             JsonArray NVMedrivesarray = JsonNode.Parse(jsonTextDrive).AsArray();
             int anzahldrives = NVMedrivesarray.Count;
-            List<NVMeDrives>? drives = JsonSerializer.Deserialize<List<NVMeDrives>>(jsonTextDrive);
+            List<NVMeDrive>? drives = JsonSerializer.Deserialize<List<NVMeDrive>>(jsonTextDrive);
             int i = 1;
             bool success = false;
             int anzahl;
@@ -31,7 +39,7 @@ namespace Konstruktor.Methoden
                 Console.WriteLine("Soll eine NVMe hinzugefügt werden?\n  Ja(y) oder Nein(n)?");
                 char.TryParse(Console.ReadLine(), out jumpNVMe);
 
-                if(jumpNVMe == 'y')
+                if (jumpNVMe == 'y')
                 {
                     Console.WriteLine("Auswahl NVMe-Speicher:");
                     Console.WriteLine($"Sie können maximal {mypc.Motherboard.NVMeplaces} NVMe-Festplatten auswählen.");
@@ -46,14 +54,13 @@ namespace Konstruktor.Methoden
                         i++;
                     }
 
-                    
-                    bool moredrivesyesno = false; 
-                    
+                    bool moredrivesyesno = false;
+
                     do
                     {
                         char numberdriveyesno = 'n';
 
-                        for (int h = 1 ; h <=  numberplacesNVMe; h++)
+                        for (int h = 1; h <= numberplacesNVMe; h++)
                         {
                             do
                             {
@@ -69,7 +76,7 @@ namespace Konstruktor.Methoden
                                         Console.ForegroundColor = ConsoleColor.DarkRed;
                                         Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
                                         Console.ResetColor();
-                                    }                          
+                                    }
 
                                     else if (pick <= anzahldrives)
                                     {
@@ -85,9 +92,10 @@ namespace Konstruktor.Methoden
 
                                     int actualpick = pick - 1;
                                     var selecteddrive = drives[actualpick];
+                                    
                                     mypc.DriveNVMe.Add(selecteddrive);
-                                    Console.WriteLine($"{selecteddrive.Name} wurde als NVMe gewählt.");                                    
-                                }                     
+                                    Console.WriteLine($"{selecteddrive.Name} wurde als NVMe gewählt.");
+                                }
 
                             } while (success == false);
 
@@ -100,11 +108,11 @@ namespace Konstruktor.Methoden
 
                             while (!newNVMe || numberplacesNVMe == 0)
                             {
-                                
-                                
+
+
                                 Console.WriteLine("Soll noch eine NVMe hiunzugefügt werden?\n  Ja(y) oder Nein(n)?");
                                 char.TryParse(Console.ReadLine(), out numberdriveyesno);
-                    
+
                                 if (numberdriveyesno == 'y')
                                 {
                                     numberplacesNVMe = numberplacesNVMe - 1;
@@ -116,7 +124,7 @@ namespace Konstruktor.Methoden
                                 else if (numberdriveyesno == 'n')
                                 {
                                     moredrivesyesno = true;
-                                    newNVMe = true;                                    
+                                    newNVMe = true;
                                 }
 
                                 else
@@ -138,7 +146,7 @@ namespace Konstruktor.Methoden
                         {
                             Console.WriteLine("Es werden/können keine weiteren Festplatten mehr ausgew#hlt werden.");
                             break;
-                        }                        
+                        }
 
                     } while (!moredrivesyesno);
 
@@ -156,22 +164,15 @@ namespace Konstruktor.Methoden
                     Console.WriteLine("Ungültige Auswahl. Bitte wählen sie nochmal.");
                 }
 
-            } while (!NVMeys);                
+            } while (!NVMeys);
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
             Console.ResetColor();
             Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("\x1b[3J");
         }
     }
-    public class NVMeDrives                                         ///Die Blaupause für die verscheidenen Festplatten
-    {
-        public string Name { get; set; }
-        public string Connection { get; set; }          //SATA, PCIe...
-        public float Size { get; set; }                 //500GB, 1TB...
-        public float ReadSpeedMBs { get; set; }
-        public float WriteSpeedMBs { get; set; }
-        public float Price { get; set; }
-        public string[] Categories { get; set; }
-    }
+        
 }

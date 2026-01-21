@@ -13,66 +13,122 @@ namespace Konstruktor.Methoden
     {
         public static void AirCoolingsSelection(MyPc mypc)
         {
+            Console.Clear();
             string jsonTextCoolingair = File.ReadAllText("json/coolingsair.json");
             JsonArray coolingairsarray = JsonNode.Parse(jsonTextCoolingair).AsArray();
-            int anzahlcoolingair = coolingairsarray.Count;
             List<CoolingBlueprint>? coolingsair = JsonSerializer.Deserialize<List<CoolingBlueprint>>(jsonTextCoolingair);
             int i = 1;
+            int anzahlcoolingair;
+            
 
-            var compatibleair = coolingsair
-                .Where(air => air.Sockets.Contains(mypc.Motherboard.Socket))
-                .ToList();
-
-            Console.WriteLine("Luft-Kühlung");
-            Console.WriteLine();
-
-            foreach (var coolingss in compatibleair)
+            if (mypc.Motherboard == null)
             {
-                Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Maße: Höhe {coolingss.Height}cm x Breite {coolingss.Width}cm x Länge {coolingss.Lenght}cm | Kategorien: {string.Join(", ", coolingss.Categories)} | Preis: {coolingss.Price}€");
-                Console.WriteLine();
-                i++;
+                foreach (var coolingss in coolingsair)
+                {
+                    Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Maße: Höhe {coolingss.Height}cm x Breite {coolingss.Width}cm x Länge {coolingss.Lenght}cm | Kategorien: {string.Join(", ", coolingss.Categories)} | Preis: {coolingss.Price}€");
+                    Console.WriteLine();
+                    i++;
+                }
+                anzahlcoolingair = coolingsair.Count;
+
+                int pick = 0;
+                bool success = false;
+
+                do
+                {
+                    if (success == false)
+                    {
+                        Console.WriteLine("Auswahl Kühlung: ");
+                        int.TryParse(Console.ReadLine(), out pick);
+
+                        if (pick == 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
+                        }
+
+                        else if (pick <= anzahlcoolingair)
+                        {
+                            success = true;
+                        }
+
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
+                        }
+                    }
+                } while (success == false);
+
+                int actualpick = pick - 1;
+
+                mypc.Coolings = coolingsair[actualpick];
+                Console.WriteLine($"{coolingsair[actualpick].Name} wurde als Kühlung ausgewählt.");
+
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+                Console.ResetColor();
+                Console.ReadKey();
             }
 
-            int pick = 0;
-            bool success = false;
-
-            do
+            else
             {
-                if (success == false)
+                var compatibleair = coolingsair
+                    .Where(air => air.Sockets.Contains(mypc.Motherboard.Socket))
+                    .ToList();
+
+                Console.WriteLine("Luft-Kühlung");
+                Console.WriteLine();
+                foreach(var coolingss in compatibleair)
                 {
-                    Console.WriteLine("Auswahl Kühlung: ");
-                    int.TryParse(Console.ReadLine(), out pick);
-
-                    if (pick == 0)
-                    {
-                        Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
-                        Console.ResetColor();
-                    }
-
-                    else if (pick <= anzahlcoolingair)
-                    {
-                        success = true;
-                    }
-
-                    else
-                    {
-                        Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
-                        Console.ResetColor();
-                    }
+                    Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Maße: Höhe {coolingss.Height}cm x Breite {coolingss.Width}cm x Länge {coolingss.Lenght}cm | Kategorien: {string.Join(", ", coolingss.Categories)} | Preis: {coolingss.Price}€");
+                    Console.WriteLine();
+                    i++;
                 }
-            } while (success == false);
+                anzahlcoolingair = compatibleair.Count;
+                int pick = 0;
+                bool success = false;
 
-            int actualpick = pick - 1;
-            
-            mypc.Coolings = compatibleair[actualpick];
-            Console.WriteLine($"{compatibleair[actualpick].Name} wurde als Kühlung ausgewählt.");
+                do
+                {
+                    if (success == false)
+                    {
+                        Console.WriteLine("Auswahl Kühlung: ");
+                        int.TryParse(Console.ReadLine(), out pick);
 
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
-            Console.ResetColor();
-            Console.ReadKey();            
+                        if (pick == 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
+                        }
+
+                        else if (pick <= anzahlcoolingair)
+                        {
+                            success = true;
+                        }
+
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
+                        }
+                    }
+                } while (success == false);
+
+                int actualpick = pick - 1;
+
+                mypc.Coolings = compatibleair[actualpick];
+                Console.WriteLine($"{compatibleair[actualpick].Name} wurde als Kühlung ausgewählt.");
+
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+                Console.ResetColor();
+                Console.ReadKey();
+            }
         }        
     } 
 }
