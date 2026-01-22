@@ -23,6 +23,23 @@ namespace Konstruktor.Methoden
 
             if (mypc.Motherboard == null)
             {
+
+                string? socketToUse = null;
+                if (mypc.Motherboard != null && !string.IsNullOrWhiteSpace(mypc.Motherboard.Socket))
+                {
+                    socketToUse = mypc.Motherboard.Socket;
+                }
+                else if (mypc.Cpu != null && !string.IsNullOrWhiteSpace(mypc.Cpu.Socket))
+                {
+                    socketToUse = mypc.Cpu.Socket;
+                }
+
+                var compatibleaios = (socketToUse == null)
+                    ? coolingsair.ToList()
+                    : coolingsair.Where(aio => aio.Sockets.Contains(socketToUse)).ToList();
+
+                Console.WriteLine("Luftkühlungen:");
+
                 foreach (var coolingss in coolingsair)
                 {
                     Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Maße: Höhe {coolingss.Height}cm x Breite {coolingss.Width}cm x Länge {coolingss.Lenght}cm | Kategorien: {string.Join(", ", coolingss.Categories)} | Preis: {coolingss.Price}€");

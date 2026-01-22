@@ -96,10 +96,21 @@ namespace Konstruktor.Methoden
                 } while (!fansnummerok);
 
                 Console.WriteLine($"{selectedfans} wurde als Lüfter gewählt.");
-
-                for (int j = 1; j <= numberfans; j++)
+                
+                if (theonefanpicked.Size == 120)
                 {
-                    mypc.Fans.Add(theonefanpicked);
+                    for (int j = 1; j <= numberfans; j++)
+                    {
+                        mypc.Fans120.Add(theonefanpicked);
+                    }
+                }
+
+                else if (theonefanpicked.Size == 140)
+                {
+                    for (int j = 1; j <= numberfans; j++)
+                    {
+                        mypc.Fans140.Add(theonefanpicked);
+                    }
                 }
 
                 do

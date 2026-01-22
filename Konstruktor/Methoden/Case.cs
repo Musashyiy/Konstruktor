@@ -1,7 +1,9 @@
 ﻿using Components;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -15,7 +17,8 @@ namespace Konstruktor.Methoden
         public float Lenght { get; set; }               //in cm
         public float Width { get; set; }                //in cm
         public float Depth { get; set; }                //in cm
-        public int NumberCaseFans { get; set; }         //Custom Größen
+        public int NumberCaseFans120mm { get; set; }
+        public int NumberCaseFans140mm { get; set; }
         public int NumberSATASlots25 { get; set; }
         public int NumberSATASlots35 { get; set; }
         public float MaxGPULength { get; set; }
@@ -32,13 +35,15 @@ namespace Konstruktor.Methoden
             List<Case>? cases = JsonSerializer.Deserialize<List<Case>>(jsonTextCase);
             int i = 1;
 
+            
+
             if(mypc.Motherboard.Fit == null)
             {
                 Console.WriteLine("Cases");
                 Console.WriteLine();
                 foreach (var casee in cases)
                 {
-                    Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    Custom-Lüfterplätze: {casee.NumberCaseFans} Stück | Formfaktor: {casee.Fit} | Maximale Kühlerhöhe: {casee.MaxCoolerHeight}cm | Kategorien: {string.Join(", ", casee.Categories)} | Preis: {casee.Price}€");
+                    Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    120mm-Lüfter: {casee.NumberCaseFans120mm} Stück | 140mm-Lüfter: {casee.NumberCaseFans140mm} Stück | Formfaktor: {casee.Fit} | Maximale Kühlerhöhe: {casee.MaxCoolerHeight}cm | Kategorien: {string.Join(", ", casee.Categories)} | Preis: {casee.Price}€");
                     Console.WriteLine();
                     i++;
                 }
@@ -77,38 +82,57 @@ namespace Konstruktor.Methoden
 
                 int actualpick = pick - 1;
                 mypc.Case = cases[actualpick];
-                int anzahlfans = mypc.Fans.Count();
+                int anzahlfans = mypc.Fans120.Count() + mypc.Fans140.Count();
+                int anzahlfanslotsincase = mypc.Case.NumberCaseFans120mm + mypc.Case.NumberCaseFans140mm;
                 Console.WriteLine($"{cases[actualpick].Name} wurde als Case gewählt.");
+                int select120140;
+                
 
-                if (anzahlfans > mypc.Case.NumberCaseFans)
+                if (anzahlfans > anzahlfanslotsincase)
                 {
-                    bool numberok = false;
+                    while()
 
-                    do
-                    {
-                        Console.WriteLine($"Es wurden {anzahlfans} Lüfter ausgewählt. Das sind mehr als das ausgewählte Gehäuse fassen kann. Wollen sie die Lüfter beibehalten(y) oder ändern(n)?");
-                        char numbertoomuchfans;
-                        char.TryParse(Console.ReadLine(), out numbertoomuchfans);
-
-                        if (numbertoomuchfans == 'y')
+                        if (mypc.Fans120.Count() > mypc.Case.NumberCaseFans120mm)
                         {
-                            mypc.Fans.Clear();
-                            //Fan(mypc);
-                            numberok = true;
+                            
+                            Console.WriteLine($"Es wurden {mypc.Fans120.Count()} 120mm-Lüfter für das ausgewählte Gehäuse ausgewählt, das sind zu viele.\n Wollen sie die Lüfter neu auswählen (1), oder die Anzahl so behalten (2)?");
+                            int.TryParse(Console.ReadLine(), out select120140);
+                            if (select120140 == 1)
+                            {
+                                IComponent component = new Fan();
+                                component.Select(mypc);
+                            } 
+                            else if (select120140 == 2) continue;
+                            else Console.WriteLine("Ungültige Ei<ngabe. Bitte erneut auswählen.");
+                            
                         }
+                    //bool numberok = false;
+                    //do
+                    //{
+                    //    Console.WriteLine($"Es wurden {anzahlfans} Lüfter ausgewählt. Das sind mehr als das ausgewählte Gehäuse fassen kann. Wollen sie die Lüfter beibehalten(y) oder ändern(n)?");
+                    //    char numbertoomuchfans;
+                    //    char.TryParse(Console.ReadLine(), out numbertoomuchfans);
 
-                        else if (numbertoomuchfans == 'n')
-                        {
-                            Console.WriteLine("Die Auswahl der Lüfter bleibt bestehen.");
-                            numberok = true;
-                        }
+                    //    if (numbertoomuchfans == 'y')
+                    //    {
+                    //        mypc.Fans120.Clear();
+                    //        mypc.Fans140.Clear();
+                    //        //Fan();                        Hier muss noch die Selct Methode für die Fans eingabeut werden.
+                    //        numberok = true;
+                    //    }
 
-                        else
-                        {
-                            Console.WriteLine("Ungültige Eingabe. Bitte wählen sie erneut aus.");
-                        }
+                    //    else if (numbertoomuchfans == 'n')
+                    //    {
+                    //        Console.WriteLine("Die Auswahl der Lüfter bleibt bestehen.");
+                    //        numberok = true;
+                    //    }
 
-                    } while (!numberok);
+                    //    else
+                    //    {
+                    //        Console.WriteLine("Ungültige Eingabe. Bitte wählen sie erneut aus.");
+                    //    }
+
+                    //} while (!numberok);
                 }
 
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -129,15 +153,18 @@ namespace Konstruktor.Methoden
                 Console.WriteLine();
                 foreach (var casee in compatiblecases)
                 {
-                    Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    Custom-Lüfterplätze: {casee.NumberCaseFans} Stück | Formfaktor: {casee.Fit} | Maximale Kühlerhöhe: {casee.MaxCoolerHeight}cm | Kategorien: {string.Join(", ", casee.Categories)} | Preis: {casee.Price}€");
+                    Console.WriteLine($"({i}) {casee.Name} | Höhe: {casee.Lenght}cm | Breite: {casee.Width}cm | Tiefe: {casee.Depth}cm \n    120mm-Lüfterplätze: {casee.NumberCaseFans120mm} Stück | 140mm-Lüfterplätze: {casee.NumberCaseFans140mm} Stück | Formfaktor: {casee.Fit} | Maximale Kühlerhöhe: {casee.MaxCoolerHeight}cm |\n    Kategorien: {string.Join(", ", casee.Categories)} | Preis: {casee.Price}€");
                     Console.WriteLine();
                     i++;
                 }
 
+                int numfansincase = mypc.Fans.Count();
                 anzahlcases = compatiblecases.Count();
                 int pick = 0;
                 bool success = false;
+                
 
+                
                 do
                 {
                     if (success == false)
@@ -172,36 +199,45 @@ namespace Konstruktor.Methoden
                 int anzahlfans = mypc.Fans.Count();
                 Console.WriteLine($"{cases[actualpick].Name} wurde als Case gewählt.");
 
-                if (anzahlfans > mypc.Case.NumberCaseFans)
+
+                if (mypc.)
                 {
-                    bool numberok = false;
 
-                    do
-                    {
-                        Console.WriteLine($"Es wurden {anzahlfans} Lüfter ausgewählt. Das sind mehr als das ausgewählte Gehäuse fassen kann. Wollen sie die Lüfter beibehalten(y) oder ändern(n)?");
-                        char numbertoomuchfans;
-                        char.TryParse(Console.ReadLine(), out numbertoomuchfans);
-
-                        if (numbertoomuchfans == 'y')
-                        {
-                            mypc.Fans.Clear();
-                            //Fan(mypc);
-                            numberok = true;
-                        }
-
-                        else if (numbertoomuchfans == 'n')
-                        {
-                            Console.WriteLine("Die Auswahl der Lüfter bleibt bestehen.");
-                            numberok = true;
-                        }
-
-                        else
-                        {
-                            Console.WriteLine("Ungültige Eingabe. Bitte wählen sie erneut aus.");
-                        }
-
-                    } while (!numberok);
                 }
+
+                //if (anzahlfans > mypc.Case.NumberCaseFans)
+                //{
+                //    bool numberok = false;
+
+                //    do
+                //    {
+                //        Console.WriteLine($"Es wurden {anzahlfans} Lüfter ausgewählt. Das sind mehr als das ausgewählte Gehäuse fassen kann. Wollen sie die Lüfter beibehalten(y) oder ändern(n)?");
+                //        char numbertoomuchfans;
+                //        char.TryParse(Console.ReadLine(), out numbertoomuchfans);
+
+                //        if (numbertoomuchfans == 'y')
+                //        {
+                //            mypc.Fans.Clear();
+                //            //Fan(mypc);
+                //            numberok = true;
+                //        }
+
+                //        else if (numbertoomuchfans == 'n')
+                //        {
+                //            Console.WriteLine("Die Auswahl der Lüfter bleibt bestehen.");
+                //            numberok = true;
+                //        }
+
+                //        else
+                //        {
+                //            Console.WriteLine("Ungültige Eingabe. Bitte wählen sie erneut aus.");
+                //        }
+
+                //    } while (!numberok);
+                //}
+                
+
+
 
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");

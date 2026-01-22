@@ -18,66 +18,26 @@ namespace Konstruktor.Methoden
             JsonArray coolingsaioarray = JsonNode.Parse(jsonTextCoolingaio).AsArray();
             int anzahlcooling;
             List<CoolingBlueprint>? coolingsaio = JsonSerializer.Deserialize<List<CoolingBlueprint>>(jsonTextCoolingaio);
-            int i = 1;
+            int i = 1;            
             
-            if (mypc.Motherboard == null)
+
+            if (mypc.Motherboard != null || mypc.Cpu != null)
             {
-                foreach (var coolingss in coolingsaio)
+                string? socketToUse = null;
+                if (mypc.Motherboard != null && !string.IsNullOrWhiteSpace(mypc.Motherboard.Socket))
                 {
-                    Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Maße: Höhe {coolingss.Height}cm x Breite {coolingss.Width}cm x Länge {coolingss.Lenght}cm | Kategorien: {string.Join(", ", coolingss.Categories)} | Preis: {coolingss.Price}€");
-                    Console.WriteLine();
-                    i++;
+                    socketToUse = mypc.Motherboard.Socket;
                 }
-
-                anzahlcooling = coolingsaio.Count();
-                int pick = 0;
-                bool success = false;
-
-                do
+                else if (mypc.Cpu != null && !string.IsNullOrWhiteSpace(mypc.Cpu.Socket))
                 {
-                    if (success == false)
-                    {
-                        Console.WriteLine("Auswahl Kühlung: ");
-                        int.TryParse(Console.ReadLine(), out pick);
+                    socketToUse = mypc.Cpu.Socket;
+                }
+                
+                var compatibleaios = (socketToUse == null)
+                    ? coolingsaio.ToList()
+                    : coolingsaio.Where(aio => aio.Sockets.Contains(socketToUse)).ToList();
 
-                        if (pick == 0)
-                        {
-                            Console.ForegroundColor = ConsoleColor.DarkRed;
-                            Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
-                            Console.ResetColor();
-                        }
-
-                        else if (pick <= anzahlcooling)
-                        {
-                            success = true;
-                        }
-
-                        else
-                        {
-                            Console.ForegroundColor = ConsoleColor.DarkRed;
-                            Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
-                            Console.ResetColor();
-                        }
-                    }
-                } while (success == false);
-
-                int actualpick = pick - 1;
-                mypc.Coolings = coolingsaio[actualpick];
-                Console.WriteLine($"{coolingsaio[actualpick].Name} wurde als Kühlung ausgewählt.");
-
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
-                Console.ResetColor();
-                Console.ReadKey();
-            }
-
-            else
-            {
-                var compatibleaios = coolingsaio
-                    .Where(aio => aio.Sockets.Contains(mypc.Motherboard.Socket) || aio.Sockets.Contains(mypc.Cpu.Socket))
-                    .ToList();
-
-                Console.WriteLine("Coolings");
+                Console.WriteLine("Aio-Kühlungen:");
                 Console.WriteLine();
                 foreach (var coolingss in compatibleaios)
                 {
@@ -125,9 +85,57 @@ namespace Konstruktor.Methoden
                 Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
                 Console.ResetColor();
                 Console.ReadKey();
-            }
+            }           
 
-                                                  
+            else if (mypc.Motherboard == null && mypc.Cpu == null)
+            {
+                foreach (var coolingss in coolingsaio)
+                {
+                    Console.WriteLine($"({i}) {coolingss.Name} | Form: {coolingss.Form} | Sockelkompartibilität: {string.Join(", ", coolingss.Sockets)} | Maße: Höhe {coolingss.Height}cm x Breite {coolingss.Width}cm x Länge {coolingss.Lenght}cm | Kategorien: {string.Join(", ", coolingss.Categories)} | Preis: {coolingss.Price}€");
+                    Console.WriteLine();
+                    i++;
+                }
+                anzahlcooling = coolingsaio.Count();
+                int pick = 0;
+                bool success = false;
+
+                do
+                {
+                    if (success == false)
+                    {
+                        Console.WriteLine("Auswahl Kühlung: ");
+                        int.TryParse(Console.ReadLine(), out pick);
+
+                        if (pick == 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
+                        }
+
+                        else if (pick <= anzahlcooling)
+                        {
+                            success = true;
+                        }
+
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("ungültige Zahl. Nochmal auswählen.");
+                            Console.ResetColor();
+                        }
+                    }
+                } while (success == false);
+
+                int actualpick = pick - 1;
+                mypc.Coolings = coolingsaio[actualpick];
+                Console.WriteLine($"{coolingsaio[actualpick].Name} wurde als Kühlung ausgewählt.");
+
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Drücken sie eine Taste, um zum nächsten Punkt zu springen.");
+                Console.ResetColor();
+                Console.ReadKey();
+            }
         }        
     }
 }

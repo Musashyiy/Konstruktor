@@ -1,15 +1,58 @@
 [
 	{
+		"Name": "Arctic F12 PWM PST",
+		"Size": 120.0,
+		"Price": 5.49,
+		"Categories": [ "Office", "Server" ]
+	},
+	{
+		"Name": "Arctic P12 Max",
+		"Size": 120.0,
+		"Price": 9.49,
+		"Categories": [ "Gaming", "Rendering", "Server" ]
+	},
+	{
 		"Name": "Arctic P12 PWM PST",
 		"Size": 120.0,
 		"Price": 4.99,
 		"Categories": [ "Office", "Server" ]
 	},
 	{
+		"Name": "Arctic F14 PWM PST",
+		"Size": 140.0,
+		"Price": 7.49,
+		"Categories": [ "Office", "Server" ]
+	},
+	{
+		"Name": "Arctic P14 Max",
+		"Size": 140.0,
+		"Price": 11.49,
+		"Categories": [ "Gaming", "Rendering", "Server" ]
+	},
+	{
 		"Name": "Arctic P14 PWM PST",
 		"Size": 140.0,
 		"Price": 6.99,
 		"Categories": [ "Office", "Server" ]
+	},
+
+	{
+		"Name": "be quiet! Pure Wings 2 120mm",
+		"Size": 120.0,
+		"Price": 9.49,
+		"Categories": [ "Office" ]
+	},
+	{
+		"Name": "be quiet! Pure Wings 3 120mm",
+		"Size": 120.0,
+		"Price": 12.99,
+		"Categories": [ "Office", "Server" ]
+	},
+	{
+		"Name": "be quiet! Silent Wings Pro 4 120mm",
+		"Size": 120.0,
+		"Price": 32.99,
+		"Categories": [ "Gaming", "Rendering" ]
 	},
 	{
 		"Name": "be quiet! Pure Wings 2 140mm",
@@ -18,21 +61,22 @@
 		"Categories": [ "Office" ]
 	},
 	{
+		"Name": "be quiet! Pure Wings 3 140mm",
+		"Size": 140.0,
+		"Price": 14.99,
+		"Categories": [ "Office", "Server" ]
+	},
+	{
 		"Name": "be quiet! Silent Wings Pro 4 140mm",
 		"Size": 140.0,
 		"Price": 35.99,
 		"Categories": [ "Gaming", "Rendering" ]
 	},
+
 	{
-		"Name": "Corsair AF120 ELITE",
+		"Name": "Cooler Master MasterFan MF120 Halo",
 		"Size": 120.0,
-		"Price": 24.90,
-		"Categories": [ "Gaming", "Office" ]
-	},
-	{
-		"Name": "Corsair ML140 Pro",
-		"Size": 140.0,
-		"Price": 29.90,
+		"Price": 18.99,
 		"Categories": [ "Gaming", "Rendering" ]
 	},
 	{
@@ -42,10 +86,60 @@
 		"Categories": [ "Gaming", "Office" ]
 	},
 	{
-		"Name": "Cooler Master MegaFlow 200",
-		"Size": 200.0,
-		"Price": 18.99,
-		"Categories": [ "Gaming", "Server" ]
+		"Name": "Cooler Master MasterFan MF140 Halo",
+		"Size": 140.0,
+		"Price": 20.99,
+		"Categories": [ "Gaming", "Rendering" ]
+	},
+	{
+		"Name": "Cooler Master SickleFlow 140",
+		"Size": 140.0,
+		"Price": 14.49,
+		"Categories": [ "Gaming", "Office" ]
+	},
+
+	{
+		"Name": "Corsair AF120 ELITE",
+		"Size": 120.0,
+		"Price": 24.90,
+		"Categories": [ "Gaming", "Office" ]
+	},
+	{
+		"Name": "Corsair ML120 Pro",
+		"Size": 120.0,
+		"Price": 26.90,
+		"Categories": [ "Gaming", "Rendering" ]
+	},
+	{
+		"Name": "Corsair SP120 ELITE",
+		"Size": 120.0,
+		"Price": 23.90,
+		"Categories": [ "Gaming", "Office" ]
+	},
+	{
+		"Name": "Corsair AF140 ELITE",
+		"Size": 140.0,
+		"Price": 27.90,
+		"Categories": [ "Gaming", "Office" ]
+	},
+	{
+		"Name": "Corsair ML140 Pro",
+		"Size": 140.0,
+		"Price": 29.90,
+		"Categories": [ "Gaming", "Rendering" ]
+	},
+	{
+		"Name": "Corsair SP140 ELITE",
+		"Size": 140.0,
+		"Price": 26.90,
+		"Categories": [ "Gaming", "Office" ]
+	},
+
+	{
+		"Name": "Lian Li UNI FAN AL120 V2",
+		"Size": 120.0,
+		"Price": 29.90,
+		"Categories": [ "Gaming", "Rendering" ]
 	},
 	{
 		"Name": "Lian Li UNI FAN SL120 V2",
@@ -54,16 +148,35 @@
 		"Categories": [ "Gaming", "Rendering" ]
 	},
 	{
-		"Name": "Noctua NF-A9 PWM",
-		"Size": 92.0,
-		"Price": 17.90,
-		"Categories": [ "Office", "Server" ]
+		"Name": "Lian Li UNI FAN AL140 V2",
+		"Size": 140.0,
+		"Price": 32.90,
+		"Categories": [ "Gaming", "Rendering" ]
 	},
+	{
+		"Name": "Lian Li UNI FAN SL140 V2",
+		"Size": 140.0,
+		"Price": 31.90,
+		"Categories": [ "Gaming", "Rendering" ]
+	},
+
 	{
 		"Name": "Noctua NF-A12x25 PWM",
 		"Size": 120.0,
 		"Price": 33.89,
 		"Categories": [ "Gaming", "Rendering", "Office" ]
+	},
+	{
+		"Name": "Noctua NF-F12 PWM",
+		"Size": 120.0,
+		"Price": 24.90,
+		"Categories": [ "Office", "Server" ]
+	},
+	{
+		"Name": "Noctua NF-P12 redux-1700 PWM",
+		"Size": 120.0,
+		"Price": 14.90,
+		"Categories": [ "Office", "Server" ]
 	},
 	{
 		"Name": "Noctua NF-A14 PWM",
@@ -72,9 +185,40 @@
 		"Categories": [ "Gaming", "Rendering", "Server" ]
 	},
 	{
+		"Name": "Noctua NF-A14 industrialPPC-2000 PWM",
+		"Size": 140.0,
+		"Price": 32.90,
+		"Categories": [ "Rendering", "Server" ]
+	},
+
+	{
+		"Name": "Phanteks M25-120",
+		"Size": 120.0,
+		"Price": 11.99,
+		"Categories": [ "Gaming", "Office" ]
+	},
+	{
+		"Name": "Phanteks PH-F120MP",
+		"Size": 120.0,
+		"Price": 14.99,
+		"Categories": [ "Gaming", "Office", "Server" ]
+	},
+	{
 		"Name": "Phanteks T30-120",
 		"Size": 120.0,
 		"Price": 40.39,
 		"Categories": [ "Gaming", "Rendering", "Server" ]
+	},
+	{
+		"Name": "Phanteks M25-140",
+		"Size": 140.0,
+		"Price": 13.99,
+		"Categories": [ "Gaming", "Office" ]
+	},
+	{
+		"Name": "Phanteks PH-F140MP",
+		"Size": 140.0,
+		"Price": 16.99,
+		"Categories": [ "Gaming", "Office", "Server" ]
 	}
 ]
