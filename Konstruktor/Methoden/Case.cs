@@ -86,26 +86,53 @@ namespace Konstruktor.Methoden
                 int anzahlfanslotsincase = mypc.Case.NumberCaseFans120mm + mypc.Case.NumberCaseFans140mm;
                 Console.WriteLine($"{cases[actualpick].Name} wurde als Case gewählt.");
                 int select120140;
+                bool toomuch120140 = false;
                 
 
                 if (anzahlfans > anzahlfanslotsincase)
                 {
-                    while()
-
-                        if (mypc.Fans120.Count() > mypc.Case.NumberCaseFans120mm)
-                        {
-                            
-                            Console.WriteLine($"Es wurden {mypc.Fans120.Count()} 120mm-Lüfter für das ausgewählte Gehäuse ausgewählt, das sind zu viele.\n Wollen sie die Lüfter neu auswählen (1), oder die Anzahl so behalten (2)?");
+                    while (!toomuch120140)
+                    {
+                        if (mypc.Fans120.Count() > mypc.Case.NumberCaseFans120mm || mypc.Fans140.Count() > mypc.Case.NumberCaseFans140mm)
+                        {                            
+                            Console.WriteLine($"{mypc.Fans120.Count()}x 120mm-Lüfter sind ausgewählt und ({mypc.Case.NumberCaseFans120mm}x 120mm-Lüfter passen ins Gehäuse) \n{mypc.Fans140.Count()}x 140mm-Lüfter sind ausgewählt und ({mypc.Case.NumberCaseFans120mm}x 120mm-Lüfter passen ins Gehäuse)\n(1) Wähle alle Lüfter und die Anzahl nochmals aus\n(2) Wähle nur neue 120mm-Lüfter aus\n(3) Wähle nur neue 140mm-Lüfter aus\n(4) Die jetzige Auswahl bleibt bestehen (egal ob es zu viele Lüfter sind)");
                             int.TryParse(Console.ReadLine(), out select120140);
                             if (select120140 == 1)
                             {
+                                mypc.Fans120.Clear();
+                                mypc.Fans140.Clear();
                                 IComponent component = new Fan();
                                 component.Select(mypc);
-                            } 
-                            else if (select120140 == 2) continue;
-                            else Console.WriteLine("Ungültige Ei<ngabe. Bitte erneut auswählen.");
-                            
-                        }
+                                toomuch120140 = true;
+                            }
+                            else if (select120140 == 2)
+                            {
+                                mypc.Fans120.Clear();                                
+                                IComponent component = new Fan();
+                                component.Select(mypc);
+                                toomuch120140 = true;
+                            }
+                            else if (select120140 == 3)
+                            {
+                                mypc.Fans140.Clear();
+                                IComponent component = new Fan();
+                                component.Select(mypc);
+                                toomuch120140 = true;
+                            }
+                            else if (select120140 == 4)
+                            {
+                                mypc.Fans120.Clear();
+                                IComponent component = new Fan();
+                                component.Select(mypc);
+                                toomuch120140 = true;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Auswahl ungültig. Bitte erneut auswählen.");
+                            }
+                        }                        
+                    }
+
                     //bool numberok = false;
                     //do
                     //{
